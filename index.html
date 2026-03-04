@@ -398,6 +398,18 @@
                 <h2 data-lang="en">Education</h2>
                 <h2 data-lang="fr">Formation</h2>
 
+                <!-- Modal Trigger Button -->
+                <button class="btn-degrees no-print" onclick="openModal()" aria-label="View Degrees">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                    </svg>
+                    <span data-lang="it">Visualizza i miei diplomi</span>
+                    <span data-lang="en">View my Degrees</span>
+                    <span data-lang="fr">Voir mes diplômes</span>
+                </button>
+
                 <div class="education-item">
                     <div class="item-header">
                         <span class="item-title" data-lang="it">Diploma in Gestione d'Impresa (Bac+2)</span>
@@ -509,6 +521,17 @@
         </a>
     </div>
 
+    <!-- Modal Gallery HTML -->
+    <div id="degreeModal" class="modal" onclick="closeModal(event)">
+        <span class="modal-close" onclick="closeModal(event)">&times;</span>
+        <div class="modal-content-wrapper" onclick="event.stopPropagation()">
+            <img class="modal-content" id="modalImage">
+            <button class="modal-nav prev-btn" onclick="changeImage(-1)">&#10094;</button>
+            <button class="modal-nav next-btn" onclick="changeImage(1)">&#10095;</button>
+            <div id="modalCaption"></div>
+        </div>
+    </div>
+
     <!-- Mobile Scroll Behavior Script -->
     <script>
         let lastScrollTop = 0;
@@ -532,6 +555,63 @@
                 ctaBar.classList.remove('cta-hidden');
             }
         }, { passive: true });
+
+        // --- 2. Degrees Modal Gallery Logic ---
+        // REPLACE THESE with your actual file names
+        const degrees = [
+            { src: "diploma-ista.jpg", titleIt: "Diploma ISTA", titleEn: "ISTA Diploma", titleFr: "Diplôme ISTA" },
+            { src: "diploma-unibn.jpg", titleIt: "Laurea Università Ibn Zohr", titleEn: "Ibn Zohr University Degree", titleFr: "Licence Université Ibn Zohr" },
+            { src: "diploma-bac.jpg", titleIt: "Maturità", titleEn: "High School Diploma", titleFr: "Baccalauréat" }
+        ];
+
+        let currentIndex = 0;
+        const modal = document.getElementById("degreeModal");
+        const modalImg = document.getElementById("modalImage");
+        const modalCaption = document.getElementById("modalCaption");
+
+        function openModal() {
+            modal.style.display = "flex";
+            setTimeout(() => { modal.style.opacity = "1"; }, 10);
+            document.body.style.overflow = "hidden"; // Prevent background scroll
+            showImage(0);
+        }
+
+        function closeModal(e) {
+            if (e === undefined || e.target === modal || e.target.classList.contains('modal-close')) {
+                modal.style.opacity = "0";
+                setTimeout(() => {
+                    modal.style.display = "none";
+                    document.body.style.overflow = "auto";
+                }, 300);
+            }
+        }
+
+        function changeImage(step) {
+            currentIndex += step;
+            if (currentIndex >= degrees.length) currentIndex = 0;
+            if (currentIndex < 0) currentIndex = degrees.length - 1;
+            showImage(currentIndex);
+        }
+
+        function showImage(index) {
+            currentIndex = index;
+            modalImg.src = degrees[currentIndex].src;
+
+            // Detect active language for caption
+            const isIt = document.getElementById('lang-it').checked;
+            const isFr = document.getElementById('lang-fr').checked;
+
+            if (isIt) modalCaption.textContent = degrees[currentIndex].titleIt;
+            else if (isFr) modalCaption.textContent = degrees[currentIndex].titleFr;
+            else modalCaption.textContent = degrees[currentIndex].titleEn;
+        }
+
+        // Close on ESC key
+        document.addEventListener('keydown', function (event) {
+            if (event.key === "Escape" && modal.style.display === "flex") {
+                closeModal();
+            }
+        });
     </script>
 </body>
 

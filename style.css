@@ -829,3 +829,150 @@ body {
 }
 
 
+/* ============================================================
+   DEGREES MODAL GALLERY
+   ============================================================ */
+/* Trigger Button */
+.btn-degrees {
+    background: transparent;
+    color: var(--primary-navy);
+    border: 2px solid var(--primary-navy);
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-family: var(--font-family);
+    font-size: 0.82rem;
+    font-weight: 700;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 24px;
+    transition: all 0.2s ease;
+}
+
+.btn-degrees:hover {
+    background: var(--primary-navy);
+    color: #fff;
+}
+
+/* Modal Overlay */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(15, 23, 42, 0.85); /* Deep slate semi-transparent */
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Modal Content Wrapper */
+.modal-content-wrapper {
+    position: relative;
+    max-width: 900px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* The Image */
+.modal-content {
+    max-width: 100%;
+    max-height: 80vh;
+    border-radius: 8px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+    object-fit: contain;
+    background: #fff;
+    padding: 10px;
+}
+
+/* Caption */
+#modalCaption {
+    margin-top: 16px;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
+/* Close Button (X) */
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 40px;
+    font-weight: 300;
+    line-height: 1;
+    cursor: pointer;
+    transition: color 0.2s ease;
+    z-index: 2010;
+}
+
+.modal-close:hover {
+    color: #fff;
+}
+
+/* Navigation Buttons (Prev/Next) */
+.modal-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255,255,255,0.1);
+    color: white;
+    border: none;
+    padding: 16px;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 50%;
+    transition: background 0.3s ease, transform 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+}
+
+.modal-nav:hover {
+    background: rgba(255,255,255,0.3);
+    transform: translateY(-50%) scale(1.05);
+}
+
+.prev-btn {
+    left: -70px;
+}
+
+.next-btn {
+    right: -70px;
+}
+
+/* Responsive Modal Adjustments */
+@media screen and (max-width: 850px) {
+    .modal-close {
+        top: 10px;
+        right: 20px;
+        font-size: 35px;
+    }
+    .modal-nav {
+        width: 44px;
+        height: 44px;
+        font-size: 18px;
+        padding: 10px;
+    }
+    .prev-btn { left: 10px; }
+    .next-btn { right: 10px; }
+    
+    .modal-content-wrapper {
+        width: 100%;
+        padding: 0 10px;
+    }
+}
