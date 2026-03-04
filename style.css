@@ -834,34 +834,32 @@ body {
    ============================================================ */
 /* Trigger Button - Individual Education Item */
 .btn-view-degree {
-    background: transparent;
+    background: rgba(37, 99, 235, 0.08); /* Very soft blue background */
     color: var(--accent-blue);
-    border: 1px solid var(--accent-blue);
-    padding: 4px 10px;
-    border-radius: 4px;
+    border: none;
+    padding: 6px 14px;
+    border-radius: 20px; /* Modern round pill */
     font-family: var(--font-family);
-    font-size: 0.72rem;
-    font-weight: 700;
+    font-size: 0.75rem;
+    font-weight: 600;
     cursor: pointer;
     display: inline-flex;
     align-items: center;
     gap: 6px;
     margin-top: 10px;
-    transition: all 0.2s ease;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn-view-degree:hover {
     background: var(--accent-blue);
     color: #fff;
-    transform: translateY(-1px);
-    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
 }
 
 .btn-view-degree svg {
-    width: 12px;
-    height: 12px;
+    /* Hardcoded inline but good practice to enforce in CSS */
+    flex-shrink: 0;
 }
 
 /* Modal Overlay */
