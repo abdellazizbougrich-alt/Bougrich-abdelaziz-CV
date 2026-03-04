@@ -359,12 +359,165 @@ section h2 {
     }
 }
 
-/* Responsive for Screen */
+/* ============================================================
+   RESPONSIVE — TABLET  (max-width: 850px)
+   ============================================================ */
 @media screen and (max-width: 850px) {
+    body {
+        background-color: #f3f4f6;
+    }
+
+    /* Language bar wraps nicely */
+    .lang-controls {
+        padding: 16px 0 8px;
+    }
+    .lang-btn {
+        padding: 8px 18px;
+        font-size: 0.95rem;
+    }
+
+    /* Stack sidebar on top of main content */
     .cv-wrapper {
         grid-template-columns: 1fr;
+        margin: 20px auto;
+        max-width: 100%;
     }
+
     .sidebar {
-        padding: 40px 50px;
+        padding: 30px 40px;
+        /* Side bar draws its own full-width band */
+        border-radius: 0;
+    }
+
+    /* Centre the headshot */
+    .photo-container {
+        width: 140px;
+        height: 140px;
+        margin: 0 auto 24px;
+    }
+
+    /* Main content breathes */
+    .main-content {
+        padding: 30px 30px;
+    }
+
+    /* Slightly smaller heading so name never overflows */
+    header h1 {
+        font-size: 2.2rem;
+    }
+    header .subtitle {
+        font-size: 1.05rem;
+    }
+
+    section h2 {
+        font-size: 1.2rem;
+    }
+
+    /* Experience date wraps rather than overlapping */
+    .item-header {
+        flex-wrap: wrap;
+        gap: 4px;
+    }
+    .item-date {
+        width: 100%;
+        font-size: 0.8rem;
     }
 }
+
+/* ============================================================
+   RESPONSIVE — MOBILE  (max-width: 480px)
+   ============================================================ */
+@media screen and (max-width: 480px) {
+    /* Wrapper flush to viewport edges */
+    .cv-wrapper {
+        margin: 0;
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+    /* Sidebar compact */
+    .sidebar {
+        padding: 24px 20px;
+    }
+
+    /* Smaller headshot */
+    .photo-container {
+        width: 110px;
+        height: 110px;
+        margin: 0 auto 20px;
+    }
+
+    /* Main content tight padding */
+    .main-content {
+        padding: 24px 18px;
+    }
+
+    /* Hero name fits any phone */
+    header h1 {
+        font-size: 1.75rem;
+        line-height: 1.1;
+    }
+    header .subtitle {
+        font-size: 0.95rem;
+    }
+
+    /* Section titles */
+    section h2 {
+        font-size: 1.05rem;
+        letter-spacing: 0.5px;
+    }
+
+    /* Profile description text */
+    .profile-variant {
+        padding: 14px;
+        font-size: 0.9rem;
+    }
+
+    /* Experience cards */
+    .item-title {
+        font-size: 0.95rem;
+    }
+    .item-meta {
+        font-size: 0.8rem;
+    }
+    .item-content {
+        font-size: 0.85rem;
+    }
+    .item-content ul {
+        padding-left: 16px;
+    }
+
+    /* Skill pills — shrink slightly */
+    .skill-pill {
+        font-size: 0.72rem;
+        padding: 4px 10px;
+    }
+
+    /* Language toggle — bigger tap targets */
+    .lang-controls {
+        padding: 12px 0 6px;
+    }
+    .lang-btn {
+        padding: 10px 20px;
+        font-size: 1rem;
+        min-width: 56px;
+        text-align: center;
+        border-radius: 6px;
+    }
+
+    /* GDPR footer small */
+    .gdpr-footer {
+        margin-top: 30px;
+        font-size: 0.7rem;
+    }
+
+    /* Letter specifics */
+    .letter-date {
+        text-align: left;
+        margin-bottom: 24px;
+    }
+    .letter-signature {
+        margin-top: 36px;
+    }
+}
+
