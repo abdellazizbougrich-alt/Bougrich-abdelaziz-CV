@@ -38,7 +38,49 @@ body {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
-/* Language Switcher */
+/* ---- Top bar (lang switcher + print btn) ---- */
+.top-bar {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px 8px;
+}
+
+.lang-controls {
+    display: flex;
+    gap: 8px;
+}
+
+/* Print Button */
+.print-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--primary-navy);
+    color: #fff;
+    border: none;
+    padding: 9px 20px;
+    border-radius: 6px;
+    font-family: var(--font-family);
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.25s ease, transform 0.15s ease;
+    box-shadow: 0 2px 8px rgba(26, 42, 108, 0.3);
+}
+
+.print-btn:hover {
+    background: var(--accent-blue);
+    transform: translateY(-1px);
+}
+
+.print-btn svg {
+    flex-shrink: 0;
+}
+
+/* Sidebar Styles */
 .lang-toggle {
     display: none;
 }
@@ -333,29 +375,84 @@ section h2 {
     font-size: 1.1rem;
 }
 
-/* Print Optimization */
+/* ============================================================
+   PRINT — A4 OPTIMISED
+   ============================================================ */
+@page {
+    size: A4;
+    margin: 0;
+}
+
 @media print {
+    /* Hide UI chrome */
+    .top-bar,
+    .lang-controls,
+    .print-btn {
+        display: none !important;
+    }
+
     body {
         background: #fff;
+        margin: 0;
+        padding: 0;
     }
+
+    /* Restore full two-column grid, A4 size */
     .cv-wrapper {
         margin: 0;
         box-shadow: none;
-        width: 100%;
+        width: 210mm;
+        min-height: 297mm;
         display: grid !important;
-        grid-template-columns: 320px 1fr !important;
+        grid-template-columns: 260px 1fr !important;
+        page-break-inside: avoid;
     }
+
+    /* Force navy sidebar to print in colour */
     .sidebar {
         background-color: var(--primary-navy) !important;
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
+        color: #ffffff !important;
     }
+
+    /* Force pill colours */
+    .skill-pill {
+        background: rgba(255,255,255,0.15) !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+        border: 1px solid rgba(255,255,255,0.25);
+    }
+
+    /* Force profile-variant background */
     .profile-variant {
         background-color: #f3f4f6 !important;
         -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
     }
-    .skill-pill {
-        border: 1px solid #ddd;
+
+    /* Shrink typography just a touch for A4 fit */
+    header h1 {
+        font-size: 2.4rem;
+    }
+
+    .main-content {
+        padding: 36px 40px;
+    }
+
+    /* Hide the inactive language versions — only IT prints */
+    [data-lang="en"],
+    [data-lang="fr"] {
+        display: none !important;
+    }
+
+    [data-lang="it"] {
+        display: block !important;   /* restore blocks */
+    }
+
+    /* Inline spans that were hidden by the radio trick */
+    span[data-lang="it"] {
+        display: inline !important;
     }
 }
 
