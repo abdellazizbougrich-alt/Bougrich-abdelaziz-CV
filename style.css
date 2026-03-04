@@ -394,10 +394,19 @@ section h2 {
 }
 
 @media print {
+    /* Disable all animations for print so elements aren't trapped at opacity: 0 */
+    *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+    }
+
     /* Hide UI chrome */
     .top-bar,
     .lang-controls,
-    .print-btn {
+    .print-btn,
+    .cta-bar {
         display: none !important;
     }
 
@@ -713,6 +722,14 @@ section h2 {
     -webkit-backdrop-filter: blur(12px);
     border-top: 1px solid var(--border-color);
     box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Mobile Scroll Hiding */
+@media screen and (max-width: 850px) {
+    .cta-bar.cta-hidden {
+        transform: translateY(120%);
+    }
 }
 
 .cta-btn {

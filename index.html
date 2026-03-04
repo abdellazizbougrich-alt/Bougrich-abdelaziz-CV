@@ -508,6 +508,30 @@
         </a>
     </div>
 
+    <!-- Mobile Scroll Behavior Script -->
+    <script>
+        let lastScrollTop = 0;
+        const ctaBar = document.querySelector('.cta-bar');
+
+        window.addEventListener('scroll', function () {
+            // Only apply scroll hiding on mobile view widths
+            if (window.innerWidth <= 850) {
+                let st = window.pageYOffset || document.documentElement.scrollTop;
+                // Add tolerance to avoid jitter
+                if (st > lastScrollTop && st > 150) {
+                    // Scrolling down past threshold -> hide
+                    ctaBar.classList.add('cta-hidden');
+                } else if (st < lastScrollTop - 5 || st <= 150) {
+                    // Scrolling up significantly or near top -> show
+                    ctaBar.classList.remove('cta-hidden');
+                }
+                lastScrollTop = st <= 0 ? 0 : st;
+            } else {
+                // Ensure visibility on desktop always
+                ctaBar.classList.remove('cta-hidden');
+            }
+        }, { passive: true });
+    </script>
 </body>
 
 </html>
