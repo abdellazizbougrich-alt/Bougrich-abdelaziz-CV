@@ -398,18 +398,6 @@
                 <h2 data-lang="en">Education</h2>
                 <h2 data-lang="fr">Formation</h2>
 
-                <!-- Modal Trigger Button -->
-                <button class="btn-degrees no-print" onclick="openModal()" aria-label="View Degrees">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
-                        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
-                    </svg>
-                    <span data-lang="it">Visualizza i miei diplomi</span>
-                    <span data-lang="en">View my Degrees</span>
-                    <span data-lang="fr">Voir mes diplômes</span>
-                </button>
-
                 <div class="education-item">
                     <div class="item-header">
                         <span class="item-title" data-lang="it">Diploma in Gestione d'Impresa (Bac+2)</span>
@@ -425,6 +413,16 @@
                         <span data-lang="en">ISTA - Specialized Institute of Applied Technology</span>
                         <span data-lang="fr">ISTA - Institut Spécialisé de Technologie Appliquée</span>
                     </div>
+                    <!-- View Button -->
+                    <button class="btn-view-degree no-print" onclick="openModal(0)">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                            <circle cx="12" cy="12" r="3"></circle>
+                        </svg>
+                        <span data-lang="it">Visualizza</span>
+                        <span data-lang="en">View</span>
+                        <span data-lang="fr">Voir</span>
+                    </button>
                 </div>
 
                 <div class="education-item">
@@ -442,6 +440,16 @@
                         <span data-lang="en">University Ibn Zohr</span>
                         <span data-lang="fr">Université Ibn Zohr</span>
                     </div>
+                    <!-- View Button -->
+                    <button class="btn-view-degree no-print" onclick="openModal(1)">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                            <circle cx="12" cy="12" r="3"></circle>
+                        </svg>
+                        <span data-lang="it">Visualizza</span>
+                        <span data-lang="en">View</span>
+                        <span data-lang="fr">Voir</span>
+                    </button>
                 </div>
 
                 <div class="education-item">
@@ -459,6 +467,16 @@
                         <span data-lang="en">Lycée Moulay Rachid</span>
                         <span data-lang="fr">Lycée Moulay Rachid</span>
                     </div>
+                    <!-- View Button -->
+                    <button class="btn-view-degree no-print" onclick="openModal(2)">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                            <circle cx="12" cy="12" r="3"></circle>
+                        </svg>
+                        <span data-lang="it">Visualizza</span>
+                        <span data-lang="en">View</span>
+                        <span data-lang="fr">Voir</span>
+                    </button>
                 </div>
             </section>
 
@@ -557,11 +575,10 @@
         }, { passive: true });
 
         // --- 2. Degrees Modal Gallery Logic ---
-        // REPLACE THESE with your actual file names
         const degrees = [
-            { src: "diploma-ista.jpg", titleIt: "Diploma ISTA", titleEn: "ISTA Diploma", titleFr: "Diplôme ISTA" },
-            { src: "diploma-unibn.jpg", titleIt: "Laurea Università Ibn Zohr", titleEn: "Ibn Zohr University Degree", titleFr: "Licence Université Ibn Zohr" },
-            { src: "diploma-bac.jpg", titleIt: "Maturità", titleEn: "High School Diploma", titleFr: "Baccalauréat" }
+            { src: "assets/diplome-ista.jpeg", titleIt: "Diploma ISTA", titleEn: "ISTA Diploma", titleFr: "Diplôme ISTA" },
+            { src: "assets/licence-anglais.jpeg", titleIt: "Laurea Università Ibn Zohr", titleEn: "Ibn Zohr University Degree", titleFr: "Licence Université Ibn Zohr" },
+            { src: "assets/baccalaureat.jpeg", titleIt: "Maturità", titleEn: "High School Diploma", titleFr: "Baccalauréat" }
         ];
 
         let currentIndex = 0;
@@ -569,11 +586,11 @@
         const modalImg = document.getElementById("modalImage");
         const modalCaption = document.getElementById("modalCaption");
 
-        function openModal() {
+        function openModal(index) {
             modal.style.display = "flex";
             setTimeout(() => { modal.style.opacity = "1"; }, 10);
-            document.body.style.overflow = "hidden"; // Prevent background scroll
-            showImage(0);
+            document.body.style.overflow = "hidden";
+            showImage(index || 0);
         }
 
         function closeModal(e) {
