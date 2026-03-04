@@ -4,151 +4,146 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curriculum Vitae | Full-Stack Web Developer</title>
+    <title>Curriculum Vitae | Senior Web Developer</title>
+    <!-- SEO & Accessibility -->
     <meta name="description"
-        content="Professional Curriculum Vitae of an expert Full-Stack Web Developer specializing in the Italian tech sector.">
+        content="Professional CV of a Senior Web Developer specialized in full-stack solutions for the Italian market.">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <div class="cv-container">
-        <!-- Sidebar: Contact, Skills, Languages -->
-        <aside>
-            <div class="profile-img-container">
-                <div class="profile-img"></div>
+    <div class="cv-wrapper">
+        <!-- Sidebar: Info, Skills, Languages -->
+        <aside class="sidebar">
+            <div class="photo-placeholder">
+                <img src="profile-placeholder.png" alt="Profilo">
             </div>
 
             <div class="sidebar-section">
                 <h2>Contatti</h2>
-                <ul class="contact-list">
-                    <li class="contact-item">📍 Milano, Italia (Disponibile Remoto)</li>
-                    <li class="contact-item">📞 +39 333 123 4567</li>
-                    <li class="contact-item">✉️ developer.pro@email.it</li>
-                    <li class="contact-item">🔗 linkedin.com/in/tech-lead-italy</li>
-                    <li class="contact-item">💻 github.com/fullstack-master</li>
-                </ul>
+                <div class="contact-info">
+                    <p>📍 Milano, Italia</p>
+                    <p>📞 +39 333 456 7890</p>
+                    <p>✉️ marco.rossi@email.it</p>
+                    <p>🔗 linkedin.com/in/mrossi</p>
+                    <p>💻 github.com/mrossi-dev</p>
+                </div>
             </div>
 
             <div class="sidebar-section">
                 <h2>Competenze</h2>
-                <div class="skills-group">
-                    <span class="skill-tag">React / Next.js</span>
-                    <span class="skill-tag">Node.js / Express</span>
-                    <span class="skill-tag">TypeScript</span>
-                    <span class="skill-tag">PostgreSQL / MongoDB</span>
-                    <span class="skill-tag">Docker / AWS</span>
-                    <span class="skill-tag">CI/CD Pipelines</span>
-                    <span class="skill-tag">Agile / Scrum</span>
-                    <span class="skill-tag">REST / GraphQL</span>
+                <div class="skills-list">
+                    <span class="skill-pill">Full-Stack Dev</span>
+                    <span class="skill-pill">React / Next.js</span>
+                    <span class="skill-pill">Node.js</span>
+                    <span class="skill-pill">TypeScript</span>
+                    <span class="skill-pill">PostgreSQL</span>
+                    <span class="skill-pill">Docker</span>
+                    <span class="skill-pill">AWS</span>
+                    <span class="skill-pill">Unit Testing</span>
                 </div>
             </div>
 
             <div class="sidebar-section">
                 <h2>Lingue</h2>
-                <div class="contact-item">🇮🇹 Italiano (Madrelingua)</div>
-                <div class="contact-item">🇬🇧 Inglese (C1 - Professional)</div>
-                <div class="contact-item">🇫🇷 Francese (B1 - Intermediate)</div>
-            </div>
-
-            <div class="sidebar-section">
-                <h2>Certificazioni</h2>
-                <div class="contact-item">� AWS Certified Developer</div>
-                <div class="contact-item">📜 Meta Front-End Specialization</div>
+                <div class="languages-list">
+                    <span class="skill-pill">Italiano (C2)</span>
+                    <span class="skill-pill">Inglese (C1)</span>
+                    <span class="skill-pill">Spagnolo (B2)</span>
+                </div>
             </div>
         </aside>
 
         <!-- Main Content: Profile, Experience, Education -->
-        <main>
+        <main class="main-content">
             <header>
                 <h1>MARCO ROSSI</h1>
-                <div class="job-title">Senior Full-Stack Web Developer</div>
+                <p class="subtitle">Senior Web Developer & Full-Stack Architect</p>
             </header>
 
             <section id="profilo">
                 <h2>Profilo Professionale</h2>
-                <div class="profile-content">
-                    <div class="bilingual-box">
-                        <span class="language-label">Italiano</span>
-                        <p>Sviluppatore Full-Stack con oltre 7 anni di esperienza nella creazione di ecosistemi digitali
-                            scalabili. Specializzato nella risoluzione di problemi complessi (problem-solving) e nella
-                            guida tecnica di team multidisciplinari. Focalizzato sulla crescita professionale continua e
-                            sull'adattabilità alle dinamiche frenetiche del settore tech italiano, trasformando le sfide
-                            tecniche in opportunità di business concrete.</p>
+                <div class="profile-grid">
+                    <!-- Version A: Italian -->
+                    <div class="profile-variant">
+                        <em>Versione Italiana</em>
+                        <p>Professionista determinato con una solida esperienza nello sviluppo web, focalizzato sul
+                            raggiungimento di risultati tangibili e sull'eccellenza tecnica. Dedico massima attenzione
+                            alla qualità del codice e all'esperienza utente, garantendo soluzioni scalabili e
+                            performanti attraverso un impegno costante e una dedizione all'innovazione continua nel
+                            panorama tecnologico italiano.</p>
                     </div>
 
-                    <div class="bilingual-box">
-                        <span class="language-label">English</span>
-                        <p>Senior Full-Stack Developer with 7+ years of experience building scalable digital ecosystems.
-                            Expert in strategic problem-solving and technical leadership. Dedicated to professional
-                            growth and adaptability within the Italian tech sector, consistently translating complex
-                            technical challenges into robust, high-performance business solutions.</p>
+                    <!-- Version B: English -->
+                    <div class="profile-variant">
+                        <em>English Version</em>
+                        <p>Results-oriented Senior Web Developer with deep technical expertise in modern full-stack
+                            architectures. Highly adaptable to evolving technologies and business requirements, I
+                            specialize in building robust, user-centric digital products. Proven track record of
+                            delivering high-quality code and scaling applications in fast-paced environments while
+                            maintaining technical excellence.</p>
                     </div>
                 </div>
             </section>
 
             <section id="esperienza">
-                <h2>Esperienze Professionali</h2>
+                <h2>Esperienza Lavorativa</h2>
 
                 <article class="experience-item">
                     <div class="item-header">
-                        <span class="item-title">Senior Full-Stack Engineer</span>
+                        <span class="item-title">Senior Full-Stack Developer</span>
                         <span class="item-date">Gen 2021 — Presente</span>
                     </div>
-                    <span class="item-company">TechInnovate S.r.l. | Milano</span>
-                    <div class="item-desc">
+                    <div class="item-meta">TechNova Solutions | Milano</div>
+                    <div class="item-content">
                         <ul>
-                            <li>Architettura e sviluppo di una piattaforma SaaS ad alta disponibilità utilizzando
-                                Next.js e Microservizi Node.js.</li>
-                            <li>Ottimizzazione delle performance del database PostgreSQL, riducendo i tempi di risposta
-                                del 40%.</li>
-                            <li>Mentoring di 4 sviluppatori junior, promuovendo best practice di coding e code review.
-                            </li>
+                            <li>Leadership tecnica nello sviluppo di architetture a microservizi scalabili.</li>
+                            <li>Ottimizzazione delle performance front-end riducendo il LCP del 35%.</li>
+                            <li>Coordinamento di un team agile di 6 sviluppatori senior.</li>
                         </ul>
                     </div>
                 </article>
 
                 <article class="experience-item">
                     <div class="item-header">
-                        <span class="item-title">Web Application Developer</span>
+                        <span class="item-title">Web Developer</span>
                         <span class="item-date">Mar 2018 — Dic 2020</span>
                     </div>
-                    <span class="item-company">Digital Solutions Agency | Roma</span>
-                    <div class="item-desc">
+                    <div class="item-meta">Digital Core S.r.l. | Torino</div>
+                    <div class="item-content">
                         <ul>
-                            <li>Sviluppo di applicazioni single-page (SPA) robuste e responsive per clienti leader nel
-                                settore finanziario.</li>
-                            <li>Integrazione di API di terze parti e sistemi di pagamento sicuri.</li>
-                            <li>Adattamento agile a stack tecnologici variabili basato sulle specifiche esigenze del
-                                progetto.</li>
+                            <li>Sviluppo di interfacce utente complesse con React e Redux.</li>
+                            <li>Integrazione di sistemi di pagamento sicuri e API RESTful.</li>
+                            <li>Collaborazione proattiva in ambienti dinamici e fast-paced.</li>
                         </ul>
                     </div>
                 </article>
             </section>
 
-            <section id="istruzione">
-                <h2>Istruzione</h2>
+            <section id="formazione">
+                <h2>Formazione</h2>
 
                 <div class="education-item">
                     <div class="item-header">
-                        <span class="item-title">Laurea Magistrale in Ingegneria Informatica</span>
+                        <span class="item-title">Laurea Magistrale in Informatica</span>
                         <span class="item-date">2016 — 2018</span>
                     </div>
-                    <span class="item-company">Politecnico di Milano</span>
+                    <div class="item-meta">Politecnico di Milano</div>
                 </div>
 
                 <div class="education-item">
                     <div class="item-header">
-                        <span class="item-title">Laurea Triennale in Informatica</span>
+                        <span class="item-title">Laurea Triennale in Ingegneria Gestionale</span>
                         <span class="item-date">2013 — 2016</span>
                     </div>
-                    <span class="item-company">Università degli Studi di Roma "La Sapienza"</span>
+                    <div class="item-meta">Università degli Studi di Torino</div>
                 </div>
             </section>
 
             <footer class="gdpr-footer">
-                In ottemperanza al Regolamento UE 2016/679 (GDPR) e al D.Lgs. 196/2003, autorizzo il trattamento dei
-                miei dati personali per finalità di ricerca e selezione del personale.
+                Autorizzo il trattamento dei miei dati personali ai sensi del Dlgs 196 del 30 giugno 2003 e dell'art. 13
+                GDPR.
             </footer>
         </main>
     </div>
