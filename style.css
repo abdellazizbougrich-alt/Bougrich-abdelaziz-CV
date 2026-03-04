@@ -465,20 +465,6 @@ section h2 {
 
 
 
-    /* Hide the inactive language versions — only IT prints */
-    [data-lang="en"],
-    [data-lang="fr"] {
-        display: none !important;
-    }
-
-    [data-lang="it"] {
-        display: block !important;   /* restore blocks */
-    }
-
-    /* Inline spans that were hidden by the radio trick */
-    span[data-lang="it"] {
-        display: inline !important;
-    }
 }
 
 /* ============================================================
