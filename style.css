@@ -642,3 +642,173 @@ section h2 {
     }
 }
 
+/* ============================================================
+   PREMIUM MICRO-ANIMATIONS & INTERACTIONS
+   ============================================================ */
+
+/* Page fade-in on load */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.cv-wrapper {
+    animation: fadeInUp 0.55s ease both;
+}
+
+.sidebar {
+    animation: fadeInUp 0.55s 0.05s ease both;
+}
+
+.main-content > header,
+.main-content > section {
+    animation: fadeInUp 0.5s ease both;
+}
+
+.main-content > section:nth-child(2) { animation-delay: 0.10s; }
+.main-content > section:nth-child(3) { animation-delay: 0.18s; }
+.main-content > section:nth-child(4) { animation-delay: 0.26s; }
+
+/* Skill pill hover — lift + glow */
+.skill-pill {
+    transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+    cursor: default;
+}
+
+.skill-pill:hover {
+    transform: translateY(-3px) scale(1.05);
+    background: rgba(255, 255, 255, 0.22);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Experience card hover — subtle left-accent pulse */
+.experience-item {
+    transition: box-shadow 0.25s ease, transform 0.2s ease;
+    border-radius: 4px;
+    padding: 4px 8px;
+    margin-left: -8px;
+}
+
+.experience-item:hover {
+    box-shadow: -3px 0 0 var(--accent-blue), 0 4px 16px rgba(37, 99, 235, 0.08);
+    transform: translateX(3px);
+}
+
+/* Education item hover */
+.education-item {
+    transition: transform 0.2s ease;
+}
+
+.education-item:hover {
+    transform: translateX(4px);
+}
+
+/* ============================================================
+   FLOATING CTA ACTION BAR
+   ============================================================ */
+.cta-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    padding: 12px 20px;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-top: 1px solid var(--border-color);
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-family: var(--font-family);
+    font-size: 0.88rem;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.18s ease, box-shadow 0.18s ease, filter 0.18s ease;
+    white-space: nowrap;
+}
+
+.cta-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+    filter: brightness(1.08);
+}
+
+/* PDF / Scarica button — Navy */
+.cta-pdf {
+    background: var(--primary-navy);
+    color: #fff;
+}
+
+/* Email button — Slate accent */
+.cta-email {
+    background: var(--accent-blue);
+    color: #fff;
+}
+
+/* WhatsApp button — WhatsApp green */
+.cta-whatsapp {
+    background: #25d366;
+    color: #fff;
+}
+
+/* Push page content up so CTA bar doesn't hide footer */
+body {
+    padding-bottom: 72px;
+}
+
+/* On desktop: move CTA to right-side vertical strip feel */
+@media screen and (min-width: 851px) {
+    .cta-bar {
+        bottom: auto;
+        top: 50%;
+        left: auto;
+        right: 16px;
+        transform: translateY(-50%);
+        flex-direction: column;
+        width: auto;
+        border-top: none;
+        border-radius: 12px;
+        padding: 12px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+        gap: 8px;
+    }
+
+    .cta-btn {
+        padding: 10px 16px;
+        font-size: 0.82rem;
+        justify-content: flex-start;
+    }
+
+    body {
+        padding-bottom: 0;
+    }
+}
+
+/* Hide CTA on print */
+@media print {
+    .cta-bar {
+        display: none !important;
+    }
+    body {
+        padding-bottom: 0;
+    }
+}
+
+
