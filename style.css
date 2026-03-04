@@ -38,6 +38,48 @@ body {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
+/* Language Switcher */
+.lang-toggle {
+    display: none;
+}
+
+.lang-controls {
+    text-align: center;
+    padding: 20px 0 10px 0;
+}
+
+.lang-btn {
+    display: inline-block;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    background: #e5e7eb;
+    padding: 6px 12px;
+    border-radius: 4px;
+    margin: 0 5px;
+    transition: all 0.3s ease;
+}
+
+.lang-btn:hover {
+    background: var(--text-dark);
+    color: #fff;
+}
+
+#lang-it:checked ~ .lang-controls label[for="lang-it"],
+#lang-en:checked ~ .lang-controls label[for="lang-en"],
+#lang-fr:checked ~ .lang-controls label[for="lang-fr"] {
+    background: var(--primary-navy);
+    color: #fff;
+}
+
+/* Visibility Control using data-lang */
+#lang-it:checked ~ .cv-wrapper [data-lang]:not([data-lang="it"]),
+#lang-en:checked ~ .cv-wrapper [data-lang]:not([data-lang="en"]),
+#lang-fr:checked ~ .cv-wrapper [data-lang]:not([data-lang="fr"]) {
+    display: none !important;
+}
+
 /* Sidebar Styles */
 .sidebar {
     background-color: var(--primary-navy);
@@ -168,6 +210,41 @@ section h2 {
 .experience-item, .education-item {
     margin-bottom: 25px;
     position: relative;
+}
+
+/* Education Timeline layout */
+#formazione {
+    position: relative;
+}
+
+.education-item {
+    padding-left: 20px;
+}
+
+.education-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 5px;
+    bottom: -25px;
+    width: 2px;
+    background: var(--border-color);
+}
+
+.education-item:last-child::before {
+    bottom: 0;
+}
+
+.education-item::after {
+    content: '';
+    position: absolute;
+    left: -4px;
+    top: 6px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--accent-blue);
+    border: 2px solid var(--main-bg);
 }
 
 .item-header {
