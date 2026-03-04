@@ -38,13 +38,13 @@ body {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
-/* ---- Top bar (lang switcher + print btn) ---- */
+/* ---- Top bar (lang switcher) ---- */
 .top-bar {
     max-width: 1000px;
     margin: 0 auto;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
     padding: 16px 20px 8px;
 }
 
@@ -53,54 +53,26 @@ body {
     gap: 8px;
 }
 
-/* Print Button */
-.print-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    background: var(--primary-navy);
-    color: #fff;
-    border: none;
-    padding: 9px 20px;
-    border-radius: 6px;
-    font-family: var(--font-family);
-    font-size: 0.9rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background 0.25s ease, transform 0.15s ease;
-    box-shadow: 0 2px 8px rgba(26, 42, 108, 0.3);
-}
-
-.print-btn:hover {
-    background: var(--accent-blue);
-    transform: translateY(-1px);
-}
-
-.print-btn svg {
-    flex-shrink: 0;
-}
-
-/* Sidebar Styles */
+/* ---- Language Toggle Inputs (hidden) ---- */
 .lang-toggle {
     display: none;
 }
 
-.lang-controls {
-    text-align: center;
-    padding: 20px 0 10px 0;
-}
-
+/* ---- Language Button Pills ---- */
 .lang-btn {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
     font-size: 0.9rem;
     font-weight: 600;
     color: var(--text-muted);
     background: #e5e7eb;
-    padding: 6px 12px;
-    border-radius: 4px;
-    margin: 0 5px;
-    transition: all 0.3s ease;
+    padding: 7px 16px;
+    border-radius: 5px;
+    transition: all 0.25s ease;
+    min-width: 48px;
+    text-align: center;
 }
 
 .lang-btn:hover {
@@ -108,13 +80,59 @@ body {
     color: #fff;
 }
 
-#lang-it:checked ~ .lang-controls label[for="lang-it"],
-#lang-en:checked ~ .lang-controls label[for="lang-en"],
-#lang-fr:checked ~ .lang-controls label[for="lang-fr"] {
+/* Active tab highlight */
+#lang-it:checked ~ .top-bar .lang-controls label[for="lang-it"],
+#lang-en:checked ~ .top-bar .lang-controls label[for="lang-en"],
+#lang-fr:checked ~ .top-bar .lang-controls label[for="lang-fr"] {
     background: var(--primary-navy);
     color: #fff;
 }
 
+/* ---- Floating Print Button ---- */
+.print-btn {
+    position: fixed;
+    top: 18px;
+    right: 24px;
+    z-index: 999;
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    background: var(--primary-navy);
+    color: #fff;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 7px;
+    font-family: var(--font-family);
+    font-size: 0.88rem;
+    font-weight: 700;
+    cursor: pointer;
+    letter-spacing: 0.3px;
+    transition: background 0.25s ease, transform 0.15s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 14px rgba(26, 42, 108, 0.35);
+}
+
+.print-btn:hover {
+    background: var(--accent-blue);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(37, 99, 235, 0.4);
+}
+
+.print-btn svg {
+    flex-shrink: 0;
+}
+
+/* CSS-only language label: hide all, show matching one */
+.print-label-it,
+.print-label-en,
+.print-label-fr {
+    display: none;
+}
+
+#lang-it:checked ~ .print-btn .print-label-it { display: inline; }
+#lang-en:checked ~ .print-btn .print-label-en { display: inline; }
+#lang-fr:checked ~ .print-btn .print-label-fr { display: inline; }
+
+/* ---- Content Visibility by Language ---- */
 /* Visibility Control using data-lang */
 #lang-it:checked ~ .cv-wrapper [data-lang]:not([data-lang="it"]),
 #lang-en:checked ~ .cv-wrapper [data-lang]:not([data-lang="en"]),
@@ -122,7 +140,13 @@ body {
     display: none !important;
 }
 
-/* Sidebar Styles */
+/* ---- .no-print utility ---- */
+@media print {
+    .no-print {
+        display: none !important;
+    }
+}
+
 .sidebar {
     background-color: var(--primary-navy);
     color: var(--sidebar-text);
