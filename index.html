@@ -29,19 +29,6 @@
     <input type="radio" name="lang-switch" id="lang-en" class="lang-toggle">
     <input type="radio" name="lang-switch" id="lang-fr" class="lang-toggle">
 
-    <!-- Floating Print Button (CSS-driven language label) -->
-    <button class="print-btn no-print" onclick="window.print()" aria-label="Print">
-        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none"
-            stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="6 9 6 2 18 2 18 9" />
-            <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2" />
-            <rect x="6" y="14" width="12" height="8" />
-        </svg>
-        <span class="print-label-it">Stampa CV</span>
-        <span class="print-label-en">Print CV</span>
-        <span class="print-label-fr">Imprimer le CV</span>
-    </button>
-
     <div class="top-bar no-print">
         <div class="lang-controls">
             <label for="lang-it" class="lang-btn">IT</label>
@@ -68,6 +55,8 @@
                             Italie</span></p>
                     <p>📞 <a href="tel:+393534875880" style="color: inherit; text-decoration: none;">+39 353 487
                             5880</a></p>
+                    <p>✉️ <a href="mailto:abdelaziz.bougrich@gmail.com"
+                            style="color: inherit; text-decoration: none;">abdelaziz.bougrich@gmail.com</a></p>
                     <p>🔗 <a href="https://www.linkedin.com/in/abdelaziz-bougrich-a13671155/" target="_blank"
                             style="color: inherit; text-decoration: none; word-break: break-all; font-size: 0.78rem;">linkedin.com/in/<br>abdelaziz-bougrich</a>
                     </p>
@@ -433,15 +422,15 @@
 
     <!-- Floating CTA Action Bar -->
     <div class="cta-bar no-print">
-        <a class="cta-btn cta-pdf" onclick="window.print()" href="#" role="button" aria-label="Download PDF">
+        <a class="cta-btn cta-print" onclick="window.print()" href="#" role="button" aria-label="Print CV">
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-                <polyline points="7 10 12 15 17 10" />
-                <line x1="12" y1="15" x2="12" y2="3" />
+                <polyline points="6 9 6 2 18 2 18 9" />
+                <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2" />
+                <rect x="6" y="14" width="12" height="8" />
             </svg>
-            <span data-lang="it">Scarica PDF</span><span data-lang="en">Download PDF</span><span
-                data-lang="fr">Télécharger</span>
+            <span data-lang="it">Stampa CV</span><span data-lang="en">Print CV</span><span
+                data-lang="fr">Imprimer</span>
         </a>
         <a class="cta-btn cta-email"
             href="mailto:abdelaziz.bougrich@email.com?subject=Candidatura%20-%20Abdelaziz%20Bougrich"
