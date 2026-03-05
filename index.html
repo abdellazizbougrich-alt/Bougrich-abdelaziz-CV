@@ -20,6 +20,8 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Abdelaziz Bougrich — CV Professionale">
     <meta name="twitter:description" content="5+ anni nelle vendite tecniche. Disponibile a Bologna, Italia.">
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%231a2a6c'/><text x='16' y='22' font-family='sans-serif' font-size='13' font-weight='700' fill='white' text-anchor='middle'>AB</text></svg>">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -61,18 +63,6 @@
                 </div>
             </div>
 
-            <!-- Badge Visibility Toggle -->
-            <div class="badge-toggle-wrap no-print">
-                <button class="badge-toggle-btn" id="badgeToggle" title="Mostra / Nascondi badge disponibilità"
-                    aria-label="Toggle availability badge">
-                    <!-- Eye icon -->
-                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                        <circle cx="12" cy="12" r="3"></circle>
-                    </svg>
-                </button>
-            </div>
 
             <div class="sidebar-section">
                 <h2 data-lang="it">Contatti</h2>
@@ -652,25 +642,6 @@
                 closeModal();
             }
         });
-
-        // --- 3. Availability Badge Toggle (localStorage) ---
-        (function () {
-            const badge = document.getElementById('availabilityBadge');
-            const btn = document.getElementById('badgeToggle');
-            if (!badge || !btn) return;
-
-            // Restore saved preference on page load
-            if (localStorage.getItem('cvBadgeHidden') === 'true') {
-                badge.classList.add('badge-hidden');
-                btn.classList.add('is-hidden');
-            }
-
-            btn.addEventListener('click', function () {
-                const nowHidden = badge.classList.toggle('badge-hidden');
-                btn.classList.toggle('is-hidden', nowHidden);
-                localStorage.setItem('cvBadgeHidden', String(nowHidden));
-            });
-        })();
     </script>
 </body>
 

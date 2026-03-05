@@ -216,7 +216,9 @@ header h1 {
     line-height: 1.05;
     letter-spacing: 3px;
     text-transform: uppercase;
-    white-space: nowrap;
+    white-space: nowrap;          /* desktop: one line  */
+    overflow: hidden;
+    text-overflow: ellipsis;
     margin-bottom: 10px;
 }
 
@@ -478,6 +480,7 @@ section h2 {
 @media screen and (max-width: 850px) {
     body {
         background-color: #f3f4f6;
+        overflow-x: hidden;          /* prevent horizontal scroll */
     }
 
     /* Language bar wraps nicely */
@@ -497,26 +500,46 @@ section h2 {
     }
 
     .sidebar {
-        padding: 30px 40px;
-        /* Side bar draws its own full-width band */
+        padding: 30px 24px;
         border-radius: 0;
+        text-align: center;         /* centre all sidebar text on mobile */
+    }
+
+    /* Centre sidebar lists */
+    .skills-list,
+    .languages-list {
+        justify-content: center;
+    }
+
+    /* Contact info: left-align for readability */
+    .contact-info {
+        text-align: left;
     }
 
     /* Centre the headshot */
     .photo-container {
         width: 140px;
         height: 140px;
-        margin: 0 auto 24px;
+        margin: 0 auto 16px;
+    }
+
+    /* Centre the availability badge */
+    .availability-badge {
+        margin: 0 auto 20px;
     }
 
     /* Main content breathes */
     .main-content {
-        padding: 30px 30px;
+        padding: 30px 24px;
     }
 
-    /* Slightly smaller heading so name never overflows */
+    /* Name: allow wrap + tighter letter-spacing on tablet */
     header h1 {
-        font-size: 2.2rem;
+        font-size: 1.9rem;
+        letter-spacing: 2px;
+        white-space: normal;
+        overflow: visible;
+        text-overflow: clip;
     }
     header .subtitle {
         font-size: 1.05rem;
@@ -524,6 +547,7 @@ section h2 {
 
     section h2 {
         font-size: 1.2rem;
+        justify-content: flex-start;
     }
 
     /* Experience date wraps rather than overlapping */
@@ -565,10 +589,13 @@ section h2 {
         padding: 24px 18px;
     }
 
-    /* Hero name fits any phone */
+    /* Hero name — wrap naturally, minimal letter-spacing on phones */
     header h1 {
-        font-size: 1.75rem;
-        line-height: 1.1;
+        font-size: 1.5rem;
+        line-height: 1.15;
+        letter-spacing: 1px;
+        white-space: normal;
+        overflow-wrap: break-word;
     }
     header .subtitle {
         font-size: 0.95rem;
@@ -616,12 +643,6 @@ section h2 {
         min-width: 56px;
         text-align: center;
         border-radius: 6px;
-    }
-
-    /* GDPR footer small */
-    .gdpr-footer {
-        margin-top: 30px;
-        font-size: 0.7rem;
     }
 
     /* Letter specifics */
@@ -974,40 +995,6 @@ body {
     font-weight: 400;
 }
 
-/* ── Toggle wrap ── */
-.badge-toggle-wrap {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-}
-
-/* ── Toggle button (tiny eye icon circle) ── */
-.badge-toggle-btn {
-    background: rgba(255, 255, 255, 0.07);
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    border-radius: 50%;
-    width: 24px;
-    height: 24px;
-    color: rgba(255, 255, 255, 0.38);
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-    transition: all 0.25s ease;
-}
-
-.badge-toggle-btn:hover {
-    background: rgba(255, 255, 255, 0.16);
-    color: rgba(255, 255, 255, 0.85);
-    transform: scale(1.15);
-}
-
-/* Dimmed state when badge is hidden */
-.badge-toggle-btn.is-hidden {
-    color: rgba(255, 255, 255, 0.18);
-    opacity: 0.55;
-}
 
 /* ── Mobile: compact sizing ── */
 @media screen and (max-width: 850px) {
