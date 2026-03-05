@@ -210,12 +210,13 @@ header {
 
 header h1 {
     font-family: var(--font-display);
-    font-size: 3rem;
+    font-size: 2.2rem;
     font-weight: 700;
     color: var(--primary-navy);
     line-height: 1.05;
     letter-spacing: 3px;
     text-transform: uppercase;
+    white-space: nowrap;
     margin-bottom: 10px;
 }
 
