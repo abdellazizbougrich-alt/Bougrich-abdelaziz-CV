@@ -882,6 +882,144 @@ body {
 
 
 /* ============================================================
+   AVAILABILITY BADGE
+   ============================================================ */
+
+/* Blinking green dot */
+@keyframes dotBlink {
+    0%, 100% { opacity: 1; }
+    50%       { opacity: 0.3; }
+}
+
+/* Subtle pulse ring — desktop only, fires after slide-in settles */
+@keyframes badgePulse {
+    0%, 100% { box-shadow: 0 0 0 0   rgba(46, 125, 50, 0.55); }
+    60%       { box-shadow: 0 0 0 8px rgba(46, 125, 50, 0);    }
+}
+
+.availability-badge {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(46, 125, 50, 0.18);
+    border: 1px solid rgba(76, 175, 80, 0.45);
+    border-radius: 30px;
+    padding: 7px 15px;
+    margin: 0 auto 8px;
+    width: fit-content;
+    max-width: 92%;
+    max-height: 80px;          /* needed for collapse transition */
+    overflow: hidden;
+    /* Smooth show / hide */
+    transition:
+        opacity        0.4s ease,
+        transform      0.35s ease,
+        max-height     0.45s ease,
+        padding-top    0.35s ease,
+        padding-bottom 0.35s ease,
+        margin-bottom  0.35s ease,
+        border-color   0.3s ease;
+}
+
+/* Pulse only on desktop, starts after 1.2s (lets slide-in finish first) */
+@media screen and (min-width: 851px) {
+    .availability-badge:not(.badge-hidden) {
+        animation: badgePulse 3s ease-in-out 1.2s infinite;
+    }
+}
+
+/* ── Collapsed / hidden state ── */
+.availability-badge.badge-hidden {
+    opacity: 0;
+    transform: translateY(-6px);
+    max-height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border-color: transparent;
+    pointer-events: none;
+}
+
+/* ── Dot ── */
+.badge-dot {
+    width: 8px;
+    height: 8px;
+    min-width: 8px;
+    border-radius: 50%;
+    background: #4caf50;
+    animation: dotBlink 2s ease-in-out infinite;
+}
+
+/* ── Text block ── */
+.badge-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    line-height: 1.3;
+}
+
+.badge-status {
+    display: block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #a5d6a7;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.badge-notice {
+    display: block;
+    font-size: 0.67rem;
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 400;
+}
+
+/* ── Toggle wrap ── */
+.badge-toggle-wrap {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+/* ── Toggle button (tiny eye icon circle) ── */
+.badge-toggle-btn {
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    color: rgba(255, 255, 255, 0.38);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    transition: all 0.25s ease;
+}
+
+.badge-toggle-btn:hover {
+    background: rgba(255, 255, 255, 0.16);
+    color: rgba(255, 255, 255, 0.85);
+    transform: scale(1.15);
+}
+
+/* Dimmed state when badge is hidden */
+.badge-toggle-btn.is-hidden {
+    color: rgba(255, 255, 255, 0.18);
+    opacity: 0.55;
+}
+
+/* ── Mobile: compact sizing ── */
+@media screen and (max-width: 850px) {
+    .availability-badge {
+        padding: 5px 13px;
+        gap: 8px;
+    }
+    .badge-status { font-size: 0.68rem; }
+    .badge-notice { font-size: 0.62rem; }
+}
+
+/* ============================================================
    DEGREES MODAL GALLERY
    ============================================================ */
 /* Trigger Button - Individual Education Item */

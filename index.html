@@ -44,6 +44,36 @@
                 <img src="profile-placeholder.jpg" alt="Abdelaziz Bougrich" class="profile-photo">
             </div>
 
+            <!-- Availability Badge -->
+            <div class="availability-badge no-print" id="availabilityBadge">
+                <span class="badge-dot"></span>
+                <div class="badge-text">
+                    <strong class="badge-status">
+                        <span data-lang="it">Disponibile per nuove opportunità</span>
+                        <span data-lang="en">Open to Work</span>
+                        <span data-lang="fr">Ouvert aux opportunités</span>
+                    </strong>
+                    <span class="badge-notice">
+                        <span data-lang="it">Disponibilità immediata</span>
+                        <span data-lang="en">Available Immediately</span>
+                        <span data-lang="fr">Disponible immédiatement</span>
+                    </span>
+                </div>
+            </div>
+
+            <!-- Badge Visibility Toggle -->
+            <div class="badge-toggle-wrap no-print">
+                <button class="badge-toggle-btn" id="badgeToggle" title="Mostra / Nascondi badge disponibilità"
+                    aria-label="Toggle availability badge">
+                    <!-- Eye icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                        <circle cx="12" cy="12" r="3"></circle>
+                    </svg>
+                </button>
+            </div>
+
             <div class="sidebar-section">
                 <h2 data-lang="it">Contatti</h2>
                 <h2 data-lang="en">Contact</h2>
@@ -622,6 +652,25 @@
                 closeModal();
             }
         });
+
+        // --- 3. Availability Badge Toggle (localStorage) ---
+        (function () {
+            const badge = document.getElementById('availabilityBadge');
+            const btn = document.getElementById('badgeToggle');
+            if (!badge || !btn) return;
+
+            // Restore saved preference on page load
+            if (localStorage.getItem('cvBadgeHidden') === 'true') {
+                badge.classList.add('badge-hidden');
+                btn.classList.add('is-hidden');
+            }
+
+            btn.addEventListener('click', function () {
+                const nowHidden = badge.classList.toggle('badge-hidden');
+                btn.classList.toggle('is-hidden', nowHidden);
+                localStorage.setItem('cvBadgeHidden', String(nowHidden));
+            });
+        })();
     </script>
 </body>
 
