@@ -645,6 +645,32 @@ section h2 {
     }
 }
 
+/* === Header Slide-In Animations === */
+
+/* Photo : glisse depuis la gauche + fade-in */
+@keyframes slideInFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-60px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Nom & Titre : glissent depuis la droite + fade-in */
+@keyframes slideInFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(60px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 @media screen {
     .cv-wrapper {
         animation: fadeInUp 0.55s ease both;
@@ -654,9 +680,30 @@ section h2 {
         animation: fadeInUp 0.55s 0.05s ease both;
     }
 
+    /* Photo de profil — slide depuis la gauche */
+    .photo-container {
+        animation: slideInFromLeft 0.9s ease-out both;
+    }
+
+    /* Nom (h1) — slide depuis la droite */
+    .main-content > header h1 {
+        animation: slideInFromRight 0.9s ease-out both;
+    }
+
+    /* Titre/Subtitle — slide depuis la droite avec léger délai */
+    .main-content > header .subtitle {
+        animation: slideInFromRight 0.9s 0.12s ease-out both;
+    }
+
     .main-content > header,
     .main-content > section {
         animation: fadeInUp 0.5s ease both;
+    }
+
+    /* Override : le header lui-même n'anime plus globalement
+       car ses enfants ont leurs propres animations */
+    .main-content > header {
+        animation: none;
     }
 
     .main-content > section:nth-child(2) { animation-delay: 0.10s; }
