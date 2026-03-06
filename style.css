@@ -210,56 +210,8 @@ body {
     opacity: 0.9;
 }
 
-/* Contact Info in Main Content Area */
-#contatti {
-    margin-top: 15px;
-    margin-bottom: 35px;
-    padding: 18px 0;
-    border-top: 1px solid rgba(0,0,0,0.04);
-    border-bottom: 1px solid rgba(0,0,0,0.04);
-}
 
-#contatti h2 {
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    color: var(--primary-navy);
-    margin-bottom: 15px;
-}
 
-#contatti h2::after {
-    display: none; /* remove sidebar style underline */
-}
-
-.dark-text-contacts {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px 30px;
-}
-
-.dark-text-contacts p {
-    margin: 0 !important;
-    font-size: 0.85rem;
-    color: #555;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.dark-text-contacts .contact-icon {
-    color: var(--accent); /* blue icons */
-    opacity: 0.8;
-}
-
-.dark-text-contacts a {
-    color: inherit;
-    text-decoration: none;
-    transition: color 0.2s;
-}
-
-.dark-text-contacts a:hover {
-    color: var(--accent);
-}
 
 /* Minimalist Bullet Skills List */
 .skills-bullet-list {
@@ -689,24 +641,19 @@ section h2::after {
 }
 
 /* ============================================================
-   RESPONSIVE — TABLET  (max-width: 850px)
+   RESPONSIVE — TABLET / MOBILE  (max-width: 850px)
    ============================================================ */
 @media screen and (max-width: 850px) {
     body {
         background-color: #f3f4f6;
-        overflow-x: hidden;          /* prevent horizontal scroll */
+        overflow-x: hidden;
     }
 
-    /* Language bar wraps nicely */
-    .lang-controls {
-        padding: 16px 0 8px;
-    }
-    .lang-btn {
-        padding: 8px 18px;
-        font-size: 0.95rem;
-    }
+    /* Language bar */
+    .lang-controls { padding: 16px 0 8px; }
+    .lang-btn { padding: 8px 18px; font-size: 0.95rem; }
 
-    /* Stack and reorder contents seamlessly */
+    /* ---- Core trick: flatten both sidebar & main into cv-wrapper ---- */
     .cv-wrapper {
         display: flex;
         flex-direction: column;
@@ -716,10 +663,12 @@ section h2::after {
     }
 
     .sidebar, .main-content {
-        display: contents;
+        display: contents; /* children become direct flex children of cv-wrapper */
     }
 
-    /* 1. Profile Picture First */
+    /* ---- Order each piece ---- */
+
+    /* 1. Profile photo */
     .photo-container {
         order: 1;
         width: 140px;
@@ -727,18 +676,18 @@ section h2::after {
         margin: 0 auto 16px;
     }
 
-    /* 2. Availability Badge just below photo */
+    /* 2. Availability badge */
     .availability-badge {
         order: 2;
         margin: 0 auto 16px;
     }
 
-    /* 3. Name Header */
+    /* 3. Name / title header */
     .main-content header {
         order: 3;
         padding: 0 24px;
         text-align: center;
-        margin-bottom: 24px;
+        margin-bottom: 20px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -754,69 +703,64 @@ section h2::after {
         margin-bottom: 6px;
     }
 
-    header .subtitle {
-        font-size: 1.05rem;
-        justify-content: center;
-    }
+    header .subtitle { font-size: 1.05rem; justify-content: center; }
+    header::after { left: 50%; transform: translateX(-50%); }
 
-    header::after {
-        left: 50%;
-        transform: translateX(-50%);
-    }
-
-    /* 4. Contact Section */
+    /* 4. Contact info — from sidebar */
     #contatti {
         order: 4;
-        padding: 0 24px;
-        margin-bottom: 30px;
-        border: none; /* items stack vertically anyway on mobile */
+        padding: 16px 24px;
+        margin-bottom: 20px;
+        border-top: 1px solid var(--border-color);
+        border-bottom: 1px solid var(--border-color);
+        /* reset sidebar-section styles */
+        margin-top: 0;
     }
 
-    .dark-text-contacts {
-        flex-direction: column;
-        gap: 12px;
+    #contatti h2 {
+        font-size: 1rem;
+        letter-spacing: 1.5px;
+        margin-bottom: 14px;
     }
 
-    .contact-info {
-        text-align: left;
-    }
+    .contact-info { text-align: left; }
 
     /* 5. Professional Profile */
-    .main-content #profilo {
+    #profilo {
         order: 5;
         padding: 0 24px;
         margin-bottom: 40px;
     }
 
     /* 6. Experience */
-    .main-content #esperienza {
+    #esperienza {
         order: 6;
         padding: 0 24px;
         margin-bottom: 40px;
     }
 
     /* 7. Education */
-    .main-content #formazione {
+    #formazione {
         order: 7;
         padding: 0 24px;
         margin-bottom: 40px;
     }
 
-    /* 8. Skills/Competenze */
-    .main-content #competenze {
+    /* 8. Skills — from sidebar */
+    #competenze {
         order: 8;
         padding: 0 24px;
         margin-bottom: 40px;
     }
 
-    /* 9. Languages/Lingue */
-    .main-content #lingue {
+    /* 9. Languages — from sidebar */
+    #lingue {
         order: 9;
         padding: 0 24px;
         margin-bottom: 40px;
     }
 
-    /* 10. Signature at the very bottom */
+    /* 10. Signature */
     .cv-signature {
         order: 10;
         padding: 0 24px 30px;
@@ -829,16 +773,9 @@ section h2::after {
         justify-content: flex-start;
     }
 
-    /* Experience date wraps rather than overlapping */
-    .item-header {
-        flex-wrap: wrap;
-        gap: 4px;
-    }
-    
-    .item-date {
-        width: 100%;
-        font-size: 0.8rem;
-    }
+    /* Experience date wraps cleanly */
+    .item-header { flex-wrap: wrap; gap: 4px; }
+    .item-date { width: 100%; font-size: 0.8rem; }
 }
 
 /* ============================================================
