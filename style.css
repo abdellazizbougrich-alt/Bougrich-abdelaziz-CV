@@ -1,18 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@300;400;500;600;700;800&display=swap');
 
 :root {
-    /* Color Palette */
-    --primary-navy: #1a2a6c;
-    --sidebar-text: #ffffff;
-    --main-bg: #ffffff;
-    --text-dark: #1f2937;
-    --text-muted: #4b5563;
-    --accent-blue: #2563eb;
-    --border-color: #e5e7eb;
-    
+    /* Core Palette */
+    --primary-navy:   #152350;           /* richer, deeper navy */
+    --sidebar-text:   #ffffff;
+    --main-bg:        #ffffff;
+    --text-dark:      #111827;           /* darker for crisper contrast */
+    --text-muted:     #4b5563;
+    --accent-blue:    #3b82f6;           /* more vibrant blue */
+    --accent-gold:    #c9a84c;           /* champagne gold — luxury accent */
+    --border-color:   #e5e7eb;
+
     /* Typography */
-    --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    --font-display: 'Montserrat', 'Inter', sans-serif;
+    --font-family:   'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-display:  'Montserrat', 'Inter', sans-serif;
+
+    /* Sidebar */
+    --sidebar-bg: #ffffff;
+    --sidebar-text: var(--text-dark);
 }
 
 * {
@@ -34,9 +39,14 @@ body {
     margin: 40px auto;
     background: var(--main-bg);
     display: grid;
-    grid-template-columns: 320px 1fr;
-    min-height: 297mm; /* Standard A4 height */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    grid-template-columns: 300px 1fr;
+    min-height: 297mm;
+    box-shadow:
+        0 4px 6px  rgba(0,0,0,0.04),
+        0 12px 30px rgba(0,0,0,0.10),
+        0 30px 60px rgba(0,0,0,0.08);
+    border-top: 4px solid var(--accent-gold);
+    overflow: hidden;           /* clips sidebar gradient cleanly */
 }
 
 /* ---- Top bar (lang switcher) ---- */
@@ -108,7 +118,7 @@ body {
 .contact-icon {
     flex-shrink: 0;
     margin-top: 2px;
-    color: var(--accent-blue);
+    color: var(--primary-navy);
 }
 
 
@@ -135,19 +145,24 @@ body {
 }
 
 .sidebar {
-    background-color: var(--primary-navy);
+    background: var(--sidebar-bg);
     color: var(--sidebar-text);
-    padding: 40px 30px;
+    padding: 40px 28px;
+    border-right: 1px solid var(--border-color);
 }
 
 .photo-container {
-    width: 170px;
-    height: 170px;
-    margin: 0 auto 30px;
+    width: 160px;
+    height: 160px;
+    margin: 0 auto 28px;
     border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.15);
-    padding: 6px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    /* Triple-ring effect adjusted for white background */
+    box-shadow:
+        0 0 0 3px var(--accent-gold),
+        0 0 0 6px #ffffff,
+        0 8px 20px rgba(0,0,0,0.12);
+    background: #f9fafb;
+    padding: 4px;
 }
 
 .profile-photo {
@@ -163,13 +178,27 @@ body {
 }
 
 .sidebar-section h2 {
-    font-size: 1rem;
+    font-size: 0.8rem;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
     margin-bottom: 20px;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
     padding-bottom: 10px;
     font-weight: 700;
+    color: var(--primary-navy);
+    border-bottom: 1px solid var(--border-color);
+    position: relative;
+}
+
+/* Gold underline accent on sidebar section titles */
+.sidebar-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 24px;
+    height: 2px;
+    background: var(--accent-gold);
+    border-radius: 1px;
 }
 
 .contact-info p {
@@ -181,19 +210,79 @@ body {
     opacity: 0.9;
 }
 
-.skills-list, .languages-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
+/* Minimalist Bullet Skills List */
+.skills-bullet-list {
     list-style: none;
+    padding-left: 0;
+    margin-top: 8px;
+    margin-bottom: 25px;
 }
 
-.skill-pill {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 4px 12px;
-    border-radius: 4px;
-    font-size: 0.8rem;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+.skills-bullet-list li {
+    position: relative;
+    padding-left: 14px;
+    margin-bottom: 7px;
+    font-size: 0.85rem;
+    color: var(--primary-navy);
+    line-height: 1.4;
+    font-weight: 500;
+}
+
+/* Custom dark square bullet point */
+.skills-bullet-list li::before {
+    content: '▪';
+    position: absolute;
+    left: 0;
+    top: -1px;
+    color: #4b5563; /* sophisticated dark gray bullet */
+    font-size: 0.95rem; /* slightly larger bullet for presence */
+}
+
+/* Language Skill Progress Bars */
+.lang-skill-group {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.lang-item {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.lang-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.lang-name {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--primary-navy);
+    letter-spacing: 0.5px;
+}
+
+.lang-level {
+    font-size: 0.7rem;
+    color: #6b7280;
+    font-weight: 500;
+}
+
+.lang-bar-bg {
+    width: 100%;
+    height: 4px;
+    background: #e5e7eb;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.lang-bar-fill {
+    height: 100%;
+    background: var(--accent-gold);
+    border-radius: 2px;
+    transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Main Content Styles */
@@ -203,29 +292,72 @@ body {
 }
 
 header {
-    margin-bottom: 40px;
-    border-bottom: 4px solid var(--primary-navy);
-    padding-bottom: 20px;
+    margin-bottom: 36px;
+    padding-bottom: 22px;
+    border-bottom: 1px solid var(--border-color);
+    position: relative;
+}
+
+/* Gold accent stripe under header */
+header::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: var(--accent-gold);
+    border-radius: 2px;
 }
 
 header h1 {
     font-family: var(--font-display);
-    font-size: 2.2rem;
-    font-weight: 700;
-    color: var(--primary-navy);
+    font-size: 2.4rem;
+    color: #111111;               /* Pure professional black */
     line-height: 1.05;
-    letter-spacing: 3px;
     text-transform: uppercase;
-    white-space: nowrap;          /* desktop: one line  */
+    white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
+    display: flex;
+    gap: 12px;
+}
+
+header h1 .first-name {
+    /* Elegant light weight */
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+header h1 .last-name {
+    /* Elegant light weight to match the first name */
+    font-weight: 300;
+    letter-spacing: 2px;
 }
 
 header .subtitle {
-    font-size: 1.25rem;
+    font-family: var(--font-family);
+    font-size: 1.05rem;
     color: var(--text-muted);
-    font-weight: 500;
+    font-weight: 400;
+    font-style: italic;
+    letter-spacing: 0.3px;
+    padding-left: 2px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Small gold dash before subtitle */
+header .subtitle::before {
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 2px;
+    background: var(--accent-gold);
+    border-radius: 1px;
+    flex-shrink: 0;
 }
 
 section {
@@ -233,15 +365,30 @@ section {
 }
 
 section h2 {
-    font-size: 1.4rem;
+    font-size: 0.8rem;
     color: var(--primary-navy);
     text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 20px;
+    letter-spacing: 3px;
+    margin-bottom: 24px;
+    padding-bottom: 10px;
     display: flex;
     align-items: center;
     gap: 12px;
     font-weight: 700;
+    position: relative;
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* Gold underline accent on section titles */
+section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 32px;
+    height: 2px;
+    background: var(--accent-gold);
+    border-radius: 1px;
 }
 
 .profile-grid {
@@ -251,9 +398,10 @@ section h2 {
 }
 
 .profile-variant {
-    background: #f9fafb;
+    background: linear-gradient(to right, rgba(59, 130, 246, 0.05), rgba(59, 130, 246, 0.01));
     padding: 20px;
-    border-left: 4px solid var(--primary-navy);
+    border-left: 3px solid var(--accent-blue);
+    border-radius: 0 4px 4px 0;
 }
 
 .profile-variant em {
@@ -343,6 +491,21 @@ section h2 {
 
 .item-content li {
     margin-bottom: 5px;
+}
+
+/* Elegant Signature at bottom */
+.cv-signature {
+    margin-top: 60px;
+    padding-top: 30px;
+    border-top: 1px solid var(--border-color);
+    text-align: right;
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.8rem;
+    color: #111111;
+    line-height: 1;
+    padding-right: 20px;
+    transform: rotate(-3deg);
+    opacity: 0.85;
 }
 
 .gdpr-footer {
@@ -983,7 +1146,7 @@ body {
     display: block;
     font-size: 0.72rem;
     font-weight: 700;
-    color: #a5d6a7;
+    color: #1b5e20;
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
@@ -991,8 +1154,8 @@ body {
 .badge-notice {
     display: block;
     font-size: 0.67rem;
-    color: rgba(255, 255, 255, 0.7);
-    font-weight: 400;
+    color: #2e7d32;
+    font-weight: 500;
 }
 
 
