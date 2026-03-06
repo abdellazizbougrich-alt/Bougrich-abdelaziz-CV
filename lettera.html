@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lettera di Presentazione | Abdelaziz Bougrich</title>
+    <title>Lettera di Presentazione — Abdelaziz Bougrich</title>
     <!-- SEO & Accessibility -->
     <meta name="description" content="Lettera di Presentazione professionale di Abdelaziz Bougrich.">
     <link rel="icon" type="image/svg+xml"
@@ -19,16 +19,16 @@
     <input type="radio" name="lang-switch" id="lang-fr" class="lang-toggle">
 
     <!-- Floating Print Button (CSS-driven language label) -->
-    <button class="print-btn no-print" onclick="window.print()" aria-label="Print">
+    <button class="print-btn no-print" onclick="printLetter()" aria-label="Print">
         <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none"
             stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
             <polyline points="6 9 6 2 18 2 18 9" />
             <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2" />
             <rect x="6" y="14" width="12" height="8" />
         </svg>
-        <span class="print-label-it">Stampa Lettera</span>
-        <span class="print-label-en">Print Letter</span>
-        <span class="print-label-fr">Imprimer la Lettre</span>
+        <span class="print-label-it">Stampa / PDF</span>
+        <span class="print-label-en">Print / PDF</span>
+        <span class="print-label-fr">Imprimer / PDF</span>
     </button>
 
     <div class="top-bar no-print">
@@ -180,6 +180,15 @@
             </section>
         </main>
     </div>
+
+    <script>
+        function printLetter() {
+            const orig = document.title;
+            document.title = 'Lettera_Presentazione_Abdelaziz_Bougrich';
+            window.print();
+            setTimeout(() => { document.title = orig; }, 2000);
+        }
+    </script>
 
 </body>
 

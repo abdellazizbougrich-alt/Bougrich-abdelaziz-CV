@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curriculum Vitae | Abdelaziz Bougrich</title>
+    <title>CV — Abdelaziz Bougrich | Technical Sales Professional</title>
     <!-- SEO & Accessibility -->
     <meta name="description"
         content="CV professionale di Abdelaziz Bougrich — Professionista Tecnico-Commerciale con 5+ anni di esperienza. Basato a Bologna, Italia.">
@@ -536,7 +536,7 @@
 
     <!-- Floating CTA Action Bar -->
     <div class="cta-bar no-print">
-        <a class="cta-btn cta-print" onclick="window.print()" href="#" role="button" aria-label="Print CV">
+        <a class="cta-btn cta-print" onclick="printCV()" href="#" role="button" aria-label="Stampa CV">
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <polyline points="6 9 6 2 18 2 18 9" />
@@ -546,7 +546,8 @@
             <span data-lang="it">Stampa CV</span><span data-lang="en">Print CV</span><span
                 data-lang="fr">Imprimer</span>
         </a>
-        <a class="cta-btn cta-pdf" onclick="window.print()" href="#" role="button" aria-label="Download PDF">
+        <a class="cta-btn cta-pdf" onclick="downloadPDF()" href="#" role="button" aria-label="Scarica PDF"
+            title="Salva come PDF — scegli &lsquo;Salva come PDF&rsquo; nella finestra di stampa">
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
@@ -591,6 +592,22 @@
 
     <!-- Mobile Scroll Behavior Script -->
     <script>
+        // ---- Print / PDF helpers ----
+        function printCV() {
+            window.print();
+        }
+
+        function downloadPDF() {
+            // Set a clean title so the browser's print-to-PDF dialog
+            // suggests a professional filename.
+            const originalTitle = document.title;
+            document.title = 'CV_Abdelaziz_Bougrich';
+            window.print();
+            // Restore original title after dialog closes
+            setTimeout(() => { document.title = originalTitle; }, 2000);
+        }
+
+        // ---- Scroll hide/show the CTA bar ----
         let lastScrollTop = 0;
         const ctaBar = document.querySelector('.cta-bar');
 

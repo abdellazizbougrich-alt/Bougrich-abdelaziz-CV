@@ -567,7 +567,7 @@ section h2::after {
 }
 
 @media print {
-    /* Disable all animations for print so elements aren't trapped at opacity: 0 */
+    /* Disable all animations */
     *, *::before, *::after {
         animation: none !important;
         transition: none !important;
@@ -579,7 +579,9 @@ section h2::after {
     .top-bar,
     .lang-controls,
     .print-btn,
-    .cta-bar {
+    .cta-bar,
+    .availability-badge,
+    .btn-view-degree {
         display: none !important;
     }
 
@@ -589,55 +591,120 @@ section h2::after {
         padding: 0;
     }
 
-    /* Layout for print */
+    /* === CRITICAL: Force desktop grid layout for print === */
+    /* Reset any mobile display:contents that may be active */
     .cv-wrapper {
-        margin: 0;
-        box-shadow: none;
-        width: 100%;
-        display: flex !important;
-        background: #fff;
+        display: grid !important;
+        grid-template-columns: 260px 1fr !important;
+        margin: 0 !important;
+        box-shadow: none !important;
+        width: 100% !important;
+        min-height: 297mm;
     }
 
-    /* Sidebar takes fixed width, main takes the rest */
+    /* Sidebar: restore normal block flow (undo display:contents) — WHITE like screen */
     .sidebar {
-        width: 260px;
-        flex-shrink: 0;
-        background-color: var(--primary-navy) !important;
+        display: block !important;
+        width: 260px !important;
+        flex-shrink: 0 !important;
+        padding: 36px 24px !important;
+        background-color: #ffffff !important;
+        color: var(--text-dark) !important;
+        border-right: 1px solid var(--border-color) !important;
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
-        color: #ffffff !important;
-        min-height: 100vh;
+        min-height: 100%;
     }
 
+    /* Sidebar text: keep dark navy */
+    .sidebar * {
+        color: var(--text-dark) !important;
+    }
+
+    /* Section headings keep navy color */
+    .sidebar .sidebar-section h2 {
+        color: var(--primary-navy) !important;
+    }
+
+    /* Keep accent gold for soft-skill subheadings */
+    .sidebar strong[style*="accent-gold"] {
+        color: var(--accent-gold) !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    /* Contact icons: navy */
+    .sidebar .contact-icon {
+        color: var(--primary-navy) !important;
+    }
+
+    /* Language bars: light grey track, navy fill */
+    .lang-bar-bg {
+        background: #e5e7eb !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+    .lang-bar-fill {
+        background: var(--primary-navy) !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    /* Main content: restore normal block flow */
     .main-content {
-        flex: 1;
-        padding: 36px 40px;
+        display: block !important;
+        flex: 1 !important;
+        padding: 36px 40px !important;
+        order: unset !important;
     }
 
-
-
-    /* Force pill colours */
-    .skill-pill {
-        background: rgba(255,255,255,0.15) !important;
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
-        border: 1px solid rgba(255,255,255,0.25);
+    /* Reset ALL order properties set by mobile CSS */
+    .photo-container,
+    .availability-badge,
+    .main-content header,
+    #contatti, #profilo, #esperienza,
+    #formazione, #competenze, #lingue,
+    .cv-signature {
+        order: unset !important;
     }
 
-    /* Force profile-variant background */
+    /* Photo in sidebar: restore circular style */
+    .photo-container {
+        width: 140px !important;
+        height: 140px !important;
+        margin: 0 auto 24px !important;
+        display: block !important;
+    }
+
+    .profile-photo {
+        border-radius: 50% !important;
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+    }
+
+    /* Profile variant background */
     .profile-variant {
         background-color: #f3f4f6 !important;
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
     }
 
-    /* Shrink typography just a touch for A4 fit */
+    /* Shrink h1 for A4 fit */
     header h1 {
         font-size: 2.4rem;
     }
 
-
-
+    /* Sidebar section headings — navy color, gold underline accent */
+    .sidebar-section h2 {
+        color: var(--primary-navy) !important;
+        border-bottom-color: var(--border-color) !important;
+    }
+    .sidebar-section h2::after {
+        background: var(--accent-gold) !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
 }
 
 /* ============================================================
