@@ -210,6 +210,57 @@ body {
     opacity: 0.9;
 }
 
+/* Contact Info in Main Content Area */
+#contatti {
+    margin-top: 15px;
+    margin-bottom: 35px;
+    padding: 18px 0;
+    border-top: 1px solid rgba(0,0,0,0.04);
+    border-bottom: 1px solid rgba(0,0,0,0.04);
+}
+
+#contatti h2 {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--primary-navy);
+    margin-bottom: 15px;
+}
+
+#contatti h2::after {
+    display: none; /* remove sidebar style underline */
+}
+
+.dark-text-contacts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 30px;
+}
+
+.dark-text-contacts p {
+    margin: 0 !important;
+    font-size: 0.85rem;
+    color: #555;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.dark-text-contacts .contact-icon {
+    color: var(--accent); /* blue icons */
+    opacity: 0.8;
+}
+
+.dark-text-contacts a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.dark-text-contacts a:hover {
+    color: var(--accent);
+}
+
 /* Minimalist Bullet Skills List */
 .skills-bullet-list {
     list-style: none;
@@ -655,57 +706,122 @@ section h2::after {
         font-size: 0.95rem;
     }
 
-    /* Stack sidebar on top of main content */
+    /* Stack and reorder contents seamlessly */
     .cv-wrapper {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
         margin: 20px auto;
         max-width: 100%;
+        padding-top: 30px;
     }
 
-    .sidebar {
-        padding: 30px 24px;
-        border-radius: 0;
-        text-align: center;         /* centre all sidebar text on mobile */
+    .sidebar, .main-content {
+        display: contents;
     }
 
-    /* Centre sidebar lists */
-    .skills-list,
-    .languages-list {
-        justify-content: center;
-    }
-
-    /* Contact info: left-align for readability */
-    .contact-info {
-        text-align: left;
-    }
-
-    /* Centre the headshot */
+    /* 1. Profile Picture First */
     .photo-container {
+        order: 1;
         width: 140px;
         height: 140px;
         margin: 0 auto 16px;
     }
 
-    /* Centre the availability badge */
+    /* 2. Availability Badge just below photo */
     .availability-badge {
-        margin: 0 auto 20px;
+        order: 2;
+        margin: 0 auto 16px;
     }
 
-    /* Main content breathes */
-    .main-content {
-        padding: 30px 24px;
+    /* 3. Name Header */
+    .main-content header {
+        order: 3;
+        padding: 0 24px;
+        text-align: center;
+        margin-bottom: 24px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: none;
     }
 
-    /* Name: allow wrap + tighter letter-spacing on tablet */
     header h1 {
         font-size: 1.9rem;
-        letter-spacing: 2px;
         white-space: normal;
         overflow: visible;
         text-overflow: clip;
+        justify-content: center;
+        margin-bottom: 6px;
     }
+
     header .subtitle {
         font-size: 1.05rem;
+        justify-content: center;
+    }
+
+    header::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    /* 4. Contact Section */
+    #contatti {
+        order: 4;
+        padding: 0 24px;
+        margin-bottom: 30px;
+        border: none; /* items stack vertically anyway on mobile */
+    }
+
+    .dark-text-contacts {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .contact-info {
+        text-align: left;
+    }
+
+    /* 5. Professional Profile */
+    .main-content #profilo {
+        order: 5;
+        padding: 0 24px;
+        margin-bottom: 40px;
+    }
+
+    /* 6. Experience */
+    .main-content #esperienza {
+        order: 6;
+        padding: 0 24px;
+        margin-bottom: 40px;
+    }
+
+    /* 7. Education */
+    .main-content #formazione {
+        order: 7;
+        padding: 0 24px;
+        margin-bottom: 40px;
+    }
+
+    /* 8. Skills/Competenze */
+    .main-content #competenze {
+        order: 8;
+        padding: 0 24px;
+        margin-bottom: 40px;
+    }
+
+    /* 9. Languages/Lingue */
+    .main-content #lingue {
+        order: 9;
+        padding: 0 24px;
+        margin-bottom: 40px;
+    }
+
+    /* 10. Signature at the very bottom */
+    .cv-signature {
+        order: 10;
+        padding: 0 24px 30px;
+        text-align: center;
+        margin-top: 0;
     }
 
     section h2 {
@@ -718,6 +834,7 @@ section h2::after {
         flex-wrap: wrap;
         gap: 4px;
     }
+    
     .item-date {
         width: 100%;
         font-size: 0.8rem;
@@ -735,21 +852,13 @@ section h2::after {
         border-radius: 0;
     }
 
-    /* Sidebar compact */
-    .sidebar {
-        padding: 24px 20px;
-    }
-
-    /* Smaller headshot */
-    .photo-container {
-        width: 110px;
-        height: 110px;
-        margin: 0 auto 20px;
-    }
-
-    /* Main content tight padding */
-    .main-content {
-        padding: 24px 18px;
+    /* Update unified paddings for mobile edge flush */
+    .main-content header,
+    .sidebar .sidebar-section,
+    .main-content section,
+    .cv-signature {
+        padding-left: 18px;
+        padding-right: 18px;
     }
 
     /* Hero name — wrap naturally, minimal letter-spacing on phones */
