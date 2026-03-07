@@ -705,6 +705,15 @@ section h2::after {
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
     }
+
+    /* Prevent page breaks inside important items */
+    .experience-item,
+    .education-item,
+    .sidebar-section,
+    .profile-variant {
+        page-break-inside: avoid;
+        break-inside: avoid;
+    }
 }
 
 /* ============================================================
