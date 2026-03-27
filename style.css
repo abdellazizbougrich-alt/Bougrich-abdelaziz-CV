@@ -162,7 +162,11 @@ body {
         0 0 0 6px #ffffff,
         0 8px 20px rgba(0,0,0,0.12);
     background: #f9fafb;
-    padding: 4px;
+    border: 4px solid #f9fafb; /* replaces padding so overflow works cleanly */
+    padding: 0;
+    overflow: hidden;   /* clips the zoom inside the circle */
+    z-index: 1;         /* Safari bug fix for border-radius clip */
+    transform: translateZ(0); /* Safari bug fix for border-radius clip */
 }
 
 .profile-photo {
@@ -172,7 +176,11 @@ body {
     object-position: top center;
     border-radius: 50%;
     display: block;
+    cursor: crosshair;
+    transition: transform 0.3s ease-out; /* Pan origin changes instantly, scale is smooth */
 }
+
+
 
 .sidebar-section {
     margin-bottom: 40px;
@@ -854,6 +862,13 @@ section h2::after {
     /* Experience date wraps cleanly */
     .item-header { flex-wrap: wrap; gap: 4px; }
     .item-date { width: 100%; font-size: 0.8rem; }
+
+    /* --- Photo zoom overrides --- */
+
+    /* Keep overflow:hidden at 140px so circle still clips on mobile */
+    .photo-container {
+        overflow: hidden;
+    }
 }
 
 /* ============================================================

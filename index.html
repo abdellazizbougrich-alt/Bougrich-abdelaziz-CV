@@ -42,9 +42,12 @@
     <div class="cv-wrapper">
         <!-- Sidebar: Info, Skills, Languages -->
         <aside class="sidebar">
-            <div class="photo-container">
+            <div class="photo-container" id="photoContainer"
+                onmousemove="panImage(event)"
+                onmouseleave="resetPan()">
                 <img src="profile-placeholder.jpeg"
-                    alt="Abdelaziz Bougrich" class="profile-photo">
+                    alt="Abdelaziz Bougrich" class="profile-photo"
+                    id="profileImg">
             </div>
 
             <!-- Availability Badge -->
@@ -714,6 +717,41 @@
             }
         });
     </script>
+
+    <!-- ===== Profile Photo Hover Zoom ===== -->
+    <script>
+        function panImage(e) {
+            const img = document.getElementById('profileImg');
+            const container = document.getElementById('photoContainer');
+            const rect = container.getBoundingClientRect();
+            
+            // Calculate mouse position relative to the container
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            // Convert to percentages within the container
+            const xPercent = Math.max(0, Math.min(100, (x / rect.width) * 100));
+            const yPercent = Math.max(0, Math.min(100, (y / rect.height) * 100));
+            
+            // Apply scale and change the origin dynamically to zoom exactly where the cursor is
+            img.style.transformOrigin = `${xPercent}% ${yPercent}%`;
+            img.style.transform = 'scale(1.8)';
+        }
+
+        function resetPan() {
+            const img = document.getElementById('profileImg');
+            // Animate scale back to normal
+            img.style.transform = 'scale(1)';
+            
+            // Clean up the origin to default after transition completes
+            setTimeout(() => {
+                if (img.style.transform === 'scale(1)') {
+                    img.style.transformOrigin = 'top center';
+                }
+            }, 300);
+        }
+    </script>
+
 </body>
 
 </html>
