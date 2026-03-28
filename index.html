@@ -42,9 +42,7 @@
     <div class="cv-wrapper">
         <!-- Sidebar: Info, Skills, Languages -->
         <aside class="sidebar">
-            <div class="photo-container" id="photoContainer"
-                onmousemove="panImage(event)"
-                onmouseleave="resetPan()">
+            <div class="photo-container" id="photoContainer">
                 <img src="profile-placeholder.jpeg"
                     alt="Abdelaziz Bougrich" class="profile-photo"
                     id="profileImg">
@@ -725,15 +723,28 @@
             const container = document.getElementById('photoContainer');
             const rect = container.getBoundingClientRect();
             
-            // Calculate mouse position relative to the container
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
+            let clientX, clientY;
+            if (e.type.startsWith('touch')) {
+                if (e.touches.length > 0) {
+                    clientX = e.touches[0].clientX;
+                    clientY = e.touches[0].clientY;
+                } else {
+                    return; // ignore end events without touches
+                }
+            } else {
+                clientX = e.clientX;
+                clientY = e.clientY;
+            }
+            
+            // Calculate mouse/touch position relative to the container
+            const x = clientX - rect.left;
+            const y = clientY - rect.top;
             
             // Convert to percentages within the container
             const xPercent = Math.max(0, Math.min(100, (x / rect.width) * 100));
             const yPercent = Math.max(0, Math.min(100, (y / rect.height) * 100));
             
-            // Apply scale and change the origin dynamically to zoom exactly where the cursor is
+            // Apply scale and change the origin dynamically to zoom exactly where the interaction is
             img.style.transformOrigin = `${xPercent}% ${yPercent}%`;
             img.style.transform = 'scale(1.8)';
         }
@@ -750,6 +761,21 @@
                 }
             }, 300);
         }
+
+        const photoContainer = document.getElementById('photoContainer');
+        
+        // Mouse events (Desktop)
+        photoContainer.addEventListener('mousemove', panImage);
+        photoContainer.addEventListener('mouseleave', resetPan);
+        
+        // Touch events (Mobile)
+        photoContainer.addEventListener('touchmove', function(e) {
+            e.preventDefault(); // Prevent page scroll while zooming image
+            panImage(e);
+        }, { passive: false });
+        photoContainer.addEventListener('touchstart', panImage, { passive: true });
+        photoContainer.addEventListener('touchend', resetPan);
+        photoContainer.addEventListener('touchcancel', resetPan);
     </script>
 
 </body>
