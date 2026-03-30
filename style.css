@@ -568,7 +568,7 @@ section h2::after {
 }
 
 /* ============================================================
-   PRINT — A4 OPTIMISED
+   PRINT — A4 SINGLE PAGE OPTIMISED
    ============================================================ */
 @page {
     size: A4;
@@ -576,7 +576,7 @@ section h2::after {
 }
 
 @media print {
-    /* Disable all animations */
+    /* Disable all animations / transitions */
     *, *::before, *::after {
         animation: none !important;
         transition: none !important;
@@ -584,7 +584,7 @@ section h2::after {
         transform: none !important;
     }
 
-    /* Hide UI chrome */
+    /* Hide all UI chrome */
     .top-bar,
     .lang-controls,
     .print-btn,
@@ -597,91 +597,66 @@ section h2::after {
     body {
         background: #fff;
         margin: 0;
-        padding: 0;
+        padding: 0 !important;
+        font-size: 11pt;              /* +15% larger readable base */
+        line-height: 1.4;
     }
 
-    /* === CRITICAL: Force desktop grid layout for print === */
-    /* Reset any mobile display:contents that may be active */
+    /* ── Force the two-column grid layout for print ── */
     .cv-wrapper {
         display: grid !important;
-        grid-template-columns: 260px 1fr !important;
+        grid-template-columns: 230px 1fr !important;
         margin: 0 !important;
         box-shadow: none !important;
         width: 100% !important;
-        min-height: 297mm;
+        height: 297mm;               /* hard-clamp to one A4 page */
+        max-height: 297mm;
+        overflow: hidden;
+        border-top: 3px solid var(--accent-gold) !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
     }
 
-    /* Sidebar: restore normal block flow (undo display:contents) — WHITE like screen */
+    /* ── SIDEBAR ── */
     .sidebar {
         display: block !important;
-        width: 260px !important;
+        width: 230px !important;
         flex-shrink: 0 !important;
-        padding: 36px 24px !important;
+        padding: 18px 16px !important;   /* tighter padding, more text room */
         background-color: #ffffff !important;
         color: var(--text-dark) !important;
         border-right: 1px solid var(--border-color) !important;
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
-        min-height: 100%;
+        overflow: hidden;
     }
 
-    /* Sidebar text: keep dark navy */
-    .sidebar * {
-        color: var(--text-dark) !important;
+    .sidebar * { color: var(--text-dark) !important; }
+
+    .sidebar-section {
+        margin-bottom: 10px !important;
     }
 
-    /* Section headings keep navy color */
-    .sidebar .sidebar-section h2 {
+    .sidebar-section h2 {
+        font-size: 8pt !important;
+        letter-spacing: 1.5px !important;
+        margin-bottom: 7px !important;
+        padding-bottom: 5px !important;
         color: var(--primary-navy) !important;
+        border-bottom-color: var(--border-color) !important;
     }
 
-    /* Keep accent gold for soft-skill subheadings */
-    .sidebar strong[style*="accent-gold"] {
-        color: var(--accent-gold) !important;
+    .sidebar-section h2::after {
+        background: var(--accent-gold) !important;
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
     }
 
-    /* Contact icons: navy */
-    .sidebar .contact-icon {
-        color: var(--primary-navy) !important;
-    }
-
-    /* Language bars: light grey track, navy fill */
-    .lang-bar-bg {
-        background: #e5e7eb !important;
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
-    }
-    .lang-bar-fill {
-        background: var(--primary-navy) !important;
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
-    }
-
-    /* Main content: restore normal block flow */
-    .main-content {
-        display: block !important;
-        flex: 1 !important;
-        padding: 36px 40px !important;
-        order: unset !important;
-    }
-
-    /* Reset ALL order properties set by mobile CSS */
-    .photo-container,
-    .availability-badge,
-    .main-content header,
-    #contatti, #profilo, #esperienza,
-    #formazione, #competenze, #lingue,
-    .cv-signature {
-        order: unset !important;
-    }
-
-    /* Photo in sidebar: restore circular style */
+    /* Photo */
     .photo-container {
-        width: 140px !important;
-        height: 140px !important;
-        margin: 0 auto 24px !important;
+        width: 108px !important;
+        height: 108px !important;
+        margin: 0 auto 10px !important;
         display: block !important;
     }
 
@@ -693,30 +668,179 @@ section h2::after {
         object-position: center !important;
     }
 
-    /* Profile variant background */
-    .profile-variant {
-        background-color: #f3f4f6 !important;
+    /* Contact info */
+    .contact-info p {
+        font-size: 9.8pt !important;
+        margin-bottom: 5px !important;
+        gap: 7px !important;
+        line-height: 1.4 !important;
+    }
+
+    .contact-icon {
+        width: 13px !important;
+        height: 13px !important;
+        color: var(--primary-navy) !important;
+    }
+
+    /* Skills list */
+    .skills-bullet-list {
+        margin-bottom: 8px !important;
+    }
+
+    .skills-bullet-list li {
+        font-size: 9.8pt !important;
+        margin-bottom: 3px !important;
+        line-height: 1.35 !important;
+    }
+
+    /* Skills subheading labels */
+    .sidebar strong {
+        font-size: 8.5pt !important;
+        display: block !important;
+        margin-bottom: 4px !important;
+    }
+
+    /* Language bars */
+    .lang-skill-group { gap: 7px !important; }
+    .lang-item        { gap: 3px !important; }
+    .lang-name        { font-size: 9.8pt !important; }
+    .lang-level       { font-size: 8pt !important; }
+
+    .lang-bar-bg {
+        height: 4px !important;
+        background: #e5e7eb !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+    .lang-bar-fill {
+        background: var(--primary-navy) !important;
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
     }
 
-    /* Shrink h1 for A4 fit */
-    header h1 {
-        font-size: 2.4rem;
+    /* ── MAIN CONTENT ── */
+    .main-content {
+        display: block !important;
+        flex: 1 !important;
+        padding: 18px 26px !important;    /* tighter padding, more text room */
+        order: unset !important;
+        overflow: hidden;
     }
 
-    /* Sidebar section headings — navy color, gold underline accent */
-    .sidebar-section h2 {
-        color: var(--primary-navy) !important;
-        border-bottom-color: var(--border-color) !important;
+    /* Reset mobile order overrides */
+    .photo-container,
+    .availability-badge,
+    .main-content header,
+    #contatti, #profilo, #esperienza,
+    #formazione, #competenze, #lingue,
+    .cv-signature {
+        order: unset !important;
     }
-    .sidebar-section h2::after {
+
+    /* Header */
+    header {
+        margin-bottom: 10px !important;
+        padding-bottom: 8px !important;
+    }
+
+    header h1 {
+        font-size: 23pt !important;
+        margin-bottom: 4px !important;
+        line-height: 1.1 !important;
+    }
+
+    header .subtitle {
+        font-size: 11pt !important;
+    }
+
+    /* Section spacing */
+    section {
+        margin-bottom: 11px !important;
+    }
+
+    section h2 {
+        font-size: 8pt !important;
+        letter-spacing: 1.5px !important;
+        margin-bottom: 7px !important;
+        padding-bottom: 5px !important;
+    }
+
+    section h2::after {
         background: var(--accent-gold) !important;
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
     }
 
-    /* Prevent page breaks inside important items */
+    /* Profile paragraph */
+    .profile-variant {
+        padding: 8px 10px !important;
+        font-size: 9.8pt !important;
+        line-height: 1.45 !important;
+        background-color: #f3f4f6 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    .profile-grid { gap: 0 !important; margin-bottom: 0 !important; }
+
+    /* Experience items */
+    .experience-item {
+        margin-bottom: 9px !important;
+        padding: 0 !important;
+        margin-left: 0 !important;
+    }
+
+    /* Education items */
+    .education-item {
+        margin-bottom: 7px !important;
+        padding-left: 14px !important;
+    }
+
+    .education-item::before {
+        bottom: -7px !important;
+    }
+
+    .item-header {
+        margin-bottom: 2px !important;
+    }
+
+    .item-title {
+        font-size: 10.5pt !important;
+        font-weight: 700 !important;
+    }
+
+    .item-date {
+        font-size: 9pt !important;
+    }
+
+    .item-meta {
+        font-size: 9pt !important;
+        margin-bottom: 2px !important;
+    }
+
+    .item-content {
+        font-size: 9.8pt !important;
+        line-height: 1.4 !important;
+    }
+
+    .item-content ul {
+        margin-top: 3px !important;
+        padding-left: 14px !important;
+    }
+
+    .item-content li {
+        margin-bottom: 2px !important;
+    }
+
+    /* Signature — compact */
+    .cv-signature {
+        margin-top: 8px !important;
+        padding-top: 6px !important;
+        font-size: 2.1rem !important;
+        padding-right: 10px !important;
+    }
+
+    /* Prevent page breaks inside items */
     .experience-item,
     .education-item,
     .sidebar-section,
@@ -724,6 +848,9 @@ section h2::after {
         page-break-inside: avoid;
         break-inside: avoid;
     }
+
+    /* Hard-lock to one page */
+    @page { margin: 0; }
 }
 
 /* ============================================================
