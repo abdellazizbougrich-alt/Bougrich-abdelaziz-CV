@@ -110,7 +110,9 @@
                             </path>
                             <polyline points="22,6 12,13 2,6"></polyline>
                         </svg>
-                        <a href="mailto:abdellaziz.bougrich@gmail.com">abdellaziz.bougrich@gmail.com</a>
+                        <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=abdellaziz.bougrich@gmail.com&amp;su=Candidatura%20-%20Abdelaziz%20Bougrich"
+                            target="_blank" rel="noopener noreferrer"
+                            class="email-trigger">abdellaziz.bougrich@gmail.com</a>
                     </p>
                     <p>
                         <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none"
@@ -583,21 +585,9 @@
                 </div>
             </section>
 
-            <!-- Mandatory Italian GDPR Compliance Footer & Signature -->
+            <!-- Signature Footer -->
             <footer class="cv-footer">
-                <div class="gdpr-footer">
-                    <span data-lang="it">Autorizzo il trattamento dei miei dati personali presenti nel curriculum vitae
-                        ai sensi del D.Lgs. 30 giugno 2003, n. 196 e del Regolamento UE 2016/679 (GDPR).</span>
-                    <span data-lang="en">I authorize the processing of my personal data included in this curriculum
-                        vitae pursuant to Italian Legislative Decree 196/2003 and EU Regulation 2016/679 (GDPR).</span>
-                    <span data-lang="fr">J'autorise le traitement de mes données personnelles figurant dans ce
-                        curriculum vitae conformément au Décret Législatif italien 196/2003 et au Règlement UE 2016/679
-                        (RGPD).</span>
-                </div>
                 <div class="cv-signature">
-                    <span class="cv-signature-place" data-lang="it">Bologna, Italia</span>
-                    <span class="cv-signature-place" data-lang="en">Bologna, Italy</span>
-                    <span class="cv-signature-place" data-lang="fr">Bologne, Italie</span>
                     <span class="cv-signature-name">Abdelaziz Bougrich</span>
                 </div>
             </footer>
@@ -629,8 +619,9 @@
             <span data-lang="it">Scarica PDF</span><span data-lang="en">Save PDF</span><span
                 data-lang="fr">Télécharger PDF</span>
         </a>
-        <a class="cta-btn cta-email" href="mailto:abdellaziz.bougrich@gmail.com?subject=Candidatura%20-%20Abdelaziz%20Bougrich"
-            aria-label="Email">
+        <a class="cta-btn cta-email email-trigger"
+            href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=abdellaziz.bougrich@gmail.com&amp;su=Candidatura%20-%20Abdelaziz%20Bougrich"
+            target="_blank" rel="noopener noreferrer" aria-label="Email">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                 aria-hidden="true">
@@ -690,11 +681,44 @@
             printCV(e);
         }
 
-        // Synchronize html[lang] attribute when language radio changes
+        // Synchronize html[lang] attribute and email links when language radio changes
+        function isMobileDevice() {
+            return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ||
+                (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+        }
+
+        function updateEmailLinks() {
+            const email = 'abdellaziz.bougrich@gmail.com';
+            const isIt = document.getElementById('lang-it').checked;
+            const isFr = document.getElementById('lang-fr').checked;
+
+            let subject = 'Job Application - Abdelaziz Bougrich';
+            if (isIt) subject = 'Candidatura - Abdelaziz Bougrich';
+            else if (isFr) subject = 'Candidature - Abdelaziz Bougrich';
+
+            const encodedSubject = encodeURIComponent(subject);
+            const mobile = isMobileDevice();
+
+            document.querySelectorAll('.email-trigger').forEach(function (link) {
+                if (mobile) {
+                    link.href = 'mailto:' + email + '?subject=' + encodedSubject;
+                    link.removeAttribute('target');
+                    link.removeAttribute('rel');
+                } else {
+                    link.href = 'https://mail.google.com/mail/?view=cm&fs=1&to=' + email + '&su=' + encodedSubject;
+                    link.setAttribute('target', '_blank');
+                    link.setAttribute('rel', 'noopener noreferrer');
+                }
+            });
+        }
+
+        updateEmailLinks();
+
         document.querySelectorAll('input[name="lang-switch"]').forEach(function (radio) {
             radio.addEventListener('change', function () {
                 const lang = this.id.replace('lang-', '');
                 document.documentElement.setAttribute('lang', lang);
+                updateEmailLinks();
             });
         });
 

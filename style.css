@@ -587,22 +587,14 @@ section h2 {
     flex-shrink: 0;
 }
 
-/* Footer: Italian GDPR Privacy Statement & Signature */
+/* Footer: Signature */
 .cv-footer {
     margin-top: auto;
     padding-top: 16px;
     border-top: 1px solid var(--border-color);
     display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    gap: 24px;
-}
-
-.gdpr-footer {
-    font-size: 0.72rem;
-    color: var(--text-muted);
-    line-height: 1.45;
-    max-width: 72%;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 .cv-signature {
@@ -610,15 +602,8 @@ section h2 {
     flex-shrink: 0;
 }
 
-.cv-signature-place {
-    display: block;
-    font-size: 0.72rem;
-    color: var(--text-muted);
-    margin-bottom: 2px;
-}
-
 .cv-signature-name {
-    font-size: 0.92rem;
+    font-size: 0.96rem;
     font-weight: 700;
     color: var(--primary-navy);
     letter-spacing: 0.3px;
@@ -705,12 +690,21 @@ section h2 {
     text-decoration: none;
     cursor: pointer;
     border: 1px solid transparent;
-    transition: background-color 0.15s ease, transform 0.15s ease;
+    transition: background-color 0.15s ease, transform 0.12s ease, box-shadow 0.15s ease, filter 0.15s ease;
     white-space: nowrap;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .cta-btn:hover {
-    transform: translateY(-1px);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.18);
+    filter: brightness(1.06);
+}
+
+.cta-btn:active {
+    transform: translateY(0) scale(0.96);
+    box-shadow: 0 1px 4px rgba(15, 23, 42, 0.12);
 }
 
 .cta-print {
@@ -724,13 +718,14 @@ section h2 {
 }
 
 .cta-email {
-    background: #ffffff;
-    color: var(--primary-navy);
-    border-color: #cbd5e1;
+    background: var(--accent-blue);
+    color: #ffffff;
+    border-color: var(--accent-blue);
 }
 
 .cta-email:hover {
-    background: #f1f5f9;
+    background: #1d4ed8;
+    border-color: #1d4ed8;
 }
 
 .cta-whatsapp {
@@ -943,17 +938,11 @@ section h2 {
     .cv-footer {
         order: 10;
         padding: 16px 24px 28px;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 12px;
-    }
-
-    .gdpr-footer {
-        max-width: 100%;
+        justify-content: flex-end;
     }
 
     .cv-signature {
-        text-align: left;
+        text-align: right;
     }
 
     .prev-btn {
@@ -1253,18 +1242,10 @@ section h2 {
     .cv-footer {
         margin-top: auto !important;
         padding-top: 8px !important;
-    }
-
-    .gdpr-footer {
-        font-size: 6.8pt !important;
-        line-height: 1.3 !important;
-    }
-
-    .cv-signature-place {
-        font-size: 6.8pt !important;
+        justify-content: flex-end !important;
     }
 
     .cv-signature-name {
-        font-size: 8.5pt !important;
+        font-size: 8.8pt !important;
     }
 }
