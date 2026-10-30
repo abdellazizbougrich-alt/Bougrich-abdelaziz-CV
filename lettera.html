@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lettera di Presentazione — Abdelaziz Bougrich</title>
     <!-- SEO & Accessibility -->
-    <meta name="description" content="Lettera di Presentazione professionale di Abdelaziz Bougrich.">
+    <meta name="description"
+        content="Lettera di Presentazione di Abdelaziz Bougrich — Professionista Tecnico-Commerciale residente a Bologna, Italia.">
     <link rel="icon" type="image/svg+xml"
-        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%231a2a6c'/><text x='16' y='22' font-family='sans-serif' font-size='13' font-weight='700' fill='white' text-anchor='middle'>AB</text></svg>">
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230f172a'/><text x='16' y='21' font-family='sans-serif' font-size='13' font-weight='700' fill='white' text-anchor='middle'>AB</text></svg>">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -18,21 +19,20 @@
     <input type="radio" name="lang-switch" id="lang-en" class="lang-toggle">
     <input type="radio" name="lang-switch" id="lang-fr" class="lang-toggle">
 
-    <!-- Floating Print Button (CSS-driven language label) -->
-    <button class="print-btn no-print" onclick="printLetter()" aria-label="Print">
-        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none"
-            stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="6 9 6 2 18 2 18 9" />
-            <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2" />
-            <rect x="6" y="14" width="12" height="8" />
-        </svg>
-        <span class="print-label-it">Stampa / PDF</span>
-        <span class="print-label-en">Print / PDF</span>
-        <span class="print-label-fr">Imprimer / PDF</span>
-    </button>
-
     <div class="top-bar no-print">
-        <div class="lang-controls">
+        <nav class="doc-nav" aria-label="Document Navigation">
+            <a href="index.html" class="doc-nav-link">
+                <span data-lang="it">Curriculum Vitae</span>
+                <span data-lang="en">Curriculum Vitae</span>
+                <span data-lang="fr">Curriculum Vitae</span>
+            </a>
+            <a href="lettera.html" class="doc-nav-link active">
+                <span data-lang="it">Lettera di Presentazione</span>
+                <span data-lang="en">Cover Letter</span>
+                <span data-lang="fr">Lettre de Motivation</span>
+            </a>
+        </nav>
+        <div class="lang-controls" role="group" aria-label="Language Selector">
             <label for="lang-it" class="lang-btn">IT</label>
             <label for="lang-en" class="lang-btn">EN</label>
             <label for="lang-fr" class="lang-btn">FR</label>
@@ -40,40 +40,50 @@
     </div>
 
     <div class="cv-wrapper">
-        <!-- Sidebar: Info, Skills, Languages -->
+        <!-- Sidebar: Photo, Contact, Driving Licences, Languages -->
         <aside class="sidebar">
             <div class="photo-container">
-                <img src="profile-placeholder.jpg" alt="Abdelaziz Bougrich" class="profile-photo">
+                <img src="profile-placeholder.jpeg" alt="Abdelaziz Bougrich" class="profile-photo">
             </div>
 
-        </aside>
+            <!-- Availability Badge -->
+            <div class="availability-badge no-print">
+                <span class="badge-dot" aria-hidden="true"></span>
+                <div class="badge-text">
+                    <strong class="badge-status">
+                        <span data-lang="it">Disponibile per nuove opportunità</span>
+                        <span data-lang="en">Open to Work</span>
+                        <span data-lang="fr">Ouvert aux opportunités</span>
+                    </strong>
+                    <span class="badge-notice">
+                        <span data-lang="it">Disponibilità immediata · Bologna</span>
+                        <span data-lang="en">Immediate availability · Bologna</span>
+                        <span data-lang="fr">Disponibilité immédiate · Bologne</span>
+                    </span>
+                </div>
+            </div>
 
-        <!-- Main Content: Cover Letter Text -->
-        <main class="main-content letter-content">
-            <header>
-                <h1><span class="first-name">Abdelaziz</span> <span class="last-name">BOUGRICH</span></h1>
-                <p class="subtitle" data-lang="it">Lettera di Presentazione</p>
-                <p class="subtitle" data-lang="en">Cover Letter</p>
-                <p class="subtitle" data-lang="fr">Lettre de Motivation</p>
-            </header>
-
-            <section id="contatti">
-                <div class="contact-info dark-text-contacts">
-                    <!-- Standardized contact items for consistency -->
+            <!-- Contatti -->
+            <div class="sidebar-section" id="contatti">
+                <h2 data-lang="it">Contatti</h2>
+                <h2 data-lang="en">Contact</h2>
+                <h2 data-lang="fr">Coordonnées</h2>
+                <div class="contact-info">
                     <p>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            class="contact-icon">
+                            class="contact-icon" aria-hidden="true">
                             <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
                             <circle cx="12" cy="10" r="3"></circle>
                         </svg>
-                        <span data-lang="it">Bologna, Italia</span><span data-lang="en">Bologna, Italy</span><span
-                            data-lang="fr">Bologne, Italie</span>
+                        <span data-lang="it">Via F. Zanardi 292/2, 40131 Bologna (BO), Italia</span>
+                        <span data-lang="en">Via F. Zanardi 292/2, 40131 Bologna (BO), Italy</span>
+                        <span data-lang="fr">Via F. Zanardi 292/2, 40131 Bologne (BO), Italie</span>
                     </p>
                     <p>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            class="contact-icon">
+                            class="contact-icon" aria-hidden="true">
                             <path
                                 d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
                             </path>
@@ -81,113 +91,316 @@
                         <a href="tel:+393534875880">+39 353 487 5880</a>
                     </p>
                     <p>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            class="contact-icon">
+                            class="contact-icon" aria-hidden="true">
                             <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
                             </path>
                             <polyline points="22,6 12,13 2,6"></polyline>
                         </svg>
-                        <a href="mailto:abdelaziz.bougrich@gmail.com">abdelaziz.bougrich@gmail.com</a>
+                        <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=abdellaziz.bougrich@gmail.com&amp;su=Candidatura%20-%20Abdelaziz%20Bougrich"
+                            target="_blank" rel="noopener noreferrer"
+                            class="email-trigger">abdellaziz.bougrich@gmail.com</a>
+                    </p>
+                    <p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="contact-icon" aria-hidden="true">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                            </path>
+                            <rect x="2" y="9" width="4" height="12"></rect>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg>
+                        <a href="https://www.linkedin.com/in/abdelaziz-bougrich-a13671155/" target="_blank"
+                            rel="noopener noreferrer">linkedin.com/in/abdelaziz-bougrich</a>
+                    </p>
+                    <p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="contact-icon" aria-hidden="true">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="2" y1="12" x2="22" y2="12"></line>
+                            <path
+                                d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                            </path>
+                        </svg>
+                        <a href="https://abdellazizbougrich-alt.github.io/Abdelaziz-Bougrich-portfolio/" target="_blank"
+                            rel="noopener noreferrer">Portfolio Professionale</a>
                     </p>
                 </div>
-            </section>
+            </div>
+
+            <!-- Patenti di Guida -->
+            <div class="sidebar-section" id="competenze">
+                <h2 data-lang="it">Patenti di Guida</h2>
+                <h2 data-lang="en">Driving Licences</h2>
+                <h2 data-lang="fr">Permis de Conduire</h2>
+                <div class="cv-driving-block">
+                    <div class="cv-driving-header">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="cv-driving-ico"
+                            aria-hidden="true">
+                            <rect x="1" y="3" width="15" height="13" rx="2"></rect>
+                            <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                            <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                            <circle cx="18.5" cy="18.5" r="2.5"></circle>
+                        </svg>
+                        <span data-lang="it">Categorie Abilitate:</span>
+                        <span data-lang="en">Licensed Categories:</span>
+                        <span data-lang="fr">Catégories Validées :</span>
+                    </div>
+                    <div class="cv-licence-badges" aria-label="Driving Licences B, C, D, E, EB, EC, ED">
+                        <span class="cv-lic-pill" title="Categoria B">B</span>
+                        <span class="cv-lic-pill" title="Categoria C">C</span>
+                        <span class="cv-lic-pill" title="Categoria D">D</span>
+                        <span class="cv-lic-pill" title="Categoria E">E</span>
+                        <span class="cv-lic-pill cv-lic-trailer" title="Categoria EB">EB</span>
+                        <span class="cv-lic-pill cv-lic-trailer" title="Categoria EC">EC</span>
+                        <span class="cv-lic-pill cv-lic-trailer" title="Categoria ED">ED</span>
+                    </div>
+                    <p class="cv-driving-note">
+                        <span data-lang="it">Patenti B, C, D, E, EB, EC, ED · Disponibile a trasferte</span>
+                        <span data-lang="en">Licences B, C, D, E, EB, EC, ED · Available for travel</span>
+                        <span data-lang="fr">Permis B, C, D, E, EB, EC, ED · Disponible pour déplacements</span>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Lingue -->
+            <div class="sidebar-section" id="lingue">
+                <h2 data-lang="it">Lingue (QCER)</h2>
+                <h2 data-lang="en">Languages (CEFR)</h2>
+                <h2 data-lang="fr">Langues (CECRL)</h2>
+                <div class="lang-skill-group">
+                    <div class="lang-item">
+                        <div class="lang-info">
+                            <span class="lang-name" data-lang="it">Arabo</span>
+                            <span class="lang-name" data-lang="en">Arabic</span>
+                            <span class="lang-name" data-lang="fr">Arabe</span>
+                            <span class="lang-level" data-lang="it">C2 · Madrelingua</span>
+                            <span class="lang-level" data-lang="en">C2 · Native</span>
+                            <span class="lang-level" data-lang="fr">C2 · Langue maternelle</span>
+                        </div>
+                        <div class="lang-bar-bg">
+                            <div class="lang-bar-fill" style="width:100%;"></div>
+                        </div>
+                    </div>
+                    <div class="lang-item">
+                        <div class="lang-info">
+                            <span class="lang-name" data-lang="it">Inglese</span>
+                            <span class="lang-name" data-lang="en">English</span>
+                            <span class="lang-name" data-lang="fr">Anglais</span>
+                            <span class="lang-level" data-lang="it">C1 · Avanzato / Professionale</span>
+                            <span class="lang-level" data-lang="en">C1 · Full Professional</span>
+                            <span class="lang-level" data-lang="fr">C1 · Professionnel</span>
+                        </div>
+                        <div class="lang-bar-bg">
+                            <div class="lang-bar-fill" style="width:85%;"></div>
+                        </div>
+                    </div>
+                    <div class="lang-item">
+                        <div class="lang-info">
+                            <span class="lang-name" data-lang="it">Francese</span>
+                            <span class="lang-name" data-lang="en">French</span>
+                            <span class="lang-name" data-lang="fr">Français</span>
+                            <span class="lang-level" data-lang="it">B2 · Intermedio Superiore</span>
+                            <span class="lang-level" data-lang="en">B2 · Upper Intermediate</span>
+                            <span class="lang-level" data-lang="fr">B2 · Avancé</span>
+                        </div>
+                        <div class="lang-bar-bg">
+                            <div class="lang-bar-fill" style="width:75%;"></div>
+                        </div>
+                    </div>
+                    <div class="lang-item">
+                        <div class="lang-info">
+                            <span class="lang-name" data-lang="it">Italiano</span>
+                            <span class="lang-name" data-lang="en">Italian</span>
+                            <span class="lang-name" data-lang="fr">Italien</span>
+                            <span class="lang-level" data-lang="it">B1 · Intermedio</span>
+                            <span class="lang-level" data-lang="en">B1 · Intermediate</span>
+                            <span class="lang-level" data-lang="fr">B1 · Intermédiaire</span>
+                        </div>
+                        <div class="lang-bar-bg">
+                            <div class="lang-bar-fill" style="width:60%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content: Cover Letter Text -->
+        <main class="main-content letter-content">
+            <header>
+                <h1><span class="first-name">Abdelaziz</span> <span class="last-name">BOUGRICH</span></h1>
+                <p class="subtitle" data-lang="it">Lettera di Presentazione — Candidatura Professionale</p>
+                <p class="subtitle" data-lang="en">Cover Letter — Professional Application</p>
+                <p class="subtitle" data-lang="fr">Lettre de Motivation — Candidature Professionnelle</p>
+            </header>
 
             <section class="letter-body">
-                <p class="letter-date" data-lang="it">Data: 04 Marzo 2026</p>
-                <p class="letter-date" data-lang="en">Date: March 04, 2026</p>
-                <p class="letter-date" data-lang="fr">Date : 04 Mars 2026</p>
+                <p class="letter-date" data-lang="it">Bologna, Italia</p>
+                <p class="letter-date" data-lang="en">Bologna, Italy</p>
+                <p class="letter-date" data-lang="fr">Bologne, Italie</p>
 
                 <div class="letter-recipient" data-lang="it">
-                    <p><strong>Alla cortese attenzione di:</strong></p>
-                    <p>Gentile Responsabile del Personale,</p>
+                    <p><strong>Alla cortese attenzione dell'Ufficio Risorse Umane / Direzione Aziendale</strong></p>
+                    <p>Gentile Responsabile della Selezione,</p>
                 </div>
                 <div class="letter-recipient" data-lang="en">
-                    <p><strong>To the attention of:</strong></p>
+                    <p><strong>To the attention of the Human Resources Department / Hiring Management</strong></p>
                     <p>Dear Hiring Manager,</p>
                 </div>
                 <div class="letter-recipient" data-lang="fr">
-                    <p><strong>À l'attention de :</strong></p>
+                    <p><strong>À l'attention de la Direction des Ressources Humaines / Recrutement</strong></p>
                     <p>Madame, Monsieur le Responsable du Recrutement,</p>
                 </div>
 
                 <div class="letter-text" data-lang="it">
-                    <p>Vi scrivo per sottoporre alla Vostra attenzione la mia candidatura. Formato da una consolidata
-                        esperienza di oltre cinque anni nel settore tecnico-commerciale e nel servizio clienti, sono
-                        oggi fortemente motivato a intraprendere una nuova e stimolante sfida professionale nel settore
-                        tecnologico in Italia.</p>
-                    <p>Nel corso della mia carriera lavorativa, in modo particolare nel mio ruolo di Technical Sales
-                        Representative presso EGLO Leuchten GmbH, ho sviluppato eccellenti competenze relazionali e un
-                        approccio orientato al problem-solving. Confrontarmi quotidianamente con sfide operative mi ha
-                        insegnato l'importanza dell'adattabilità e la necessità di apprendere rapidamente in ambienti
-                        dinamici.</p>
-                    <p>Nutro una profonda passione per l'innovazione tecnologica e seguo con estremo interesse
-                        l'evoluzione di questo settore in Italia. Sono fiducioso che la mia proattività, unita alle mie
-                        competenze trasversali nel lavoro di squadra, nella negoziazione e nel coordinamento, possano
-                        tradursi rapidamente in un immediato valore aggiunto per il vostro team e per i vostri obiettivi
-                        di business.</p>
-                    <p>Come potrete evincere dal mio curriculum allegato, ho una grandissima voglia di mettermi in gioco
-                        e affinare ogni aspetto tecnico utile al successo della vostra realtà aziendale. Sarei onorato
-                        di avere l'opportunità di approfondire questa mia introduzione in sede di colloquio e dimostrare
-                        come potrei contribuire attivamente.</p>
-                    <p>In attesa di un vostro gentile riscontro, vi porgo i miei più cordiali saluti.</p>
+                    <p>Con la presente desidero sottoporre alla Vostra cortese attenzione la mia candidatura. Forte di
+                        un'esperienza consolidata di oltre cinque anni nel settore tecnico-commerciale, nell'assistenza
+                        clienti e nella gestione operativa di magazzino e punto vendita, sono oggi fortemente motivato a
+                        mettere le mie competenze al servizio della Vostra realtà aziendale in Italia.</p>
+                    <p>Nel corso del mio percorso professionale, in particolare nel ruolo di Rappresentante
+                        Tecnico-Commerciale presso EGLO Leuchten GmbH, ho sviluppato solide capacità relazionali,
+                        organizzative e di negoziazione, gestendo con successo il portafoglio clienti, la logistica
+                        degli ordini e il controllo delle scorte. Confrontarmi quotidianamente con obiettivi concreti e
+                        scadenze operative mi ha permesso di affinare un approccio pratico, affidabile e orientato al
+                        problem-solving.</p>
+                    <p>Oltre alle competenze commerciali e amministrative, sono in possesso delle patenti di guida
+                        categorie <strong>B, C, D, E, EB, EC, ED</strong>, garantendo piena autonomia negli spostamenti,
+                        disponibilità a trasferte e flessibilità per mansioni sia tecnico-commerciali sia logistiche e
+                        di trasporto.</p>
+                    <p>Come evidenziato nel Curriculum Vitae allegato, offro disponibilità immediata su Bologna e
+                        provincia, serietà professionale e una forte volontà di crescita. Sarei lieto di approfondire la
+                        mia candidatura in sede di colloquio conoscitivo.</p>
+                    <p>In attesa di un Vostro gentile riscontro, porgo distinti saluti.</p>
                 </div>
 
                 <div class="letter-text" data-lang="en">
-                    <p>I am writing to express my strong interest in joining your team. With a solid background of over
-                        five years in technical sales and customer service, I am highly motivated to embark on a new and
-                        exciting professional challenge in the technology sector in Italy.</p>
-                    <p>Over the course of my career, particularly in my role as a Technical Sales Representative at EGLO
-                        Leuchten GmbH, I have developed excellent interpersonal skills and a problem-solving-oriented
-                        approach. Facing daily operational challenges has taught me the importance of adaptability and
-                        the ability to learn quickly in fast-paced environments.</p>
-                    <p>I have a deep passion for technological innovation and closely follow the evolution of this
-                        sector in Italy. I am confident that my proactivity, coupled with my soft skills in teamwork,
-                        negotiation, and coordination, will quickly translate into immediate added value for your team
-                        and business objectives.</p>
-                    <p>As you can see from my enclosed resume, I am eager to take on new challenges and refine every
-                        technical aspect necessary for the success of your company. I would be honored to have the
-                        opportunity to further discuss my qualifications in an interview and demonstrate how I can
-                        actively contribute to your organization.</p>
-                    <p>I look forward to hearing from you. Sincerely,</p>
+                    <p>I am writing to submit my application for a position within your organization. Backed by over
+                        five years of consolidated experience in technical sales, customer service, and store/warehouse
+                        operations, I am highly motivated to contribute my skills and work ethic to your company in
+                        Italy.</p>
+                    <p>Throughout my career, particularly as a Technical Sales Representative at EGLO Leuchten GmbH, I
+                        have developed strong interpersonal, organizational, and negotiation skills, successfully
+                        managing client portfolios, order logistics, and stock control. Working daily toward concrete
+                        targets has shaped a practical, reliable, and problem-solving-oriented approach.</p>
+                    <p>In addition to my commercial and administrative background, I hold full driving licences across
+                        categories <strong>B, C, D, E, EB, EC, ED</strong>, ensuring complete mobility, readiness for
+                        business travel, and versatility across commercial, logistics, and transport operations.</p>
+                    <p>As detailed in my enclosed Curriculum Vitae, I am immediately available in Bologna and the
+                        surrounding region. I would welcome the opportunity to discuss my qualifications further in a
+                        personal interview.</p>
+                    <p>Thank you for your time and consideration. Sincerely,</p>
                 </div>
 
                 <div class="letter-text" data-lang="fr">
-                    <p>Je vous écris pour vous soumettre ma candidature. Fort d'une expérience consolidée de plus de
-                        cinq ans dans le domaine technico-commercial et le service client, je suis aujourd'hui très
-                        motivé pour relever un nouveau défi professionnel stimulant dans le secteur technologique en
-                        Italie.</p>
-                    <p>Au cours de ma carrière, notamment dans mon rôle de Représentant Technico-Commercial chez EGLO
-                        Leuchten GmbH, j'ai développé d'excellentes compétences relationnelles et une approche axée sur
-                        la résolution de problèmes. Confronter les défis opérationnels au quotidien m'a appris
-                        l'importance de l'adaptabilité et la nécessité d'apprendre rapidement dans des environnements
-                        dynamiques.</p>
-                    <p>Je nourris une profonde passion pour l'innovation technologique et je suis avec grand intérêt
-                        l'évolution de ce secteur en Italie. Je suis convaincu que ma proactivité, associée à mes
-                        compétences transversales en travail d'équipe, négociation et coordination, pourront se traduire
-                        rapidement par une valeur ajoutée immédiate pour votre équipe et vos objectifs commerciaux.</p>
-                    <p>Comme vous pourrez le constater dans mon curriculum vitae ci-joint, j'ai une grande envie de me
-                        lancer de nouveaux défis et d'affiner chaque aspect technique utile au succès de votre
-                        entreprise. Je serais honoré d'avoir l'opportunité d'approfondir cette introduction lors d'un
-                        entretien et de démontrer comment je pourrais contribuer activement.</p>
-                    <p>Dans l'attente de votre réponse, je vous prie d'agréer, Madame, Monsieur, l'expression de mes
+                    <p>Par la présente, je vous soumets ma candidature au sein de votre entreprise. Fort d'une
+                        expérience consolidée de plus de cinq ans dans le secteur technico-commercial, le service client
+                        et la gestion des stocks, je suis pleinement motivé à mettre mes compétences au service de votre
+                        organisation en Italie.</p>
+                    <p>Au cours de mon parcours professionnel, notamment en tant que Représentant Technico-Commercial
+                        chez EGLO Leuchten GmbH, j'ai développé de solides capacités relationnelles, organisationnelles
+                        et de négociation, en assurant la gestion du portefeuille clients, le suivi logistique des
+                        commandes et le contrôle des inventaires.</p>
+                    <p>En complément de mes compétences commerciales et administratives, je suis titulaire des permis de
+                        conduire catégories <strong>B, C, D, E, EB, EC, ED</strong>, offrant une autonomie complète de
+                        déplacement et une grande polyvalence opérationnelle et logistique.</p>
+                    <p>Disponible immédiatement à Bologne et dans sa région, je serais honoré de pouvoir échanger avec
+                        vous lors d'un entretien afin de vous exposer plus en détail mes motivations.</p>
+                    <p>Dans l'attente de votre retour, je vous prie d'agréer, Madame, Monsieur, l'expression de mes
                         salutations distinguées.</p>
                 </div>
-
-                <div class="letter-signature">
-                    <p><strong>Abdelaziz Bougrich</strong></p>
-                </div>
             </section>
+
+            <!-- Signature Footer -->
+            <footer class="cv-footer">
+                <div class="cv-signature">
+                    <span class="cv-signature-name">Abdelaziz Bougrich</span>
+                </div>
+            </footer>
         </main>
     </div>
 
+    <!-- Floating CTA Action Bar -->
+    <div class="cta-bar no-print">
+        <a class="cta-btn cta-print" onclick="printLetter(event)" href="#" role="button" aria-label="Stampa Lettera">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                aria-hidden="true">
+                <polyline points="6 9 6 2 18 2 18 9"></polyline>
+                <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+                <rect x="6" y="14" width="12" height="8"></rect>
+            </svg>
+            <span data-lang="it">Stampa / PDF</span><span data-lang="en">Print / PDF</span><span
+                data-lang="fr">Imprimer / PDF</span>
+        </a>
+        <a class="cta-btn cta-email email-trigger"
+            href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=abdellaziz.bougrich@gmail.com&amp;su=Candidatura%20-%20Abdelaziz%20Bougrich"
+            target="_blank" rel="noopener noreferrer" aria-label="Email">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                aria-hidden="true">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+            <span data-lang="it">Contattami</span><span data-lang="en">Email Me</span><span
+                data-lang="fr">M'écrire</span>
+        </a>
+    </div>
+
     <script>
-        function printLetter() {
+        function printLetter(e) {
+            if (e) e.preventDefault();
             const orig = document.title;
-            document.title = 'Lettera_Presentazione_Abdelaziz_Bougrich';
+            const isIt = document.getElementById('lang-it').checked;
+            const isFr = document.getElementById('lang-fr').checked;
+            if (isIt) document.title = 'Lettera_Presentazione_Abdelaziz_Bougrich_IT';
+            else if (isFr) document.title = 'Lettre_Motivation_Abdelaziz_Bougrich_FR';
+            else document.title = 'Cover_Letter_Abdelaziz_Bougrich_EN';
             window.print();
-            setTimeout(() => { document.title = orig; }, 2000);
+            setTimeout(() => { document.title = orig; }, 1500);
         }
+
+        function isMobileDevice() {
+            return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ||
+                (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+        }
+
+        function updateEmailLinks() {
+            const email = 'abdellaziz.bougrich@gmail.com';
+            const isIt = document.getElementById('lang-it').checked;
+            const isFr = document.getElementById('lang-fr').checked;
+
+            let subject = 'Job Application - Abdelaziz Bougrich';
+            if (isIt) subject = 'Candidatura - Abdelaziz Bougrich';
+            else if (isFr) subject = 'Candidature - Abdelaziz Bougrich';
+
+            const encodedSubject = encodeURIComponent(subject);
+            const mobile = isMobileDevice();
+
+            document.querySelectorAll('.email-trigger').forEach(function (link) {
+                if (mobile) {
+                    link.href = 'mailto:' + email + '?subject=' + encodedSubject;
+                    link.removeAttribute('target');
+                    link.removeAttribute('rel');
+                } else {
+                    link.href = 'https://mail.google.com/mail/?view=cm&fs=1&to=' + email + '&su=' + encodedSubject;
+                    link.setAttribute('target', '_blank');
+                    link.setAttribute('rel', 'noopener noreferrer');
+                }
+            });
+        }
+
+        updateEmailLinks();
+
+        document.querySelectorAll('input[name="lang-switch"]').forEach(function (radio) {
+            radio.addEventListener('change', function () {
+                const lang = this.id.replace('lang-', '');
+                document.documentElement.setAttribute('lang', lang);
+                updateEmailLinks();
+            });
+        });
     </script>
 
 </body>
