@@ -4,24 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV — Abdelaziz Bougrich | Technical Sales Professional</title>
+    <title>Curriculum Vitae — Abdelaziz Bougrich | Professionista Tecnico-Commerciale</title>
     <!-- SEO & Accessibility -->
     <meta name="description"
-        content="CV professionale di Abdelaziz Bougrich — Professionista Tecnico-Commerciale con 5+ anni di esperienza. Basato a Bologna, Italia.">
+        content="Curriculum Vitae di Abdelaziz Bougrich — Professionista Tecnico-Commerciale con oltre 5 anni di esperienza. Residente a Bologna, Italia. Patenti: B, C, D, E, EB, EC, ED.">
     <!-- Open Graph / LinkedIn / WhatsApp Social Preview -->
     <meta property="og:type" content="profile">
-    <meta property="og:title" content="Abdelaziz Bougrich — Professionista Tecnico-Commerciale">
+    <meta property="og:title" content="Abdelaziz Bougrich — Curriculum Vitae">
     <meta property="og:description"
-        content="CV professionale con 5+ anni di esperienza nelle vendite tecniche, servizio clienti e gestione commerciale. Disponibile a Bologna, Italia.">
+        content="Professionista Tecnico-Commerciale con 5+ anni di esperienza nelle vendite tecniche, gestione clienti e logistica commerciale. Bologna, Italia.">
     <meta property="og:url" content="https://abdellazizbougrich-alt.github.io/Bougrich-abdelaziz-CV/">
     <meta property="og:image"
         content="https://abdellazizbougrich-alt.github.io/Bougrich-abdelaziz-CV/profile-placeholder.jpeg">
     <meta property="og:locale" content="it_IT">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Abdelaziz Bougrich — CV Professionale">
-    <meta name="twitter:description" content="5+ anni nelle vendite tecniche. Disponibile a Bologna, Italia.">
+    <meta name="twitter:title" content="Abdelaziz Bougrich — Curriculum Vitae">
+    <meta name="twitter:description" content="Professionista Tecnico-Commerciale. Residente a Bologna, Italia.">
     <link rel="icon" type="image/svg+xml"
-        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%231a2a6c'/><text x='16' y='22' font-family='sans-serif' font-size='13' font-weight='700' fill='white' text-anchor='middle'>AB</text></svg>">
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230f172a'/><text x='16' y='21' font-family='sans-serif' font-size='13' font-weight='700' fill='white' text-anchor='middle'>AB</text></svg>">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -32,7 +32,19 @@
     <input type="radio" name="lang-switch" id="lang-fr" class="lang-toggle">
 
     <div class="top-bar no-print">
-        <div class="lang-controls">
+        <nav class="doc-nav" aria-label="Document Navigation">
+            <a href="index.html" class="doc-nav-link active">
+                <span data-lang="it">Curriculum Vitae</span>
+                <span data-lang="en">Curriculum Vitae</span>
+                <span data-lang="fr">Curriculum Vitae</span>
+            </a>
+            <a href="lettera.html" class="doc-nav-link">
+                <span data-lang="it">Lettera di Presentazione</span>
+                <span data-lang="en">Cover Letter</span>
+                <span data-lang="fr">Lettre de Motivation</span>
+            </a>
+        </nav>
+        <div class="lang-controls" role="group" aria-label="Language Selector">
             <label for="lang-it" class="lang-btn">IT</label>
             <label for="lang-en" class="lang-btn">EN</label>
             <label for="lang-fr" class="lang-btn">FR</label>
@@ -40,17 +52,15 @@
     </div>
 
     <div class="cv-wrapper">
-        <!-- Sidebar: Info, Skills, Languages -->
+        <!-- Sidebar: Photo, Contact, Skills, Driving Licences, Languages -->
         <aside class="sidebar">
             <div class="photo-container" id="photoContainer">
-                <img src="profile-placeholder.jpeg"
-                    alt="Abdelaziz Bougrich" class="profile-photo"
-                    id="profileImg">
+                <img src="profile-placeholder.jpeg" alt="Abdelaziz Bougrich" class="profile-photo" id="profileImg">
             </div>
 
             <!-- Availability Badge -->
             <div class="availability-badge no-print" id="availabilityBadge">
-                <span class="badge-dot"></span>
+                <span class="badge-dot" aria-hidden="true"></span>
                 <div class="badge-text">
                     <strong class="badge-status">
                         <span data-lang="it">Disponibile per nuove opportunità</span>
@@ -58,9 +68,9 @@
                         <span data-lang="fr">Ouvert aux opportunités</span>
                     </strong>
                     <span class="badge-notice">
-                        <span data-lang="it">Disponibilità immediata</span>
-                        <span data-lang="en">Available Immediately</span>
-                        <span data-lang="fr">Disponible immédiatement</span>
+                        <span data-lang="it">Disponibilità immediata · Bologna</span>
+                        <span data-lang="en">Immediate availability · Bologna</span>
+                        <span data-lang="fr">Disponibilité immédiate · Bologne</span>
                     </span>
                 </div>
             </div>
@@ -69,23 +79,23 @@
             <div class="sidebar-section" id="contatti">
                 <h2 data-lang="it">Contatti</h2>
                 <h2 data-lang="en">Contact</h2>
-                <h2 data-lang="fr">Contacts</h2>
+                <h2 data-lang="fr">Coordonnées</h2>
                 <div class="contact-info">
                     <p>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            class="contact-icon">
+                            class="contact-icon" aria-hidden="true">
                             <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
                             <circle cx="12" cy="10" r="3"></circle>
                         </svg>
-                        <span data-lang="it">Via F. Zanardi 292/2, Bologna, Italia</span><span data-lang="en">Via F.
-                            Zanardi 292/2, Bologna, Italy</span><span data-lang="fr">Via F. Zanardi 292/2, Bologne,
-                            Italie</span>
+                        <span data-lang="it">Via F. Zanardi 292/2, 40131 Bologna (BO), Italia</span>
+                        <span data-lang="en">Via F. Zanardi 292/2, 40131 Bologna (BO), Italy</span>
+                        <span data-lang="fr">Via F. Zanardi 292/2, 40131 Bologne (BO), Italie</span>
                     </p>
                     <p>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            class="contact-icon">
+                            class="contact-icon" aria-hidden="true">
                             <path
                                 d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
                             </path>
@@ -93,106 +103,136 @@
                         <a href="tel:+393534875880">+39 353 487 5880</a>
                     </p>
                     <p>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            class="contact-icon">
+                            class="contact-icon" aria-hidden="true">
                             <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
                             </path>
                             <polyline points="22,6 12,13 2,6"></polyline>
                         </svg>
-                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=abdelaziz.bougrich@gmail.com&su=Candidatura%20-%20Abdelaziz%20Bougrich"
-                            target="_blank">abdelaziz.bougrich@gmail.com</a>
+                        <a href="mailto:abdelaziz.bougrich@gmail.com">abdelaziz.bougrich@gmail.com</a>
                     </p>
                     <p>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            class="contact-icon">
+                            class="contact-icon" aria-hidden="true">
                             <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
                             </path>
                             <rect x="2" y="9" width="4" height="12"></rect>
                             <circle cx="4" cy="4" r="2"></circle>
                         </svg>
-                        <a href="https://www.linkedin.com/in/abdelaziz-bougrich-a13671155/"
-                            target="_blank">linkedin.com/in/abdelaziz-bougrich</a>
+                        <a href="https://www.linkedin.com/in/abdelaziz-bougrich-a13671155/" target="_blank"
+                            rel="noopener noreferrer">linkedin.com/in/abdelaziz-bougrich</a>
                     </p>
                     <p>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            class="contact-icon">
+                            class="contact-icon" aria-hidden="true">
                             <circle cx="12" cy="12" r="10"></circle>
                             <line x1="2" y1="12" x2="22" y2="12"></line>
                             <path
                                 d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
                             </path>
                         </svg>
-                        <a href="https://abdellazizbougrich-alt.github.io/Abdelaziz-Bougrich-portfolio/"
-                            target="_blank">abdellazizbougrich-alt.github.io/…/portfolio</a>
+                        <a href="https://abdellazizbougrich-alt.github.io/Abdelaziz-Bougrich-portfolio/" target="_blank"
+                            rel="noopener noreferrer">Portfolio Professionale</a>
                     </p>
                 </div>
             </div>
 
-            <!-- Competenze -->
+            <!-- Competenze & Patenti -->
             <div class="sidebar-section" id="competenze">
                 <h2 data-lang="it">Competenze</h2>
                 <h2 data-lang="en">Skills</h2>
                 <h2 data-lang="fr">Compétences</h2>
-                <strong style="display:block; margin-bottom:8px; font-size:0.82em; color:var(--primary-navy);"
-                    data-lang="it">Competenze Tecniche</strong>
-                <strong style="display:block; margin-bottom:8px; font-size:0.82em; color:var(--primary-navy);"
-                    data-lang="en">Hard Skills</strong>
-                <strong style="display:block; margin-bottom:8px; font-size:0.82em; color:var(--primary-navy);"
-                    data-lang="fr">Compétences Techniques</strong>
-                <ul class="skills-bullet-list" style="margin-bottom:20px;">
-                    <li>CRM</li>
-                    <li><span data-lang="it">Contabilità</span><span data-lang="en">Accounting</span><span
-                            data-lang="fr">Comptabilité</span></li>
-                    <li><span data-lang="it">Vendite Tecniche</span><span data-lang="en">Technical Sales</span><span
-                            data-lang="fr">Ventes Techniques</span></li>
-                    <li><span data-lang="it">Operazioni di Cassa</span><span data-lang="en">Cashiering</span><span
-                            data-lang="fr">Tenue de Caisse</span></li>
-                    <li>Microsoft Office</li>
-                </ul>
-                <strong style="display:block; margin-bottom:8px; font-size:0.82em; color:var(--accent-gold);"
-                    data-lang="it">Competenze Trasversali</strong>
-                <strong style="display:block; margin-bottom:8px; font-size:0.82em; color:var(--accent-gold);"
-                    data-lang="en">Soft Skills</strong>
-                <strong style="display:block; margin-bottom:8px; font-size:0.82em; color:var(--accent-gold);"
-                    data-lang="fr">Compétences Transversales</strong>
-                <ul class="skills-bullet-list" style="margin-bottom:20px;">
-                    <li><span data-lang="it">Gestione Vendite</span><span data-lang="en">Sales Management</span><span
-                            data-lang="fr">Gestion des Ventes</span></li>
-                    <li><span data-lang="it">Negoziazione</span><span data-lang="en">Negotiation</span><span
-                            data-lang="fr">Négociation</span></li>
-                    <li><span data-lang="it">Problem Solving</span><span data-lang="en">Problem Solving</span><span
-                            data-lang="fr">Résolution de Problèmes</span></li>
-                    <li><span data-lang="it">Servizio Clienti</span><span data-lang="en">Customer Service</span><span
-                            data-lang="fr">Service Client</span></li>
-                    <li><span data-lang="it">Lavoro in Team</span><span data-lang="en">Teamwork</span><span
-                            data-lang="fr">Travail en Équipe</span></li>
-                </ul>
-                <strong style="display:block; margin-bottom:8px; font-size:0.82em; color:var(--primary-navy);"
-                    data-lang="it">Altre Informazioni</strong>
-                <strong style="display:block; margin-bottom:8px; font-size:0.82em; color:var(--primary-navy);"
-                    data-lang="en">Other Information</strong>
-                <strong style="display:block; margin-bottom:8px; font-size:0.82em; color:var(--primary-navy);"
-                    data-lang="fr">Autres Informations</strong>
+
+                <strong class="skills-subtitle" data-lang="it">Competenze Tecniche</strong>
+                <strong class="skills-subtitle" data-lang="en">Hard Skills</strong>
+                <strong class="skills-subtitle" data-lang="fr">Compétences Techniques</strong>
                 <ul class="skills-bullet-list">
-                    <li><span data-lang="it">Patente di guida (B)</span><span data-lang="en">Driving Licence
-                            (B)</span><span data-lang="fr">Permis de conduire (B)</span></li>
+                    <li><span data-lang="it">Vendite Tecniche &amp; Consulenza B2B</span><span data-lang="en">Technical
+                            Sales &amp; B2B Consulting</span><span data-lang="fr">Ventes Techniques &amp; Conseil
+                            B2B</span></li>
+                    <li><span data-lang="it">Sistemi CRM &amp; Gestione Clienti</span><span data-lang="en">CRM Systems
+                            &amp; Client Management</span><span data-lang="fr">Systèmes CRM &amp; Gestion Client</span>
+                    </li>
+                    <li><span data-lang="it">Contabilità &amp; Rendicontazione</span><span data-lang="en">Accounting
+                            &amp; Financial Reporting</span><span data-lang="fr">Comptabilité &amp; Reporting</span>
+                    </li>
+                    <li><span data-lang="it">Gestione Magazzino &amp; Operazioni di Cassa</span><span
+                            data-lang="en">Inventory Control &amp; Cashiering</span><span data-lang="fr">Gestion des
+                            Stocks &amp; Tenue de Caisse</span></li>
+                    <li>Microsoft Office Suite (Excel, Word, PowerPoint)</li>
                 </ul>
+
+                <strong class="skills-subtitle" data-lang="it">Competenze Trasversali</strong>
+                <strong class="skills-subtitle" data-lang="en">Soft Skills</strong>
+                <strong class="skills-subtitle" data-lang="fr">Compétences Transversales</strong>
+                <ul class="skills-bullet-list">
+                    <li><span data-lang="it">Gestione Commerciale &amp; Negoziazione</span><span data-lang="en">Sales
+                            Management &amp; Negotiation</span><span data-lang="fr">Gestion des Ventes &amp;
+                            Négociation</span></li>
+                    <li><span data-lang="it">Problem Solving Operativo</span><span data-lang="en">Operational Problem
+                            Solving</span><span data-lang="fr">Résolution de Problèmes</span></li>
+                    <li><span data-lang="it">Assistenza Clienti &amp; Post-Vendita</span><span data-lang="en">Customer
+                            Service &amp; After-Sales</span><span data-lang="fr">Service Client &amp;
+                            Après-Vente</span></li>
+                    <li><span data-lang="it">Lavoro in Team &amp; Adattabilità</span><span data-lang="en">Teamwork
+                            &amp; Adaptability</span><span data-lang="fr">Travail en Équipe &amp; Adaptabilité</span>
+                    </li>
+                </ul>
+
+                <strong class="skills-subtitle" data-lang="it">Patenti di Guida</strong>
+                <strong class="skills-subtitle" data-lang="en">Driving Licences</strong>
+                <strong class="skills-subtitle" data-lang="fr">Permis de Conduire</strong>
+                <div class="cv-driving-block">
+                    <div class="cv-driving-header">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="cv-driving-ico"
+                            aria-hidden="true">
+                            <rect x="1" y="3" width="15" height="13" rx="2"></rect>
+                            <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                            <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                            <circle cx="18.5" cy="18.5" r="2.5"></circle>
+                        </svg>
+                        <span data-lang="it">Categorie Abilitate:</span>
+                        <span data-lang="en">Licensed Categories:</span>
+                        <span data-lang="fr">Catégories Validées :</span>
+                    </div>
+                    <div class="cv-licence-badges" aria-label="Driving Licences B, C, D, E, EB, EC, ED">
+                        <span class="cv-lic-pill" title="Categoria B — Autovetture / Light Vehicles">B</span>
+                        <span class="cv-lic-pill" title="Categoria C — Autocarri &gt;3.5t / Heavy Trucks">C</span>
+                        <span class="cv-lic-pill" title="Categoria D — Autobus / Passenger Transport">D</span>
+                        <span class="cv-lic-pill" title="Categoria E — Rimorchi Pesanti / Heavy Trailers">E</span>
+                        <span class="cv-lic-pill cv-lic-trailer"
+                            title="Categoria EB — Auto + Rimorchio / Vehicle + Trailer">EB</span>
+                        <span class="cv-lic-pill cv-lic-trailer"
+                            title="Categoria EC — Autoarticolati / Articulated Heavy Trucks">EC</span>
+                        <span class="cv-lic-pill cv-lic-trailer"
+                            title="Categoria ED — Autosnodati / Articulated Coaches">ED</span>
+                    </div>
+                    <p class="cv-driving-note">
+                        <span data-lang="it">Patenti B, C, D, E, EB, EC, ED · Disponibile a trasferte</span>
+                        <span data-lang="en">Licences B, C, D, E, EB, EC, ED · Available for travel</span>
+                        <span data-lang="fr">Permis B, C, D, E, EB, EC, ED · Disponible pour déplacements</span>
+                    </p>
+                </div>
             </div>
 
-            <!-- Lingue -->
+            <!-- Lingue (QCER / CEFR) -->
             <div class="sidebar-section" id="lingue">
-                <h2 data-lang="it">Lingue</h2>
-                <h2 data-lang="en">Languages</h2>
-                <h2 data-lang="fr">Langues</h2>
+                <h2 data-lang="it">Lingue (QCER)</h2>
+                <h2 data-lang="en">Languages (CEFR)</h2>
+                <h2 data-lang="fr">Langues (CECRL)</h2>
                 <div class="lang-skill-group">
                     <div class="lang-item">
                         <div class="lang-info">
-                            <span class="lang-name" data-lang="it">Arabo</span><span class="lang-name"
-                                data-lang="en">Arabic</span><span class="lang-name" data-lang="fr">Arabe</span>
-                            <span class="lang-level">(C2 / Madrelingua)</span>
+                            <span class="lang-name" data-lang="it">Arabo</span>
+                            <span class="lang-name" data-lang="en">Arabic</span>
+                            <span class="lang-name" data-lang="fr">Arabe</span>
+                            <span class="lang-level" data-lang="it">C2 · Madrelingua</span>
+                            <span class="lang-level" data-lang="en">C2 · Native</span>
+                            <span class="lang-level" data-lang="fr">C2 · Langue maternelle</span>
                         </div>
                         <div class="lang-bar-bg">
                             <div class="lang-bar-fill" style="width:100%;"></div>
@@ -200,19 +240,12 @@
                     </div>
                     <div class="lang-item">
                         <div class="lang-info">
-                            <span class="lang-name" data-lang="it">Francese</span><span class="lang-name"
-                                data-lang="en">French</span><span class="lang-name" data-lang="fr">Français</span>
-                            <span class="lang-level">(B2 / Avanzato)</span>
-                        </div>
-                        <div class="lang-bar-bg">
-                            <div class="lang-bar-fill" style="width:70%;"></div>
-                        </div>
-                    </div>
-                    <div class="lang-item">
-                        <div class="lang-info">
-                            <span class="lang-name" data-lang="it">Inglese</span><span class="lang-name"
-                                data-lang="en">English</span><span class="lang-name" data-lang="fr">Anglais</span>
-                            <span class="lang-level">(C1 / Professionale)</span>
+                            <span class="lang-name" data-lang="it">Inglese</span>
+                            <span class="lang-name" data-lang="en">English</span>
+                            <span class="lang-name" data-lang="fr">Anglais</span>
+                            <span class="lang-level" data-lang="it">C1 · Avanzato / Professionale</span>
+                            <span class="lang-level" data-lang="en">C1 · Full Professional</span>
+                            <span class="lang-level" data-lang="fr">C1 · Professionnel</span>
                         </div>
                         <div class="lang-bar-bg">
                             <div class="lang-bar-fill" style="width:85%;"></div>
@@ -220,27 +253,42 @@
                     </div>
                     <div class="lang-item">
                         <div class="lang-info">
-                            <span class="lang-name" data-lang="it">Italiano</span><span class="lang-name"
-                                data-lang="en">Italian</span><span class="lang-name" data-lang="fr">Italien</span>
-                            <span class="lang-level">(B1 / Intermedio)</span>
+                            <span class="lang-name" data-lang="it">Francese</span>
+                            <span class="lang-name" data-lang="en">French</span>
+                            <span class="lang-name" data-lang="fr">Français</span>
+                            <span class="lang-level" data-lang="it">B2 · Intermedio Superiore</span>
+                            <span class="lang-level" data-lang="en">B2 · Upper Intermediate</span>
+                            <span class="lang-level" data-lang="fr">B2 · Avancé</span>
                         </div>
                         <div class="lang-bar-bg">
-                            <div class="lang-bar-fill" style="width:50%;"></div>
+                            <div class="lang-bar-fill" style="width:75%;"></div>
+                        </div>
+                    </div>
+                    <div class="lang-item">
+                        <div class="lang-info">
+                            <span class="lang-name" data-lang="it">Italiano</span>
+                            <span class="lang-name" data-lang="en">Italian</span>
+                            <span class="lang-name" data-lang="fr">Italien</span>
+                            <span class="lang-level" data-lang="it">B1 · Intermedio</span>
+                            <span class="lang-level" data-lang="en">B1 · Intermediate</span>
+                            <span class="lang-level" data-lang="fr">B1 · Intermédiaire</span>
+                        </div>
+                        <div class="lang-bar-bg">
+                            <div class="lang-bar-fill" style="width:60%;"></div>
                         </div>
                     </div>
                 </div>
             </div>
         </aside>
 
-        <!-- Main Content: Profile, Experience, Education -->
+        <!-- Main Content: Header, Profile, Experience, Education, GDPR Footer -->
         <main class="main-content">
             <header>
                 <h1><span class="first-name">Abdelaziz</span> <span class="last-name">BOUGRICH</span></h1>
-                <p class="subtitle" data-lang="it">Professionista Tecnico-Commerciale</p>
-                <p class="subtitle" data-lang="en">Technical Sales Professional</p>
-                <p class="subtitle" data-lang="fr">Professionnel Technico-Commercial</p>
+                <p class="subtitle" data-lang="it">Professionista Tecnico-Commerciale &amp; Gestione Clienti</p>
+                <p class="subtitle" data-lang="en">Technical Sales &amp; Client Management Professional</p>
+                <p class="subtitle" data-lang="fr">Professionnel Technico-Commercial &amp; Relation Client</p>
             </header>
-
 
             <section id="profilo">
                 <h2 data-lang="it">Profilo Professionale</h2>
@@ -249,28 +297,31 @@
 
                 <div class="profile-grid">
                     <div class="profile-variant" data-lang="it">
-                        <p>Professionista motivato e orientato ai risultati con oltre cinque anni di esperienza nel
-                            settore tecnico-commerciale e nel servizio clienti. Dotato di eccellenti capacità di
-                            comunicazione e negoziazione, ho sviluppato solide competenze nella gestione delle vendite e
-                            nelle operazioni di punto vendita. Eccello in ambienti dinamici, garantendo sempre
-                            dedizione, problem-solving e un eccellente supporto al cliente.</p>
+                        <p>Professionista affidabile e orientato ai risultati con oltre cinque anni di esperienza nel
+                            settore tecnico-commerciale, nell'assistenza clienti e nella gestione operativa di punto
+                            vendita e magazzino. Dotato di solide capacità di comunicazione, negoziazione e
+                            organizzazione, ho maturato competenze trasversali nello sviluppo del portafoglio clienti,
+                            nel coordinamento post-vendita e nel controllo delle scorte. In possesso delle patenti di
+                            guida <strong>B, C, D, E, EB, EC, ED</strong>, garantisco massima flessibilità operativa e
+                            disponibilità immediata a Bologna e provincia.</p>
                     </div>
 
                     <div class="profile-variant" data-lang="en">
-                        <p>Motivated and results-oriented professional with over five years of experience in technical
-                            sales and customer service. Equipped with excellent communication and negotiation skills, I
-                            have developed solid expertise in sales management and store operations. I excel in dynamic,
-                            fast-paced environments, consistently delivering dedication, problem-solving abilities, and
-                            outstanding client support.</p>
+                        <p>Reliable and results-driven professional with over five years of experience in technical
+                            sales, customer service, and store/warehouse operations. Equipped with strong communication,
+                            negotiation, and organizational skills, I have developed solid expertise in client portfolio
+                            management, after-sales coordination, and inventory control. Holding full driving licences
+                            (categories <strong>B, C, D, E, EB, EC, ED</strong>), I offer complete operational
+                            flexibility and immediate availability in Bologna, Italy.</p>
                     </div>
 
                     <div class="profile-variant" data-lang="fr">
-                        <p>Professionnel motivé et orienté vers les résultats avec plus de cinq ans d'expérience dans le
-                            domaine technico-commercial et le service client. Doté d'excellentes capacités de
-                            communication et de négociation, j'ai développé une solide expertise dans la gestion des
-                            ventes et les opérations en magasin. J'excelle dans des environnements dynamiques, en
-                            garantissant toujours dévouement, capacités de résolution de problèmes et un support client
-                            exceptionnel.</p>
+                        <p>Professionnel fiable et orienté vers les résultats avec plus de cinq ans d'expérience dans le
+                            secteur technico-commercial, le service client et la gestion opérationnelle des stocks et
+                            points de vente. Doté de solides compétences en communication, négociation et organisation,
+                            j'ai développé une expertise confirmée dans la gestion de portefeuille clients et le suivi
+                            après-vente. Titulaire des permis de conduire <strong>B, C, D, E, EB, EC, ED</strong>,
+                            j'offre une disponibilité immédiate à Bologne, Italie.</p>
                     </div>
                 </div>
             </section>
@@ -282,204 +333,202 @@
 
                 <article class="experience-item">
                     <div class="item-header">
-                        <span class="item-title" data-lang="it">Technical Sales Representative</span>
+                        <span class="item-title" data-lang="it">Rappresentante Tecnico-Commerciale</span>
                         <span class="item-title" data-lang="en">Technical Sales Representative</span>
                         <span class="item-title" data-lang="fr">Représentant Technico-Commercial</span>
 
-                        <span class="item-date" data-lang="it">Novembre 2019 — Aprile 2025</span>
-                        <span class="item-date" data-lang="en">November 2019 — April 2025</span>
-                        <span class="item-date" data-lang="fr">Novembre 2019 — Avril 2025</span>
+                        <span class="item-date" data-lang="it">Nov 2019 — Apr 2025</span>
+                        <span class="item-date" data-lang="en">Nov 2019 — Apr 2025</span>
+                        <span class="item-date" data-lang="fr">Nov 2019 — Avr 2025</span>
                     </div>
-                    <div class="item-meta" data-lang="it">EGLO Leuchten GmbH | Tanger-Tetouan-Al Hoceima, Marocco</div>
-                    <div class="item-meta" data-lang="en">EGLO Leuchten GmbH | Tanger-Tetouan-Al Hoceima, Morocco</div>
-                    <div class="item-meta" data-lang="fr">EGLO Leuchten GmbH | Tanger-Tétouan-Al Hoceima, Maroc</div>
+                    <div class="item-meta" data-lang="it">EGLO Leuchten GmbH · Tangeri-Tetouan-Al Hoceima, Marocco</div>
+                    <div class="item-meta" data-lang="en">EGLO Leuchten GmbH · Tangier-Tetouan-Al Hoceima, Morocco</div>
+                    <div class="item-meta" data-lang="fr">EGLO Leuchten GmbH · Tanger-Tétouan-Al Hoceima, Maroc</div>
 
                     <div class="item-content" data-lang="it">
                         <ul>
-                            <li><strong></strong>Gestito</strong> un portafoglio clienti attivo nell'area
-                                Tanger-Tetouan, sviluppando relazioni commerciali durature e fidelizzando la clientela.
-                            </li>
-                            <li><strong>Elaborato</strong> strategie di vendita personalizzate, contribuendo al
-                                raggiungimento sistematico degli obiettivi commerciali trimestrali.</li>
-                            <li><strong>Coordinato</strong> le attività di post-vendita e assistenza tecnica, garantendo
-                                elevati standard qualitativi nel servizio al cliente.</li>
-                            <li><strong>Gestito</strong> l'inventario e ottimizzato il controllo delle scorte.</li>
+                            <li><strong>Gestito</strong> un portafoglio clienti B2B attivo nell'area Tangeri-Tetouan,
+                                consolidando relazioni commerciali durature e fidelizzando la clientela.</li>
+                            <li><strong>Sviluppato</strong> strategie di vendita personalizzate e consulenza tecnica sui
+                                prodotti, raggiungendo costantemente gli obiettivi commerciali trimestrali.</li>
+                            <li><strong>Coordinato</strong> le attività di post-vendita, logistica ordini e assistenza
+                                tecnica, garantendo elevati standard qualitativi nel servizio al cliente.</li>
+                            <li><strong>Supervisionato</strong> l'inventario di magazzino e ottimizzato il controllo
+                                delle scorte e dei rifornimenti.</li>
                         </ul>
                     </div>
                     <div class="item-content" data-lang="en">
                         <ul>
-                            <li><strong>Managed</strong> an active client portfolio across the Tanger-Tetouan region,
-                                building lasting commercial relationships and driving customer loyalty.</li>
-                            <li><strong>Developed</strong> tailored sales strategies that consistently contributed to
-                                achieving quarterly commercial targets.</li>
-                            <li><strong>Coordinated</strong> post-sale and technical support activities, ensuring
-                                high-quality standards in customer service delivery.</li>
-                            <li>Inventory management and stock control optimization.</li>
+                            <li><strong>Managed</strong> an active B2B client portfolio across the Tangier-Tetouan
+                                region, building lasting commercial relationships and driving customer loyalty.</li>
+                            <li><strong>Developed</strong> tailored sales strategies and technical product consulting,
+                                consistently achieving quarterly commercial targets.</li>
+                            <li><strong>Coordinated</strong> after-sales, order logistics, and technical support
+                                activities, ensuring high-quality standards in customer service delivery.</li>
+                            <li><strong>Supervised</strong> warehouse inventory and optimized stock control and
+                                replenishment processes.</li>
                         </ul>
                     </div>
                     <div class="item-content" data-lang="fr">
                         <ul>
-                            <li><strong>Géré</strong> un portefeuille actif de clients dans la région Tanger-Tétouan, en
-                                développant des relations commerciales durables et en fidélisant la clientèle.</li>
-                            <li><strong>Élaboré</strong> des stratégies de vente personnalisées contribuant à l'atteinte
-                                systématique des objectifs commerciaux trimestriels.</li>
-                            <li><strong>Coordonné</strong> les activités d'après-vente et d'assistance technique,
-                                garantissant un service client de haute qualité.</li>
-                            <li><strong>Géré</strong> l'inventaire et optimisé le contrôle des stocks.</li>
+                            <li><strong>Géré</strong> un portefeuille actif de clients B2B dans la région
+                                Tanger-Tétouan, en développant des relations commerciales durables et en fidélisant la
+                                clientèle.</li>
+                            <li><strong>Élaboré</strong> des stratégies de vente personnalisées et un conseil technique
+                                produits, atteignant systématiquement les objectifs commerciaux trimestriels.</li>
+                            <li><strong>Coordonné</strong> les activités d'après-vente, la logistique des commandes et
+                                l'assistance technique avec un haut niveau de qualité.</li>
+                            <li><strong>Supervisé</strong> l'inventaire et optimisé le contrôle des stocks et des
+                                approvisionnements.</li>
                         </ul>
                     </div>
                 </article>
 
                 <article class="experience-item">
                     <div class="item-header">
-                        <span class="item-title" data-lang="it">Store Associate / Addetto alle Vendite</span>
-                        <span class="item-title" data-lang="en">Store Associate / Cashier</span>
-                        <span class="item-title" data-lang="fr">Employé de Magasin / Caissier</span>
+                        <span class="item-title" data-lang="it">Addetto alle Vendite e Operazioni di Cassa</span>
+                        <span class="item-title" data-lang="en">Store Associate &amp; Cashier</span>
+                        <span class="item-title" data-lang="fr">Employé de Magasin &amp; Caissier</span>
 
-                        <span class="item-date" data-lang="it">Marzo 2018 — Ottobre 2018</span>
-                        <span class="item-date" data-lang="en">March 2018 — October 2018</span>
-                        <span class="item-date" data-lang="fr">Mars 2018 — Octobre 2018</span>
+                        <span class="item-date" data-lang="it">Mar 2018 — Ott 2018</span>
+                        <span class="item-date" data-lang="en">Mar 2018 — Oct 2018</span>
+                        <span class="item-date" data-lang="fr">Mar 2018 — Oct 2018</span>
                     </div>
 
-                    <div class="item-meta" data-lang="it">BİM Birleşik Mağazalar A.Ş | Prefettura di Rabat, Marocco
-                    </div>
-                    <div class="item-meta" data-lang="en">BİM Birleşik Mağazalar A.Ş | Rabat Prefecture, Morocco</div>
-                    <div class="item-meta" data-lang="fr">BİM Birleşik Mağazalar A.Ş | Préfecture de Rabat, Maroc</div>
+                    <div class="item-meta" data-lang="it">BİM Birleşik Mağazalar A.Ş · Rabat, Marocco</div>
+                    <div class="item-meta" data-lang="en">BİM Birleşik Mağazalar A.Ş · Rabat, Morocco</div>
+                    <div class="item-meta" data-lang="fr">BİM Birleşik Mağazalar A.Ş · Rabat, Maroc</div>
 
                     <div class="item-content" data-lang="it">
                         <ul>
-                            <li><strong>Ottimizzato</strong> le operazioni di cassa, riducendo i tempi di attesa e
-                                migliorando la soddisfazione della clientela.</li>
-                            <li><strong>Organizzato</strong> il rifornimento degli scaffali e la gestione delle scorte,
-                                garantendo la disponibilità continua dei prodotti.</li>
+                            <li><strong>Gestito</strong> le operazioni di cassa e l'accoglienza clienti con precisione e
+                                rapidità, riducendo i tempi di attesa e migliorando il servizio.</li>
+                            <li><strong>Organizzato</strong> la ricezione merci, il rifornimento degli scaffali e il
+                                controllo delle scorte in magazzino.</li>
                         </ul>
                     </div>
                     <div class="item-content" data-lang="en">
                         <ul>
-                            <li><strong>Optimized</strong> cashier operations, reducing wait times and improving overall
-                                customer satisfaction.</li>
-                            <li><strong>Organized</strong> shelf restocking and stock management, ensuring continuous
-                                product availability on the shop floor.</li>
+                            <li><strong>Managed</strong> cashier operations and customer assistance with accuracy and
+                                speed, reducing wait times and improving overall satisfaction.</li>
+                            <li><strong>Organized</strong> goods reception, shelf restocking, and warehouse stock
+                                management to ensure continuous product availability.</li>
                         </ul>
                     </div>
                     <div class="item-content" data-lang="fr">
                         <ul>
-                            <li><strong>Optimisé</strong> les opérations de caisse, réduisant les temps d'attente et
-                                améliorant la satisfaction client.</li>
-                            <li><strong>Organisé</strong> le réapprovisionnement des rayons et la gestion des stocks
-                                pour garantir une disponibilité continue des produits.</li>
+                            <li><strong>Géré</strong> les opérations de caisse et l'accueil client avec précision et
+                                rapidité, réduisant les temps d'attente.</li>
+                            <li><strong>Organisé</strong> la réception des marchandises, le réapprovisionnement des
+                                rayons et la gestion des stocks en magasin.</li>
                         </ul>
                     </div>
                 </article>
 
                 <article class="experience-item">
                     <div class="item-header">
-                        <span class="item-title" data-lang="it">Intern (Progetto di Fine Studi)</span>
-                        <span class="item-title" data-lang="en">Intern (Final Year Project)</span>
-                        <span class="item-title" data-lang="fr">Stagiaire (Projet de Fin d'Études)</span>
+                        <span class="item-title" data-lang="it">Tirocinante — Analisi Processi Operativi</span>
+                        <span class="item-title" data-lang="en">Operations Analysis Intern (Final Project)</span>
+                        <span class="item-title" data-lang="fr">Stagiaire — Analyse des Processus (PFE)</span>
 
-                        <span class="item-date" data-lang="it">Marzo 2017</span>
-                        <span class="item-date" data-lang="en">March 2017</span>
-                        <span class="item-date" data-lang="fr">Mars 2017</span>
+                        <span class="item-date" data-lang="it">Mar 2017</span>
+                        <span class="item-date" data-lang="en">Mar 2017</span>
+                        <span class="item-date" data-lang="fr">Mar 2017</span>
                     </div>
-                    <div class="item-meta" data-lang="it">ONEE-Branche Eau | Guelmim, Marocco</div>
-                    <div class="item-meta" data-lang="en">ONEE-Branche Eau | Guelmim, Morocco</div>
-                    <div class="item-meta" data-lang="fr">ONEE-Branche Eau | Guelmim, Maroc</div>
+                    <div class="item-meta" data-lang="it">ONEE-Branche Eau · Guelmim, Marocco</div>
+                    <div class="item-meta" data-lang="en">ONEE-Branche Eau · Guelmim, Morocco</div>
+                    <div class="item-meta" data-lang="fr">ONEE-Branche Eau · Guelmim, Maroc</div>
 
                     <div class="item-content" data-lang="it">
                         <ul>
-                            <li>Completamento dello stage per il progetto di fine studi, focalizzato sull'analisi dei
-                                processi operativi.</li>
-                            <li>Analisi e reportistica per il miglioramento del servizio e delle infrastrutture legate
-                                alle risorse idriche.</li>
+                            <li><strong>Svolto</strong> tirocinio curriculare per il progetto di fine studi, focalizzato
+                                sull'analisi dei processi operativi e gestionali.</li>
+                            <li><strong>Redatto</strong> report tecnici per l'ottimizzazione del servizio e della
+                                gestione amministrativa.</li>
                         </ul>
                     </div>
                     <div class="item-content" data-lang="en">
                         <ul>
-                            <li>Completion of final year project internship, focused on analyzing operational processes.
-                            </li>
-                            <li>Analysis and reporting for improving services and infrastructure related to water
-                                resources.</li>
+                            <li><strong>Completed</strong> final year project internship focused on analyzing
+                                operational and administrative processes.</li>
+                            <li><strong>Prepared</strong> technical reports aimed at improving service efficiency and
+                                resource management.</li>
                         </ul>
                     </div>
                     <div class="item-content" data-lang="fr">
                         <ul>
-                            <li>Réalisation du stage de projet de fin d'études, axé sur l'analyse des processus
-                                opérationnels.</li>
-                            <li>Analyse et reporting pour l'amélioration du service et des infrastructures liées aux
-                                ressources en eau.</li>
+                            <li><strong>Réalisé</strong> le stage de projet de fin d'études axé sur l'analyse des
+                                processus opérationnels et administratifs.</li>
+                            <li><strong>Rédigé</strong> des rapports techniques pour l'amélioration de la gestion des
+                                services.</li>
                         </ul>
                     </div>
                 </article>
 
                 <article class="experience-item">
                     <div class="item-header">
-                        <span class="item-title" data-lang="it">Accounting Intern</span>
-                        <span class="item-title" data-lang="en">Accounting Intern</span>
-                        <span class="item-title" data-lang="fr">Stagiaire en Comptabilité</span>
+                        <span class="item-title" data-lang="it">Tirocinante Contabile e Amministrativo</span>
+                        <span class="item-title" data-lang="en">Accounting &amp; Administrative Intern</span>
+                        <span class="item-title" data-lang="fr">Stagiaire Comptable et Administratif</span>
 
-                        <span class="item-date" data-lang="it">Luglio 2016</span>
-                        <span class="item-date" data-lang="en">July 2016</span>
-                        <span class="item-date" data-lang="fr">Juillet 2016</span>
+                        <span class="item-date" data-lang="it">Lug 2016</span>
+                        <span class="item-date" data-lang="en">Jul 2016</span>
+                        <span class="item-date" data-lang="fr">Juil 2016</span>
                     </div>
-                    <div class="item-meta" data-lang="it">TAN-FISC | Tan-Tan, Marocco</div>
-                    <div class="item-meta" data-lang="en">TAN-FISC | Tan-Tan, Morocco</div>
-                    <div class="item-meta" data-lang="fr">TAN-FISC | Tan-Tan, Maroc</div>
+                    <div class="item-meta" data-lang="it">TAN-FISC · Tan-Tan, Marocco</div>
+                    <div class="item-meta" data-lang="en">TAN-FISC · Tan-Tan, Morocco</div>
+                    <div class="item-meta" data-lang="fr">TAN-FISC · Tan-Tan, Maroc</div>
 
                     <div class="item-content" data-lang="it">
                         <ul>
-                            <li>Stage effettuato presso il servizio di contabilità aziendale.</li>
-                            <li>Supporto alla rendicontazione finanziaria, registrazione fatture e attività
-                                amministrative.</li>
+                            <li><strong>Supportato</strong> il reparto di contabilità aziendale nella registrazione
+                                fatture, archiviazione documentale e rendicontazione finanziaria.</li>
                         </ul>
                     </div>
                     <div class="item-content" data-lang="en">
                         <ul>
-                            <li>Internship conducted in the corporate accounting department.</li>
-                            <li>Support for financial reporting, invoice registration, and administrative tasks.</li>
+                            <li><strong>Supported</strong> the corporate accounting department with invoice
+                                registration, document filing, and financial reporting.</li>
                         </ul>
                     </div>
                     <div class="item-content" data-lang="fr">
                         <ul>
-                            <li>Stage effectué au sein du service de comptabilité de l'entreprise.</li>
-                            <li>Appui au reporting financier, à l'enregistrement des factures et aux tâches
-                                administratives.</li>
+                            <li><strong>Assuré</strong> le suivi de la saisie des factures, du classement documentaire
+                                et du reporting financier au sein du service comptable.</li>
                         </ul>
                     </div>
                 </article>
             </section>
 
             <section id="formazione">
-                <h2 data-lang="it">Formazione</h2>
+                <h2 data-lang="it">Istruzione e Formazione</h2>
                 <h2 data-lang="en">Education</h2>
-                <h2 data-lang="fr">Formation</h2>
+                <h2 data-lang="fr">Formation Académique</h2>
 
                 <div class="education-item">
                     <div class="item-header">
-                        <span class="item-title" data-lang="it">Diploma in Gestione d'Impresa (Bac+2)</span>
+                        <span class="item-title" data-lang="it">Diploma Tecnico Superiore in Gestione d'Impresa
+                            (Bac+2)</span>
                         <span class="item-title" data-lang="en">Diploma in Business Management (Bac+2)</span>
-                        <span class="item-title" data-lang="fr">Diplôme en Gestion des Entreprises (Bac+2)</span>
+                        <span class="item-title" data-lang="fr">Diplôme de Technicien Spécialisé en Gestion des
+                            Entreprises (Bac+2)</span>
 
-                        <span class="item-date" data-lang="it">2015 — 2017</span>
-                        <span class="item-date" data-lang="en">2015 — 2017</span>
-                        <span class="item-date" data-lang="fr">2015 — 2017</span>
+                        <span class="item-date">2015 — 2017</span>
                     </div>
                     <div class="item-meta">
-                        <span data-lang="it">ISTA - Istituto Specializzato in Tecnologia Applicata &mdash;
-                            Marocco</span>
-                        <span data-lang="en">ISTA - Specialized Institute of Applied Technology &mdash; Morocco</span>
-                        <span data-lang="fr">ISTA - Institut Spécialisé de Technologie Appliquée &mdash; Maroc</span>
+                        <span data-lang="it">ISTA — Istituto Specializzato di Tecnologia Applicata · Marocco</span>
+                        <span data-lang="en">ISTA — Specialized Institute of Applied Technology · Morocco</span>
+                        <span data-lang="fr">ISTA — Institut Spécialisé de Technologie Appliquée · Maroc</span>
                     </div>
-                    <!-- View Button -->
-                    <button class="btn-view-degree no-print" onclick="openModal(0)">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <button type="button" class="btn-view-degree no-print" onclick="openModal(0)">
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                             <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                             <circle cx="12" cy="12" r="3"></circle>
                         </svg>
-                        <span data-lang="it">Visualizza Documento</span>
-                        <span data-lang="en">View Document</span>
-                        <span data-lang="fr">Voir le Document</span>
+                        <span data-lang="it">Visualizza Certificato</span>
+                        <span data-lang="en">View Certificate</span>
+                        <span data-lang="fr">Voir le Diplôme</span>
                     </button>
                 </div>
 
@@ -487,183 +536,191 @@
                     <div class="item-header">
                         <span class="item-title" data-lang="it">Laurea Triennale in Studi Inglesi (Bac+3)</span>
                         <span class="item-title" data-lang="en">Bachelor's Degree in English Studies (Bac+3)</span>
-                        <span class="item-title" data-lang="fr">Licence en Études Anglaises (Bac+3)</span>
+                        <span class="item-title" data-lang="fr">Licence Fondamentale en Études Anglaises (Bac+3)</span>
 
-                        <span class="item-date" data-lang="it">2010 — 2014</span>
-                        <span class="item-date" data-lang="en">2010 — 2014</span>
-                        <span class="item-date" data-lang="fr">2010 — 2014</span>
+                        <span class="item-date">2010 — 2014</span>
                     </div>
                     <div class="item-meta">
-                        <span data-lang="it">Università Ibn Zohr &mdash; Marocco</span>
-                        <span data-lang="en">University Ibn Zohr &mdash; Morocco</span>
-                        <span data-lang="fr">Université Ibn Zohr &mdash; Maroc</span>
+                        <span data-lang="it">Università Ibn Zohr · Agadir, Marocco</span>
+                        <span data-lang="en">Ibn Zohr University · Agadir, Morocco</span>
+                        <span data-lang="fr">Université Ibn Zohr · Agadir, Maroc</span>
                     </div>
-                    <!-- View Button -->
-                    <button class="btn-view-degree no-print" onclick="openModal(1)">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <button type="button" class="btn-view-degree no-print" onclick="openModal(1)">
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                             <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                             <circle cx="12" cy="12" r="3"></circle>
                         </svg>
-                        <span data-lang="it">Visualizza Documento</span>
-                        <span data-lang="en">View Document</span>
-                        <span data-lang="fr">Voir le Document</span>
+                        <span data-lang="it">Visualizza Certificato</span>
+                        <span data-lang="en">View Certificate</span>
+                        <span data-lang="fr">Voir le Diplôme</span>
                     </button>
                 </div>
 
                 <div class="education-item">
                     <div class="item-header">
-                        <span class="item-title" data-lang="it">Maturità in Lettere Moderne</span>
+                        <span class="item-title" data-lang="it">Diploma di Maturità in Lettere Moderne</span>
                         <span class="item-title" data-lang="en">High School Diploma in Modern Literature</span>
                         <span class="item-title" data-lang="fr">Baccalauréat en Lettres Modernes</span>
 
-                        <span class="item-date" data-lang="it">2010</span>
-                        <span class="item-date" data-lang="en">2010</span>
-                        <span class="item-date" data-lang="fr">2010</span>
+                        <span class="item-date">2010</span>
                     </div>
                     <div class="item-meta">
-                        <span data-lang="it">Liceo Moulay Rachid &mdash; Marocco</span>
-                        <span data-lang="en">Lycée Moulay Rachid &mdash; Morocco</span>
-                        <span data-lang="fr">Lycée Moulay Rachid &mdash; Maroc</span>
+                        <span data-lang="it">Liceo Moulay Rachid · Marocco</span>
+                        <span data-lang="en">Lycée Moulay Rachid · Morocco</span>
+                        <span data-lang="fr">Lycée Moulay Rachid · Maroc</span>
                     </div>
-                    <!-- View Button -->
-                    <button class="btn-view-degree no-print" onclick="openModal(2)">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <button type="button" class="btn-view-degree no-print" onclick="openModal(2)">
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                             <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                             <circle cx="12" cy="12" r="3"></circle>
                         </svg>
-                        <span data-lang="it">Visualizza Documento</span>
-                        <span data-lang="en">View Document</span>
-                        <span data-lang="fr">Voir le Document</span>
+                        <span data-lang="it">Visualizza Certificato</span>
+                        <span data-lang="en">View Certificate</span>
+                        <span data-lang="fr">Voir le Diplôme</span>
                     </button>
                 </div>
             </section>
 
-            <!-- Elegant Signature -->
-            <div class="cv-signature">
-                Abdelaziz Bougrich
-            </div>
-
-
+            <!-- Mandatory Italian GDPR Compliance Footer & Signature -->
+            <footer class="cv-footer">
+                <div class="gdpr-footer">
+                    <span data-lang="it">Autorizzo il trattamento dei miei dati personali presenti nel curriculum vitae
+                        ai sensi del D.Lgs. 30 giugno 2003, n. 196 e del Regolamento UE 2016/679 (GDPR).</span>
+                    <span data-lang="en">I authorize the processing of my personal data included in this curriculum
+                        vitae pursuant to Italian Legislative Decree 196/2003 and EU Regulation 2016/679 (GDPR).</span>
+                    <span data-lang="fr">J'autorise le traitement de mes données personnelles figurant dans ce
+                        curriculum vitae conformément au Décret Législatif italien 196/2003 et au Règlement UE 2016/679
+                        (RGPD).</span>
+                </div>
+                <div class="cv-signature">
+                    <span class="cv-signature-place" data-lang="it">Bologna, Italia</span>
+                    <span class="cv-signature-place" data-lang="en">Bologna, Italy</span>
+                    <span class="cv-signature-place" data-lang="fr">Bologne, Italie</span>
+                    <span class="cv-signature-name">Abdelaziz Bougrich</span>
+                </div>
+            </footer>
         </main>
     </div>
 
     <!-- Floating CTA Action Bar -->
     <div class="cta-bar no-print">
         <a class="cta-btn cta-print" onclick="printCV(event)" href="#" role="button" aria-label="Stampa CV">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="6 9 6 2 18 2 18 9" />
-                <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2" />
-                <rect x="6" y="14" width="12" height="8" />
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                aria-hidden="true">
+                <polyline points="6 9 6 2 18 2 18 9"></polyline>
+                <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+                <rect x="6" y="14" width="12" height="8"></rect>
             </svg>
             <span data-lang="it">Stampa CV</span><span data-lang="en">Print CV</span><span
                 data-lang="fr">Imprimer</span>
         </a>
-        <a class="cta-btn cta-pdf" onclick="downloadPDF(event)" href="#" role="button" aria-label="Scarica PDF"
-            title="Salva come PDF — scegli &lsquo;Salva come PDF&rsquo; nella finestra di stampa">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-                <polyline points="7 10 12 15 17 10" />
-                <line x1="12" y1="15" x2="12" y2="3" />
+        <a class="cta-btn cta-pdf" onclick="downloadPDF(event)" href="#" role="button" aria-label="Salva PDF"
+            title="Salva come PDF A4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                aria-hidden="true">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
             </svg>
-            <span data-lang="it">Scarica PDF</span><span data-lang="en">Download PDF</span><span
-                data-lang="fr">Télécharger</span>
+            <span data-lang="it">Scarica PDF</span><span data-lang="en">Save PDF</span><span
+                data-lang="fr">Télécharger PDF</span>
         </a>
-        <a class="cta-btn cta-email"
-            href="https://mail.google.com/mail/?view=cm&fs=1&to=abdelaziz.bougrich@gmail.com&su=Candidatura%20-%20Abdelaziz%20Bougrich"
-            target="_blank" aria-label="Email">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-                <polyline points="22,6 12,13 2,6" />
+        <a class="cta-btn cta-email" href="mailto:abdelaziz.bougrich@gmail.com?subject=Candidatura%20-%20Abdelaziz%20Bougrich"
+            aria-label="Email">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                aria-hidden="true">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
             </svg>
             <span data-lang="it">Contattami</span><span data-lang="en">Email Me</span><span
                 data-lang="fr">M'écrire</span>
         </a>
         <a class="cta-btn cta-whatsapp"
-            href="https://wa.me/393534875880?text=Ciao%20Abdelaziz%2C%20ho%20visto%20il%20tuo%20CV%20e%20vorrei%20parlare%20con%20te."
-            target="_blank" aria-label="WhatsApp">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            href="https://wa.me/393534875880?text=Buongiorno%20Abdelaziz%2C%20ho%20visionato%20il%20suo%20CV%20e%20vorrei%20contattarla."
+            target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"
+                aria-hidden="true">
                 <path
-                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z" />
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z">
+                </path>
             </svg>
-            <span data-lang="it">Scrivimi</span><span data-lang="en">WhatsApp</span><span data-lang="fr">WhatsApp</span>
+            <span data-lang="it">WhatsApp</span><span data-lang="en">WhatsApp</span><span data-lang="fr">WhatsApp</span>
         </a>
     </div>
 
     <!-- Modal Gallery HTML -->
-    <div id="degreeModal" class="modal" onclick="closeModal(event)">
-        <span class="modal-close" onclick="closeModal(event)">&times;</span>
+    <div id="degreeModal" class="modal no-print" onclick="closeModal(event)" role="dialog" aria-modal="true"
+        aria-labelledby="modalCaption">
+        <span class="modal-close" onclick="closeModal(event)" aria-label="Chiudi">&times;</span>
         <div class="modal-content-wrapper" onclick="event.stopPropagation()">
-            <img class="modal-content" id="modalImage">
-            <button class="modal-nav prev-btn" onclick="changeImage(-1)">&#10094;</button>
-            <button class="modal-nav next-btn" onclick="changeImage(1)">&#10095;</button>
+            <img class="modal-content" id="modalImage" src="assets/diplome-ista.jpeg" alt="Certificato di studio">
+            <button type="button" class="modal-nav prev-btn" onclick="changeImage(-1)"
+                aria-label="Precedente">&#10094;</button>
+            <button type="button" class="modal-nav next-btn" onclick="changeImage(1)"
+                aria-label="Successivo">&#10095;</button>
             <div id="modalCaption"></div>
         </div>
     </div>
 
-    <!-- Mobile Scroll Behavior Script -->
+    <!-- Scripts -->
     <script>
-        // ---- Print / PDF helpers ----
+        function getActiveLangFilename() {
+            const isIt = document.getElementById('lang-it').checked;
+            const isFr = document.getElementById('lang-fr').checked;
+            if (isIt) return 'CV_Abdelaziz_Bougrich_IT';
+            if (isFr) return 'CV_Abdelaziz_Bougrich_FR';
+            return 'CV_Abdelaziz_Bougrich_EN';
+        }
+
         function printCV(e) {
             if (e) e.preventDefault();
+            const originalTitle = document.title;
+            document.title = getActiveLangFilename();
             window.print();
+            setTimeout(() => { document.title = originalTitle; }, 1500);
         }
 
         function downloadPDF(e) {
             if (e) e.preventDefault();
-            // Set a clean title so the browser's print-to-PDF dialog
-            // suggests a professional filename based on language.
-            const originalTitle = document.title;
-            const isIt = document.getElementById('lang-it').checked;
-            const isFr = document.getElementById('lang-fr').checked;
-
-            let filename = 'CV_Abdelaziz_Bougrich_EN';
-            if (isIt) filename = 'CV_Abdelaziz_Bougrich_IT';
-            else if (isFr) filename = 'CV_Abdelaziz_Bougrich_FR';
-
-            document.title = filename;
-            window.print();
-
-            // Restore original title after dialog closes
-            setTimeout(() => { document.title = originalTitle; }, 2000);
-            window.addEventListener('focus', function handler() {
-                document.title = originalTitle;
-                window.removeEventListener('focus', handler);
-            }, { once: true });
+            printCV(e);
         }
 
-        // ---- Scroll hide/show the CTA bar ----
+        // Synchronize html[lang] attribute when language radio changes
+        document.querySelectorAll('input[name="lang-switch"]').forEach(function (radio) {
+            radio.addEventListener('change', function () {
+                const lang = this.id.replace('lang-', '');
+                document.documentElement.setAttribute('lang', lang);
+            });
+        });
+
+        // Mobile Scroll hide/show CTA bar
         let lastScrollTop = 0;
         const ctaBar = document.querySelector('.cta-bar');
 
         window.addEventListener('scroll', function () {
-            // Only apply scroll hiding on mobile view widths
             if (window.innerWidth <= 850) {
-                let st = window.pageYOffset || document.documentElement.scrollTop;
-                // Add tolerance to avoid jitter
+                const st = window.pageYOffset || document.documentElement.scrollTop;
                 if (st > lastScrollTop && st > 150) {
-                    // Scrolling down past threshold -> hide
                     ctaBar.classList.add('cta-hidden');
                 } else if (st < lastScrollTop - 5 || st <= 150) {
-                    // Scrolling up significantly or near top -> show
                     ctaBar.classList.remove('cta-hidden');
                 }
                 lastScrollTop = st <= 0 ? 0 : st;
             } else {
-                // Ensure visibility on desktop always
                 ctaBar.classList.remove('cta-hidden');
             }
         }, { passive: true });
 
-        // --- 2. Degrees Modal Gallery Logic ---
+        // Degrees Modal Gallery Logic
         const degrees = [
-            { src: "assets/diplome-ista.jpeg", titleIt: "Diploma ISTA", titleEn: "ISTA Diploma", titleFr: "Diplôme ISTA" },
-            { src: "assets/licence-anglais.jpeg", titleIt: "Laurea Università Ibn Zohr", titleEn: "Ibn Zohr University Degree", titleFr: "Licence Université Ibn Zohr" },
-            { src: "assets/baccalaureat.jpeg", titleIt: "Maturità", titleEn: "High School Diploma", titleFr: "Baccalauréat" }
+            { src: "assets/diplome-ista.jpeg", titleIt: "Diploma ISTA — Gestione d'Impresa", titleEn: "ISTA Diploma — Business Management", titleFr: "Diplôme ISTA — Gestion des Entreprises" },
+            { src: "assets/licence-anglais.jpeg", titleIt: "Laurea Triennale — Università Ibn Zohr", titleEn: "Bachelor's Degree — Ibn Zohr University", titleFr: "Licence — Université Ibn Zohr" },
+            { src: "assets/baccalaureat.jpeg", titleIt: "Diploma di Maturità — Lettere Moderne", titleEn: "High School Diploma — Modern Literature", titleFr: "Baccalauréat — Lettres Modernes" }
         ];
 
         let currentIndex = 0;
@@ -684,7 +741,7 @@
                 setTimeout(() => {
                     modal.style.display = "none";
                     document.body.style.overflow = "auto";
-                }, 300);
+                }, 250);
             }
         }
 
@@ -699,85 +756,21 @@
             currentIndex = index;
             modalImg.src = degrees[currentIndex].src;
 
-            // Detect active language for caption
             const isIt = document.getElementById('lang-it').checked;
             const isFr = document.getElementById('lang-fr').checked;
 
             if (isIt) modalCaption.textContent = degrees[currentIndex].titleIt;
             else if (isFr) modalCaption.textContent = degrees[currentIndex].titleFr;
             else modalCaption.textContent = degrees[currentIndex].titleEn;
+            modalImg.alt = modalCaption.textContent;
         }
 
-        // Close on ESC key
         document.addEventListener('keydown', function (event) {
             if (event.key === "Escape" && modal.style.display === "flex") {
                 closeModal();
             }
         });
     </script>
-
-    <!-- ===== Profile Photo Hover Zoom ===== -->
-    <script>
-        function panImage(e) {
-            const img = document.getElementById('profileImg');
-            const container = document.getElementById('photoContainer');
-            const rect = container.getBoundingClientRect();
-            
-            let clientX, clientY;
-            if (e.type.startsWith('touch')) {
-                if (e.touches.length > 0) {
-                    clientX = e.touches[0].clientX;
-                    clientY = e.touches[0].clientY;
-                } else {
-                    return; // ignore end events without touches
-                }
-            } else {
-                clientX = e.clientX;
-                clientY = e.clientY;
-            }
-            
-            // Calculate mouse/touch position relative to the container
-            const x = clientX - rect.left;
-            const y = clientY - rect.top;
-            
-            // Convert to percentages within the container
-            const xPercent = Math.max(0, Math.min(100, (x / rect.width) * 100));
-            const yPercent = Math.max(0, Math.min(100, (y / rect.height) * 100));
-            
-            // Apply scale and change the origin dynamically to zoom exactly where the interaction is
-            img.style.transformOrigin = `${xPercent}% ${yPercent}%`;
-            img.style.transform = 'scale(1.8)';
-        }
-
-        function resetPan() {
-            const img = document.getElementById('profileImg');
-            // Animate scale back to normal
-            img.style.transform = 'scale(1)';
-            
-            // Clean up the origin to default after transition completes
-            setTimeout(() => {
-                if (img.style.transform === 'scale(1)') {
-                    img.style.transformOrigin = 'center';
-                }
-            }, 300);
-        }
-
-        const photoContainer = document.getElementById('photoContainer');
-        
-        // Mouse events (Desktop)
-        photoContainer.addEventListener('mousemove', panImage);
-        photoContainer.addEventListener('mouseleave', resetPan);
-        
-        // Touch events (Mobile)
-        photoContainer.addEventListener('touchmove', function(e) {
-            e.preventDefault(); // Prevent page scroll while zooming image
-            panImage(e);
-        }, { passive: false });
-        photoContainer.addEventListener('touchstart', panImage, { passive: true });
-        photoContainer.addEventListener('touchend', resetPan);
-        photoContainer.addEventListener('touchcancel', resetPan);
-    </script>
-
 </body>
 
 </html>
