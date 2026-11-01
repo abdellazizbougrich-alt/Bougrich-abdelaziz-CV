@@ -10,7 +10,9 @@
         content="Lettera di Presentazione di Abdelaziz Bougrich — Professionista Tecnico-Commerciale residente a Bologna, Italia.">
     <link rel="icon" type="image/svg+xml"
         href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230f172a'/><text x='16' y='21' font-family='sans-serif' font-size='13' font-weight='700' fill='white' text-anchor='middle'>AB</text></svg>">
+    <meta name="theme-color" content="#dc2626">
     <link rel="stylesheet" href="style.css">
+    <script>document.documentElement.classList.add('js');</script>
 </head>
 
 <body>
@@ -137,26 +139,119 @@
                 <h2 data-lang="fr">Permis de Conduire</h2>
                 <div class="cv-driving-block">
                     <div class="cv-driving-header">
-                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="cv-driving-ico"
-                            aria-hidden="true">
-                            <rect x="1" y="3" width="15" height="13" rx="2"></rect>
-                            <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
-                            <circle cx="5.5" cy="18.5" r="2.5"></circle>
-                            <circle cx="18.5" cy="18.5" r="2.5"></circle>
-                        </svg>
-                        <span data-lang="it">Categorie Abilitate:</span>
-                        <span data-lang="en">Licensed Categories:</span>
-                        <span data-lang="fr">Catégories Validées :</span>
+                        <span class="cv-driving-badge" aria-hidden="true">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="cv-driving-ico">
+                                <path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"></path>
+                                <circle cx="7" cy="17" r="2"></circle>
+                                <path d="M9 17h6"></path>
+                                <circle cx="17" cy="17" r="2"></circle>
+                            </svg>
+                        </span>
+                        <span class="cv-driving-title">
+                            <span data-lang="it">Categorie Abilitate</span>
+                            <span data-lang="en">Licensed Categories</span>
+                            <span data-lang="fr">Catégories Validées</span>
+                        </span>
                     </div>
-                    <div class="cv-licence-badges" aria-label="Driving Licences B, C, D, E, EB, EC, ED">
-                        <span class="cv-lic-pill" title="Categoria B">B</span>
-                        <span class="cv-lic-pill" title="Categoria C">C</span>
-                        <span class="cv-lic-pill" title="Categoria D">D</span>
-                        <span class="cv-lic-pill" title="Categoria E">E</span>
-                        <span class="cv-lic-pill cv-lic-trailer" title="Categoria EB">EB</span>
-                        <span class="cv-lic-pill cv-lic-trailer" title="Categoria EC">EC</span>
-                        <span class="cv-lic-pill cv-lic-trailer" title="Categoria ED">ED</span>
+                    <div class="cv-licence-badges" role="list" aria-label="Driving Licences B, C, D, E, EB, EC, ED">
+                        <span class="cv-lic-tile" role="listitem" style="--i:0"
+                            title="Categoria B — Autovetture / Light Vehicles">
+                            <svg class="cv-lic-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"></path>
+                                <circle cx="7" cy="17" r="2"></circle>
+                                <path d="M9 17h6"></path>
+                                <circle cx="17" cy="17" r="2"></circle>
+                            </svg>
+                            <b class="cv-lic-letter">B</b>
+                        </span>
+                        <span class="cv-lic-tile" role="listitem" style="--i:1"
+                            title="Categoria C — Autocarri &gt;3.5t / Heavy Trucks">
+                            <svg class="cv-lic-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"></path>
+                                <path d="M15 18H9"></path>
+                                <path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"></path>
+                                <circle cx="17" cy="18" r="2"></circle>
+                                <circle cx="7" cy="18" r="2"></circle>
+                            </svg>
+                            <b class="cv-lic-letter">C</b>
+                        </span>
+                        <span class="cv-lic-tile" role="listitem" style="--i:2"
+                            title="Categoria D — Autobus / Passenger Transport">
+                            <svg class="cv-lic-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M8 6v6"></path>
+                                <path d="M15 6v6"></path>
+                                <path d="M2 12h19.6"></path>
+                                <path d="M18 18h3s.5-1.7.8-2.8c.1-.4.2-.8.2-1.2 0-.4-.1-.8-.2-1.2l-1.4-5C20.1 6.8 19.1 6 18 6H4a2 2 0 0 0-2 2v10h3"></path>
+                                <circle cx="7" cy="18" r="2"></circle>
+                                <path d="M9 18h5"></path>
+                                <circle cx="16" cy="18" r="2"></circle>
+                            </svg>
+                            <b class="cv-lic-letter">D</b>
+                        </span>
+                        <span class="cv-lic-tile" role="listitem" style="--i:3"
+                            title="Categoria E — Rimorchi Pesanti / Heavy Trailers">
+                            <svg class="cv-lic-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <rect x="2" y="5" width="16" height="11" rx="1.5"></rect>
+                                <path d="M18 13h4"></path>
+                                <circle cx="7" cy="18.5" r="2"></circle>
+                                <circle cx="13" cy="18.5" r="2"></circle>
+                            </svg>
+                            <b class="cv-lic-letter">E</b>
+                        </span>
+                        <span class="cv-lic-tile cv-lic-trailer" role="listitem" style="--i:4"
+                            title="Categoria EB — Auto + Rimorchio / Vehicle + Trailer">
+                            <svg class="cv-lic-svg" viewBox="0 0 48 24" fill="none" stroke="currentColor"
+                                stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"></path>
+                                <circle cx="7" cy="17" r="2"></circle>
+                                <path d="M9 17h6"></path>
+                                <circle cx="17" cy="17" r="2"></circle>
+                                <path d="M22 14h5"></path>
+                                <rect x="27" y="8" width="19" height="8" rx="1.5"></rect>
+                                <circle cx="33" cy="18" r="2"></circle>
+                                <circle cx="40" cy="18" r="2"></circle>
+                            </svg>
+                            <b class="cv-lic-letter">EB</b>
+                        </span>
+                        <span class="cv-lic-tile cv-lic-trailer" role="listitem" style="--i:5"
+                            title="Categoria EC — Autoarticolati / Articulated Heavy Trucks">
+                            <svg class="cv-lic-svg" viewBox="0 0 48 24" fill="none" stroke="currentColor"
+                                stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"></path>
+                                <path d="M15 18H9"></path>
+                                <path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"></path>
+                                <circle cx="17" cy="18" r="2"></circle>
+                                <circle cx="7" cy="18" r="2"></circle>
+                                <path d="M22 14h5"></path>
+                                <rect x="27" y="6" width="19" height="10" rx="1.5"></rect>
+                                <circle cx="33" cy="18" r="2"></circle>
+                                <circle cx="40" cy="18" r="2"></circle>
+                            </svg>
+                            <b class="cv-lic-letter">EC</b>
+                        </span>
+                        <span class="cv-lic-tile cv-lic-trailer" role="listitem" style="--i:6"
+                            title="Categoria ED — Autosnodati / Articulated Coaches">
+                            <svg class="cv-lic-svg" viewBox="0 0 48 24" fill="none" stroke="currentColor"
+                                stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M8 6v6"></path>
+                                <path d="M15 6v6"></path>
+                                <path d="M2 12h19.6"></path>
+                                <path d="M18 18h3s.5-1.7.8-2.8c.1-.4.2-.8.2-1.2 0-.4-.1-.8-.2-1.2l-1.4-5C20.1 6.8 19.1 6 18 6H4a2 2 0 0 0-2 2v10h3"></path>
+                                <circle cx="7" cy="18" r="2"></circle>
+                                <path d="M9 18h5"></path>
+                                <circle cx="16" cy="18" r="2"></circle>
+                                <path d="M22 14h5"></path>
+                                <rect x="27" y="7" width="19" height="9" rx="1.5"></rect>
+                                <circle cx="33" cy="18" r="2"></circle>
+                                <circle cx="40" cy="18" r="2"></circle>
+                            </svg>
+                            <b class="cv-lic-letter">ED</b>
+                        </span>
                     </div>
                     <p class="cv-driving-note">
                         <span data-lang="it">Patenti B, C, D, E, EB, EC, ED · Disponibile a trasferte</span>
@@ -403,6 +498,7 @@
         });
     </script>
 
+    <script src="slides.js"></script>
 </body>
 
 </html>

@@ -22,7 +22,9 @@
     <meta name="twitter:description" content="Professionista Tecnico-Commerciale. Residente a Bologna, Italia.">
     <link rel="icon" type="image/svg+xml"
         href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230f172a'/><text x='16' y='21' font-family='sans-serif' font-size='13' font-weight='700' fill='white' text-anchor='middle'>AB</text></svg>">
+    <meta name="theme-color" content="#dc2626">
     <link rel="stylesheet" href="style.css">
+    <script>document.documentElement.classList.add('js');</script>
 </head>
 
 <body>
@@ -170,48 +172,249 @@
                 <strong class="skills-subtitle" data-lang="it">Competenze Trasversali</strong>
                 <strong class="skills-subtitle" data-lang="en">Soft Skills</strong>
                 <strong class="skills-subtitle" data-lang="fr">Compétences Transversales</strong>
-                <ul class="skills-bullet-list">
-                    <li><span data-lang="it">Gestione Commerciale &amp; Negoziazione</span><span data-lang="en">Sales
-                            Management &amp; Negotiation</span><span data-lang="fr">Gestion des Ventes &amp;
-                            Négociation</span></li>
-                    <li><span data-lang="it">Problem Solving Operativo</span><span data-lang="en">Operational Problem
-                            Solving</span><span data-lang="fr">Résolution de Problèmes</span></li>
-                    <li><span data-lang="it">Assistenza Clienti &amp; Post-Vendita</span><span data-lang="en">Customer
-                            Service &amp; After-Sales</span><span data-lang="fr">Service Client &amp;
-                            Après-Vente</span></li>
-                    <li><span data-lang="it">Lavoro in Team &amp; Adattabilità</span><span data-lang="en">Teamwork
-                            &amp; Adaptability</span><span data-lang="fr">Travail en Équipe &amp; Adaptabilité</span>
-                    </li>
-                </ul>
+
+                <!-- Soft Skills Slider (swipe on mobile, arrows/dots on desktop, auto-play) -->
+                <div class="soft-slider" id="softSlider" role="region" aria-roledescription="carousel"
+                    aria-label="Soft Skills">
+                    <div class="soft-track" id="softTrack">
+                        <article class="soft-slide is-active" role="group" aria-roledescription="slide"
+                            aria-label="1 / 4">
+                            <span class="soft-num" aria-hidden="true">01</span>
+                            <span class="soft-ico" aria-hidden="true">
+                                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
+                                    <polyline points="16 7 22 7 22 13"></polyline>
+                                </svg>
+                            </span>
+                            <div class="soft-text">
+                                <h3 class="soft-title">
+                                    <span data-lang="it">Gestione Commerciale &amp; Negoziazione</span>
+                                    <span data-lang="en">Sales Management &amp; Negotiation</span>
+                                    <span data-lang="fr">Gestion des Ventes &amp; Négociation</span>
+                                </h3>
+                                <p class="soft-desc">
+                                    <span data-lang="it">Sviluppo del portafoglio clienti e trattative orientate al risultato.</span>
+                                    <span data-lang="en">Growing client portfolios and closing results-driven deals.</span>
+                                    <span data-lang="fr">Développement du portefeuille clients et négociations orientées résultats.</span>
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="soft-slide" role="group" aria-roledescription="slide" aria-label="2 / 4">
+                            <span class="soft-num" aria-hidden="true">02</span>
+                            <span class="soft-ico" aria-hidden="true">
+                                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"></path>
+                                    <path d="M9 18h6"></path>
+                                    <path d="M10 22h4"></path>
+                                </svg>
+                            </span>
+                            <div class="soft-text">
+                                <h3 class="soft-title">
+                                    <span data-lang="it">Problem Solving Operativo</span>
+                                    <span data-lang="en">Operational Problem Solving</span>
+                                    <span data-lang="fr">Résolution de Problèmes</span>
+                                </h3>
+                                <p class="soft-desc">
+                                    <span data-lang="it">Soluzioni rapide e pratiche agli imprevisti di vendita e magazzino.</span>
+                                    <span data-lang="en">Fast, practical fixes for sales and warehouse challenges.</span>
+                                    <span data-lang="fr">Solutions rapides et concrètes aux imprévus de vente et de stock.</span>
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="soft-slide" role="group" aria-roledescription="slide" aria-label="3 / 4">
+                            <span class="soft-num" aria-hidden="true">03</span>
+                            <span class="soft-ico" aria-hidden="true">
+                                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M3 11h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-5Zm0 0a9 9 0 1 1 18 0m0 0v5a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3Z"></path>
+                                    <path d="M21 16v2a4 4 0 0 1-4 4h-5"></path>
+                                </svg>
+                            </span>
+                            <div class="soft-text">
+                                <h3 class="soft-title">
+                                    <span data-lang="it">Assistenza Clienti &amp; Post-Vendita</span>
+                                    <span data-lang="en">Customer Service &amp; After-Sales</span>
+                                    <span data-lang="fr">Service Client &amp; Après-Vente</span>
+                                </h3>
+                                <p class="soft-desc">
+                                    <span data-lang="it">Supporto attento e coordinamento post-vendita per fidelizzare il cliente.</span>
+                                    <span data-lang="en">Attentive support and after-sales follow-up that builds loyalty.</span>
+                                    <span data-lang="fr">Accompagnement attentif et suivi après-vente pour fidéliser.</span>
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="soft-slide" role="group" aria-roledescription="slide" aria-label="4 / 4">
+                            <span class="soft-num" aria-hidden="true">04</span>
+                            <span class="soft-ico" aria-hidden="true">
+                                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="9" cy="7" r="4"></circle>
+                                    <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                </svg>
+                            </span>
+                            <div class="soft-text">
+                                <h3 class="soft-title">
+                                    <span data-lang="it">Lavoro in Team &amp; Adattabilità</span>
+                                    <span data-lang="en">Teamwork &amp; Adaptability</span>
+                                    <span data-lang="fr">Travail en Équipe &amp; Adaptabilité</span>
+                                </h3>
+                                <p class="soft-desc">
+                                    <span data-lang="it">Collaborazione efficace e flessibilità in contesti sempre diversi.</span>
+                                    <span data-lang="en">Effective collaboration and flexibility in ever-changing settings.</span>
+                                    <span data-lang="fr">Collaboration efficace et flexibilité dans des contextes variés.</span>
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="soft-controls no-print">
+                        <button type="button" class="soft-arrow soft-prev" id="softPrev" aria-label="Precedente">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <polyline points="15 18 9 12 15 6"></polyline>
+                            </svg>
+                        </button>
+                        <div class="soft-dots" id="softDots" role="tablist" aria-label="Soft Skills">
+                            <button type="button" class="soft-dot is-active" role="tab" aria-label="1"></button>
+                            <button type="button" class="soft-dot" role="tab" aria-label="2"></button>
+                            <button type="button" class="soft-dot" role="tab" aria-label="3"></button>
+                            <button type="button" class="soft-dot" role="tab" aria-label="4"></button>
+                        </div>
+                        <button type="button" class="soft-arrow soft-next" id="softNext" aria-label="Successivo">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="soft-progress no-print" aria-hidden="true"><span id="softProgress"></span></div>
+                </div>
 
                 <strong class="skills-subtitle" data-lang="it">Patenti di Guida</strong>
                 <strong class="skills-subtitle" data-lang="en">Driving Licences</strong>
                 <strong class="skills-subtitle" data-lang="fr">Permis de Conduire</strong>
                 <div class="cv-driving-block">
                     <div class="cv-driving-header">
-                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="cv-driving-ico"
-                            aria-hidden="true">
-                            <rect x="1" y="3" width="15" height="13" rx="2"></rect>
-                            <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
-                            <circle cx="5.5" cy="18.5" r="2.5"></circle>
-                            <circle cx="18.5" cy="18.5" r="2.5"></circle>
-                        </svg>
-                        <span data-lang="it">Categorie Abilitate:</span>
-                        <span data-lang="en">Licensed Categories:</span>
-                        <span data-lang="fr">Catégories Validées :</span>
+                        <span class="cv-driving-badge" aria-hidden="true">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="cv-driving-ico">
+                                <path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"></path>
+                                <circle cx="7" cy="17" r="2"></circle>
+                                <path d="M9 17h6"></path>
+                                <circle cx="17" cy="17" r="2"></circle>
+                            </svg>
+                        </span>
+                        <span class="cv-driving-title">
+                            <span data-lang="it">Categorie Abilitate</span>
+                            <span data-lang="en">Licensed Categories</span>
+                            <span data-lang="fr">Catégories Validées</span>
+                        </span>
                     </div>
-                    <div class="cv-licence-badges" aria-label="Driving Licences B, C, D, E, EB, EC, ED">
-                        <span class="cv-lic-pill" title="Categoria B — Autovetture / Light Vehicles">B</span>
-                        <span class="cv-lic-pill" title="Categoria C — Autocarri &gt;3.5t / Heavy Trucks">C</span>
-                        <span class="cv-lic-pill" title="Categoria D — Autobus / Passenger Transport">D</span>
-                        <span class="cv-lic-pill" title="Categoria E — Rimorchi Pesanti / Heavy Trailers">E</span>
-                        <span class="cv-lic-pill cv-lic-trailer"
-                            title="Categoria EB — Auto + Rimorchio / Vehicle + Trailer">EB</span>
-                        <span class="cv-lic-pill cv-lic-trailer"
-                            title="Categoria EC — Autoarticolati / Articulated Heavy Trucks">EC</span>
-                        <span class="cv-lic-pill cv-lic-trailer"
-                            title="Categoria ED — Autosnodati / Articulated Coaches">ED</span>
+                    <div class="cv-licence-badges" role="list" aria-label="Driving Licences B, C, D, E, EB, EC, ED">
+                        <span class="cv-lic-tile" role="listitem" style="--i:0"
+                            title="Categoria B — Autovetture / Light Vehicles">
+                            <svg class="cv-lic-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"></path>
+                                <circle cx="7" cy="17" r="2"></circle>
+                                <path d="M9 17h6"></path>
+                                <circle cx="17" cy="17" r="2"></circle>
+                            </svg>
+                            <b class="cv-lic-letter">B</b>
+                        </span>
+                        <span class="cv-lic-tile" role="listitem" style="--i:1"
+                            title="Categoria C — Autocarri &gt;3.5t / Heavy Trucks">
+                            <svg class="cv-lic-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"></path>
+                                <path d="M15 18H9"></path>
+                                <path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"></path>
+                                <circle cx="17" cy="18" r="2"></circle>
+                                <circle cx="7" cy="18" r="2"></circle>
+                            </svg>
+                            <b class="cv-lic-letter">C</b>
+                        </span>
+                        <span class="cv-lic-tile" role="listitem" style="--i:2"
+                            title="Categoria D — Autobus / Passenger Transport">
+                            <svg class="cv-lic-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M8 6v6"></path>
+                                <path d="M15 6v6"></path>
+                                <path d="M2 12h19.6"></path>
+                                <path d="M18 18h3s.5-1.7.8-2.8c.1-.4.2-.8.2-1.2 0-.4-.1-.8-.2-1.2l-1.4-5C20.1 6.8 19.1 6 18 6H4a2 2 0 0 0-2 2v10h3"></path>
+                                <circle cx="7" cy="18" r="2"></circle>
+                                <path d="M9 18h5"></path>
+                                <circle cx="16" cy="18" r="2"></circle>
+                            </svg>
+                            <b class="cv-lic-letter">D</b>
+                        </span>
+                        <span class="cv-lic-tile" role="listitem" style="--i:3"
+                            title="Categoria E — Rimorchi Pesanti / Heavy Trailers">
+                            <svg class="cv-lic-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <rect x="2" y="5" width="16" height="11" rx="1.5"></rect>
+                                <path d="M18 13h4"></path>
+                                <circle cx="7" cy="18.5" r="2"></circle>
+                                <circle cx="13" cy="18.5" r="2"></circle>
+                            </svg>
+                            <b class="cv-lic-letter">E</b>
+                        </span>
+                        <span class="cv-lic-tile cv-lic-trailer" role="listitem" style="--i:4"
+                            title="Categoria EB — Auto + Rimorchio / Vehicle + Trailer">
+                            <svg class="cv-lic-svg" viewBox="0 0 48 24" fill="none" stroke="currentColor"
+                                stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"></path>
+                                <circle cx="7" cy="17" r="2"></circle>
+                                <path d="M9 17h6"></path>
+                                <circle cx="17" cy="17" r="2"></circle>
+                                <path d="M22 14h5"></path>
+                                <rect x="27" y="8" width="19" height="8" rx="1.5"></rect>
+                                <circle cx="33" cy="18" r="2"></circle>
+                                <circle cx="40" cy="18" r="2"></circle>
+                            </svg>
+                            <b class="cv-lic-letter">EB</b>
+                        </span>
+                        <span class="cv-lic-tile cv-lic-trailer" role="listitem" style="--i:5"
+                            title="Categoria EC — Autoarticolati / Articulated Heavy Trucks">
+                            <svg class="cv-lic-svg" viewBox="0 0 48 24" fill="none" stroke="currentColor"
+                                stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"></path>
+                                <path d="M15 18H9"></path>
+                                <path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"></path>
+                                <circle cx="17" cy="18" r="2"></circle>
+                                <circle cx="7" cy="18" r="2"></circle>
+                                <path d="M22 14h5"></path>
+                                <rect x="27" y="6" width="19" height="10" rx="1.5"></rect>
+                                <circle cx="33" cy="18" r="2"></circle>
+                                <circle cx="40" cy="18" r="2"></circle>
+                            </svg>
+                            <b class="cv-lic-letter">EC</b>
+                        </span>
+                        <span class="cv-lic-tile cv-lic-trailer" role="listitem" style="--i:6"
+                            title="Categoria ED — Autosnodati / Articulated Coaches">
+                            <svg class="cv-lic-svg" viewBox="0 0 48 24" fill="none" stroke="currentColor"
+                                stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M8 6v6"></path>
+                                <path d="M15 6v6"></path>
+                                <path d="M2 12h19.6"></path>
+                                <path d="M18 18h3s.5-1.7.8-2.8c.1-.4.2-.8.2-1.2 0-.4-.1-.8-.2-1.2l-1.4-5C20.1 6.8 19.1 6 18 6H4a2 2 0 0 0-2 2v10h3"></path>
+                                <circle cx="7" cy="18" r="2"></circle>
+                                <path d="M9 18h5"></path>
+                                <circle cx="16" cy="18" r="2"></circle>
+                                <path d="M22 14h5"></path>
+                                <rect x="27" y="7" width="19" height="9" rx="1.5"></rect>
+                                <circle cx="33" cy="18" r="2"></circle>
+                                <circle cx="40" cy="18" r="2"></circle>
+                            </svg>
+                            <b class="cv-lic-letter">ED</b>
+                        </span>
                     </div>
                     <p class="cv-driving-note">
                         <span data-lang="it">Patenti B, C, D, E, EB, EC, ED · Disponibile a trasferte</span>
@@ -795,6 +998,7 @@
             }
         });
     </script>
+    <script src="slides.js"></script>
 </body>
 
 </html>
